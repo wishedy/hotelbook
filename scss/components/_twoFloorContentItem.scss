@@ -1,0 +1,101 @@
+@charset "UTF-8";
+// 垂直手风琴菜单
+// Created by qiangkailiang on 2016/11/03
+// 功能库引入
+
+
+.yd-wrongExerciseContentItem {
+  .icon-downArrow{
+    transition:all 0.2s linear;
+  }
+  &.open{
+    .icon-downArrow{
+      transform:rotate(180deg);
+    }
+    .yd-wrongExerciseContentSecondItem {
+      & > article {
+        h2 {
+          font-size: rem(15px);
+          color: #555;
+        }
+      }
+    }
+  }
+    
+    .icon-downArrow:before {
+        transition: all 0.2s linear;
+        transform: rotate(0);
+    }
+    &:nth-last-child(1) {
+        border-bottom: none;
+    }
+    & > article {
+        border-bottom: 1px solid #dfdfdf;
+        padding: rem(15px) rem(24px);
+        color: #222;
+        font-size: rem(16px);
+        font-weight: normal;
+      cursor: pointer;
+
+        span {
+            color: #909090;
+            font-size: rem(14px);
+            margin-left: rem(10px);
+        }
+        & > figure {
+            float: right;
+            a {
+                margin-right: rem(15px);
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.yd-wrongExerciseContentItem.open {
+    .icon-downArrow:before {
+        transform: rotate(180deg);
+    }
+    .yd-wrongExerciseContentSecondItem {
+        display: block;
+    }
+}
+
+.yd-wrongExerciseContentSecondItem {
+    background-color: #fbfbfb;
+    padding-left: rem(36px);
+    padding-right: rem(24px);
+    display: none;
+    &:nth-last-child(1) {
+        border-bottom: none;
+    }
+    & > article {
+        color: #222;
+        font-size: rem(17px);
+        font-weight: normal;
+        border-bottom: 1px solid #eee;
+        padding: rem(12.5px) 0;
+        h2 {
+            max-width: 75%;
+            display: inline-block;
+            font-weight: normal;
+            /*padding-left: rem(20px);*/
+            i {
+                font-style: normal;
+                position: absolute;
+                margin-left: rem(-25px)
+            }
+        }
+        span {
+            color: #909090;
+            font-size: rem(14px);
+            margin-left: rem(10px);
+        }
+        & > figure {
+            float: right;
+            a {
+                vertical-align: middle;
+            }
+        }
+    }
+}

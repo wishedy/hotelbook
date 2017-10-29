@@ -1,0 +1,96 @@
+@charset "UTF-8";
+//头部信息栏组件
+//Created by qiangkailiang on 2016/07/31
+//公共方法模块调用
+@import "../modules/common-modules";
+//公共变量引用
+@import "../variables/_variables";
+//图标标签
+@import "../../components/_iconModule";
+.fixedHeader {
+    position: fixed;
+    top: 0;
+    z-index: 6;
+    width: 100%;
+}
+
+.yd-indexHeader {
+    background-color: #fff;
+    text-align: center;
+    padding: 0 rem(15px);
+    height: rem(64px);
+    border-bottom: 1px solid #d7dbde;
+    overflow: hidden;
+    position: relative;
+    h1 {
+        font-size: rem(18px);
+        font-weight: 400;
+        color: #555;
+        line-height: rem(64px);
+        font-weight: normal;
+    }
+    a {
+        display: inline-block;
+        vertical-align: middle;
+        line-height: rem(64px);
+        outline: medium;
+    }
+    .yd-indexHeaderItem {
+        height: 100%;
+        display: inline-block;
+        vertical-align: top;
+        line-height: rem(88px);
+        white-space: nowrap;
+    }
+    .yd-indexHeaderItem:nth-last-child(1) {
+        float: right;
+    }
+    .yd-indexHeaderItem:nth-child(1) {
+        float: left;
+    }
+    .yd-indexHeaderItem:nth-child(2) {
+        position: absolute;
+        left: 50%;
+            transform: translateX(-50%);
+    }
+}
+
+.yd-indexHeaderItem {
+    &:nth-child(1) {
+        a {
+            display: block;
+            height: 4rem;
+            position: relative;
+            img {
+                width: rem(19px);
+                height: rem(19px);
+                vertical-align: middle;
+
+            }
+        }
+    }
+    &:nth-last-child(1) a{
+        color: #73859E;
+        font-size: rem(17px);
+        vertical-align: top;
+    }
+}
+
+
+
+
+
+/*h5头部*/
+.ydAppDown{
+    position: absolute;
+    right: 3rem;
+    top: 0;
+    z-index: 2;
+    font-size: rem(15px);
+    color: #73859e;
+    line-height:2.75rem;
+}
+.icon-search {
+    @extend %icon-search;
+    vertical-align: middle;
+}

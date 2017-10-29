@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>Dashboard, Free HTML5 Admin Template</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/templatemo_main.css">
+    <link rel="stylesheet" href="../css/switch-ui.css">
+    <link rel="stylesheet" href="../css/platform.css" />
+    <!--
+    Dashboard Template
+    http://www.templatemo.com/preview/templatemo_415_dashboard
+    -->
+</head>
+<body>
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <div class="logo"><h1>甘特尔山国际酒店</h1></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+</div>
+<div class="template-page-wrapper">
+    <div class="navbar-collapse collapse templatemo-sidebar">
+        <ul class="templatemo-sidebar-menu">
+            <li>
+                <div class="row" style="margin: 0 auto;">
+                    <div class="col-lg-10" style="border-radius: 50%">
+                        <a href="#" class="thumbnail" style="border-radius: 50%">
+                            <img style="border-radius: 50%" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1507751416212&amp;di=09e0ce7f00fbe7c8da3750d6d5def98b&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.sc115.com%2Fuploads%2Fsc%2Fjpgs%2F1507%2Fapic12948_sc115.com.jpg" alt="...">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li class="active"><a href="../index.html"><i class="fa fa-home"></i>房间管理</a></li>
+            <li class="sub open">
+                <a href="javascript:;">
+                    <i class="fa fa fa-users"></i>客户管理 <div class="pull-right"><span class="caret"></span></div>
+                </a>
+                <ul class="templatemo-submenu">
+                    <li><a href="edit_user.html"><i class="fa fa fa-users"></i>酒店预订</a></li>
+                    <li class="active"><a href="#"><i class="fa fa fa-users"></i>加盟合作</a></li>
+                </ul>
+            </li>
+            <li class="sub">
+                <a href="javascript:;">
+                    <i class="fa fa-map-marker"></i>网站管理 <div class="pull-right"><span class="caret"></span></div>
+                </a>
+                <ul class="templatemo-submenu">
+                    <li><i class="icon-plus-sign-alt"></i><a href="edit_banner.html">主位设置</a></li>
+                    <li><a href="service.html">特色服务</a></li>
+                    <li><a href="circum.html">周边景点</a></li>
+                    <li><a href="business.html">主营业务</a></li>
+                </ul>
+            </li>
+            <!--<li><a href="data-visualization.html"><i class="fa fa-cubes"></i><span class="badge pull-right">9</span>Data Visualization</a></li>
+            <li><a href="maps.html"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>Maps</a></li>
+            <li><a href="tables.html"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>Manage Users</a></li>
+            <li><a href="preferences.html"><i class="fa fa-cog"></i>Preferences</a></li>-->
+            <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+        </ul>
+    </div><!--/.navbar-collapse -->
+
+    <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+            <ol class="breadcrumb">
+                <li><a href="#">客户管理</a></li>
+                <li class="active">加盟合作</li>
+            </ol>
+            <h1>加盟合作</h1>
+            <p>以下是加盟合作客户的信息</p>
+
+            <!--<div class="row margin-bottom-30">
+                <div class="col-md-12">
+                    <ul class="nav nav-pills">
+                        <li class="active"><button type="submit" class="btn btn-primary">查询</button></li>
+                        <li style="margin-left: 10px;"><input type="text" class="form-control" id="firstName" ></li>
+                    </ul>
+                </div>
+            </div>-->
+            <script   id="tpl-user-info" type="text/x-handlebars-template">
+                {{#each list}}
+                <tr>
+                    <td>{{franName}}</td>
+                    <td>{{franPhone}}</td>
+                    <td>{{franEmail}}</td>
+                    <td>{{cardType}}</td>
+                    <td>{{operateContent}}</td>
+                </tr>
+                {{/each}}
+            </script>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="btn-group pull-right" id="templatemo_sort_btn">
+                        <button type="button" class="btn btn-default">Sort by</button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">First Name</a></li>
+                            <li><a href="#">Last Name</a></li>
+                            <li><a href="#">Username</a></li>
+                        </ul>
+                    </div>
+                    <div class="table-responsive">
+                    	<h4 class="margin-bottom-15">以下是所有加盟合作客户的信息</h4>
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                            <tr>
+                                <th class="text-center">姓名</th>
+                                <th class="text-center">电话</th>
+                                <th class="text-center">电子信箱</th>
+                                <th class="text-center col-lg-3">合作意向</th>
+                                <th class="text-center">其他信息</th>
+                            </tr>
+                            </thead>
+                            <tbody class="ev-room-list">
+                            <tr>
+                                <td>John</td>
+                                <td>14578987547</td>
+                                <td>qwedrf@qq.com</td>
+                                <td>dsdddd</td>
+                                <td>12345678</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="col-md-12 page-info">
+                    	<ul class="pagination">
+	                        <li class="disabled"><a href="#">&laquo;</a></li>
+	                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">&raquo;</a></li>
+	                    </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Are you sure you want to sign out?</h4>
+                </div>
+                <div class="modal-footer">
+                    <a href="/sign-in.html" class="btn btn-primary">Yes</a>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="templatemo-footer">
+        <div class="templatemo-copyright">
+            <p>Copyright &copy; 2017 The Country Comfort</p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="/js/thirdParty/jquery/jquery.json-2.4.js"></script>
+<script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/Chart.min.js"></script>
+<script src="../js/templatemo_script.js"></script>
+<script src="../js/part_in.js"></script>
+</body>
+</html>

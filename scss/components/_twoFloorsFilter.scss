@@ -1,0 +1,231 @@
+@charset "UTF-8";
+//二级筛选列表组件
+//Created by qiangkailiang on 2016/08/13
+//公共方法模块调用
+@import "../../modules/common-modules";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+.yd-headFilterBox {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+}
+.contentInner{
+    position: relative;
+}
+//组件1 总筛选项目navbar
+.yd-typeFilterNavbar {
+    background-color: #fff;
+    padding: rem(15px) rem(80px);
+    box-sizing: border-box;
+    @include clearfix();
+    border: 1px solid #dfdfdf;
+    border-bottom: 0;
+    &Item {
+        float: left;
+        box-sizing: border-box;
+        width: 50%;
+        /*border-right: 1px solid #e4e9ed;*/
+        text-align: center;
+        font-size: rem(16px);
+        color: #555;
+        span {
+            vertical-align: middle;
+            position: relative;
+        }
+        span:after {
+            content: "";
+            @include triangle(rem(7.5px), #909090, down);
+            position: absolute;
+            top: 50%;
+            margin-left: rem(4px);
+            transition: all 0.2s linear;
+            -webkit-transition: all 0.2s linear;
+            transform:rotate(0deg);
+            -webkit-transform:rotate(0deg);
+            transform-origin:50% 15%;
+            -webkit-transform-origin:50% 15%;
+        }
+    }
+    &Item.active {
+        &>span {
+            color: #ffa800;
+            &:after {
+                @include triangle(rem(7.5px), #ffa800, down);
+                transform: rotate(-180deg);
+                -webkit-transform: rotate(-180deg);
+
+            }
+        }
+    }
+}
+
+//组件2 筛选组件体
+.yd-typeFilterMainMask {
+    // border-top: 1px solid #eee;
+    //background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transition: all 0.2s linear;
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.yd-indexHeader,
+.yd-typeFilterNavbar {
+    position: relative;
+    z-index: 2;
+}
+
+.yd-typeFilterMainMask.active {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+}
+
+.yd-twoFloorFilter {
+    background-color: #f8f8f8;
+    width: 100%;
+    max-height: rem(450px);
+    overflow: hidden;
+    &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: rem(10px);
+        background-color: #f4f4f4;
+        position: absolute;
+        bottom: rem(-10px);
+        border-top: 1px solid #eee;
+        border-bottom: 1px solid #eee;
+    }
+}
+
+.yd-twoFloorFirstFilter {
+    width: rem(130px);
+    border: 1px solid #eee;
+    box-sizing: border-box;
+    float: left;
+    .yd-twoFloorFirstFilterItem {
+        border-bottom: 1px solid #eee;
+        height: rem(100px);
+        line-height: rem(100px);
+        text-align: center;
+        font-size: rem(15px);
+        color: #666;
+        background-color: #f8f8f8;
+        box-sizing: border-box;
+        @include ellipsis();
+    }
+    .yd-twoFloorFirstFilterItem.selected {
+        background-color: #fff;
+        border-right: 1px solid #fff;
+        box-sizing: border-box;
+        margin-right: -1px;
+        & > span {
+            color: #3598db;
+        }
+    }
+}
+
+.yd-twoFloorSecondFilter {
+    padding: 0 rem(30px);
+    box-sizing: border-box;
+    text-align: left;
+    background-color: #fff;
+    // // max-height: 12rem;
+    // min-height: 23rem;
+    overflow: auto;
+    .yd-twoFloorSecondFilterBox {
+        display: none;
+        // height: 15rem;
+    }
+    .yd-twoFloorSecondFilterBox.selected {
+        display: block;
+    }
+    .yd-twoFloorSecondFilterItem {
+        padding: rem(29px) 0;
+        font-size: rem(15px);
+        line-height: 1.5;
+        color:#222;
+        max-height: 100%;
+    }
+    .yd-twoFloorSecondFilterItem.active {
+        color: #3598db;
+    }
+    .yd-choiceLine {
+        @include font-dpr(14px);
+        color: #b4b4b4;
+        text-align: center;
+        position: relative;
+        &:after,
+        &:before {
+            content: "";
+            width: rem(152px);
+            height: 1px;
+            background-color: #b4b4b4;
+            position: absolute;
+            top: 50%;
+            margin-top: rem(0.5px);
+        }
+        &:after {
+            right: 0;
+        }
+        &:before {
+            left: 0;
+        }
+        span:before,
+        span:after {
+            content: "";
+            display: inline-block;
+            vertical-align: middle;
+            @include square(rem(4px));
+            margin: 0 rem(16px);
+            background-color: #b4b4b4;
+        }
+    }
+}
+
+// 单层筛选项
+.yd-oneFloorFilterItem {
+    padding: rem(15px) rem(30px);
+    color: #333;
+    font-size: rem(15px);
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+    text-align: center;
+    &:active {
+        background-color: #eff4f8;
+    }
+}
+
+.yd-oneFloorFilterItem.active {
+    color: #ffa800;
+}
+
+// 遮罩层
+.yd-discoverMask{
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.5);
+    opacity: 0;
+    visibility: hidden;
+    transition:all 0.2s linear;
+    -webkit-transition:all 0.2s linear;
+    z-index: 3;
+}
+.yd-discoverMask.show{
+    opacity: 1;
+    visibility: visible;
+}
+

@@ -1,0 +1,124 @@
+@charset "UTF-8";
+//下拉单选框
+@import "../modules/_common-modules";
+//公共变量引用
+@import "../variables/_variables";
+.yd-selectorBarMask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    opacity: 0;
+    visibility: hidden;
+    transition:opacity 0.2s linear;
+    -webkit-transition:opacity 0.2s linear;
+}
+
+// .yd-selectorBar {
+//     position: absolute;
+//     bottom: 0;
+//     left: 0;
+//     right: 0;
+//     background-color: #EFF4F8;
+//     opacity: 0;
+//     transform: translateY(100%);
+//     -webkit-transform: translateY(100%);
+//     transition: all 0.2s linear;
+//     -webkit-transition: all 0.2s linear;
+// }
+.yd-selectorBarTitle {
+    border-bottom: 1px solid #eee;
+    height: rem(40px);
+    background-color: #fff;
+    text-align: center;
+    line-height: rem(40px);
+    h3 {
+        color: #73859e;
+        font-size: rem(14px);
+        font-weight: normal;
+        position: relative;
+        &:after {
+            content: "";
+            @include triangle(rem(9px), #d1d1d1, down);
+            position: absolute;
+            top: 50%;
+            margin-left: rem(5px);
+            transform-origin:50% 20%;
+        }
+    }
+    .yd-selectorBarTitleItem {
+        font-size: rem(15px);
+        display: inline-block;
+        &:nth-child(1) a {
+            color: #515c74;
+            text-align: left;
+        }
+        &:nth-child(2) h2 {
+            font-size: rem(16px);
+            color: #333;
+            font-weight: normal;
+            text-align: center;
+        }
+        &:nth-child(3) a {
+            color: #3598db;
+            text-align: right;
+        }
+    }
+}
+
+.yd-selectorBarList {
+    margin-bottom: rem(15px);
+    padding-left: rem(15px);
+    background-color: #fff;
+    &:nth-last-child(1) {
+        margin-bottom: 0;
+    }
+}
+
+.yd-selectorBarItem {
+    border-bottom: 1px solid $innerBorderColor;
+    height: rem(52.5px);
+    line-height: rem(52.5px);
+    box-sizing: border-box;
+    background-color: #fff;
+    .yd-selectorBarItemName {
+        margin-left: rem(10px);
+        font-size: rem(15px);
+        color: #222;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    .yd-selectorBarItemIcon {
+        @include circle(rem(20px), #fff);
+        border: 2px solid #b4b4b4;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.yd-selectorBarItem.selected {
+    .yd-selectorBarItemIcon {
+        @include circle(rem(20px), #fff);
+        border: 2px solid #ffa800;
+        display: inline-block;
+        vertical-align: middle;
+        background: transparent url('/image/personal/all_choose_yet@2x.png') center center no-repeat;
+        background-size: 100% 100%;
+    }
+}
+
+.yd-selectorBarMask.on {
+    visibility: visible;
+    opacity: 1;
+    .yd-selectorBar {
+        opacity: 1;
+        transform: translateY(0%);
+        -webkit-transform: translateY(0%);
+    }
+}
+.yd-selectorSecondBar{
+    display: none;
+}

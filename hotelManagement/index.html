@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+  <title>Dashboard, Free HTML5 Admin Template</title>
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="viewport" content="width=device-width">        
+  <link rel="stylesheet" href="css/templatemo_main.css">
+  <link rel="stylesheet" href="css/platform.css" />
+<!-- 
+Dashboard Template 
+http://www.templatemo.com/preview/templatemo_415_dashboard
+-->
+</head>
+<body>
+  <div class="navbar navbar-inverse" role="navigation">
+      <div class="navbar-header">
+        <div class="logo"><h1>甘特尔山国际酒店</h1></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button> 
+      </div>   
+    </div>
+    <div class="template-page-wrapper ev-container">
+      <div class="navbar-collapse collapse templatemo-sidebar">
+        <ul class="templatemo-sidebar-menu">
+        <li>
+          <div class="row" style="margin: 0 auto;">
+            <div class="col-lg-10" style="border-radius: 50%">
+                <a href="#" class="thumbnail" style="border-radius: 50%">
+                    <img style="border-radius: 50%" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1507751416212&amp;di=09e0ce7f00fbe7c8da3750d6d5def98b&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.sc115.com%2Fuploads%2Fsc%2Fjpgs%2F1507%2Fapic12948_sc115.com.jpg" alt="...">
+                </a>
+            </div>
+          </div>
+        </li>
+        <li class="active"><a href="#"><i class="fa fa-home"></i>房间管理</a></li>
+        <li class="sub open">
+          <a href="javascript:;">
+            <i class="fa fa fa-users"></i>客户管理 <div class="pull-right"><span class="caret"></span></div>
+          </a>
+          <ul class="templatemo-submenu">
+            <li><a href="html/edit_user.html"><i class="fa fa fa-users"></i>酒店预订</a></li>
+            <li><a href="#"><i class="fa fa fa-users"></i>加盟合作</a></li>
+          </ul>
+        </li>
+        <li class="sub">
+          <a href="javascript:;">
+            <i class="fa fa-map-marker"></i>网站管理 <div class="pull-right"><span class="caret"></span></div>
+          </a>
+          <ul class="templatemo-submenu">
+            <li><i class="icon-plus-sign-alt"></i><a href="html/edit_banner.html">主位设置</a></li>
+            <li><a href="html/service.html">特色服务</a></li>
+            <li><a href="html/circum.html">周边景点</a></li>
+            <li><a href="html/business.html">主营业务</a></li>
+          </ul>
+        </li>
+        <!--<li><a href="data-visualization.html"><i class="fa fa-cubes"></i><span class="badge pull-right">9</span>Data Visualization</a></li>
+        <li><a href="maps.html"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>Maps</a></li>
+        <li><a href="tables.html"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>Manage Users</a></li>
+        <li><a href="preferences.html"><i class="fa fa-cog"></i>Preferences</a></li>-->
+        <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+      </ul>
+      </div><!--/.navbar-collapse -->
+
+      <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+          <ol class="breadcrumb">
+            <li class="active">房间管理</li>
+          </ol>
+          <h1>房间管理</h1>
+          <p>酒店所有房间相关信息的管理</p>
+
+          <div class="row margin-bottom-30">
+            <div class="col-md-12">
+              <ul class="nav nav-pills">
+                <li><button type="submit" class="btn btn-primary ev-search-list">所有房间</button></li>
+                <li class="active"><button type="submit" class="btn btn-primary ev-search-room">查询</button></li>
+                <li><input type="text" class="form-control" id="firstName" ></li>
+                <li class="active"><button type="submit" class="btn btn-link">请输入房间编号！</button></li>
+                <li><button type="submit" class="btn btn-success" data-toggle="modal" data-target="#confirmModal" id="ev-add-room">新增房间</button></li>
+
+              </ul>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12">
+              <div class="btn-group pull-right" id="templatemo_sort_btn">
+                <button type="button" class="btn btn-default">Sort by</button>
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                  <span class="caret"></span>
+                  <span class="sr-only">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                  <li><a href="#">First Name</a></li>
+                  <li><a href="#">Last Name</a></li>
+                  <li><a href="#">Username</a></li>
+                </ul>
+              </div>
+              <script id="tpl-room-info" type="text/x-handlebars-template">
+                {{#each list}}
+                <tr>
+                  <td>{{roomId}}</td>
+                  <td>{{title}}</td>
+                  <td>{{filterRoomType roomType}}</td>
+                  <td>{{description}}</td>
+                  <td>{{money aud price}}</td>
+                  <td><a href="#" class="btn btn-success col-md-12">{{checkRoomState roomState}}</a></td>
+                  <td class="text-center">
+                    {{imgLen imgUrl}}
+                  </td>
+                  <td>{{serviceList service}}</td>
+                  <td><span   class="btn btn-link ev-edit-roomInfo"  data-toggle="modal" data-target="#confirmModal" data-index={{@index}} style="color:#5cb85c;">编辑</span><span   class="btn btn-link ev-delete-room"  data-index={{@index}}  style="color: #d9534f;">删除</span></td>
+                </tr>
+                {{/each}}
+              </script>
+              <div class="table-responsive">
+                <h4 class="margin-bottom-15">以下是所有酒店房间信息</h4>
+                <table class="table table-striped table-hover table-bordered">
+                  <thead>
+                  <tr>
+                    <th class="text-center">编号</th>
+                    <th class="text-center">名称</th>
+                    <th class="text-center">标准</th>
+                    <th class="text-center col-lg-3">描述</th>
+                    <th class="text-center">价格</th>
+                    <th class="text-center">状态</th>
+                    <th class="text-center">照片</th>
+                    <th class="text-center">服务</th>
+                    <th class="text-center">操作</th>
+                  </tr>
+                  </thead>
+                  <tbody class="ev-room-list">
+                  <!--<tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>John</td>
+                    <td>Henry</td>
+                    <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                    <td>$234</td>
+                    <td><a href="#" class="btn btn-success col-md-12">闲置</a></td>
+                    <td class="text-center">
+                      3
+                    </td>
+                    <td>服务1、服务2、服务2、服务2、服务2</td>
+                    <td><a href="#" class="btn btn-link" style="color:#5cb85c;">编辑</a><a href="#" class="btn btn-link"  style="color: #d9534f;">删除</a></td>
+                  </tr>-->
+                  </tbody>
+                </table>
+              </div>
+              <div class="col-md-12 page-info">
+                    	<ul class="pagination">
+	                        <li class="disabled"><a href="#">&laquo;</a></li>
+	                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+	                        <li><a href="#">&raquo;</a></li>
+	                    </ul>
+                    </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+              <h4 class="modal-title" id="myModalLabel">编辑房间信息</h4>
+            </div>
+            <div class="modal-body clearfix">
+              <form class="form-inline" role="form">
+                <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                  <label class="form-label">编号</label>
+                  <input type="text" class="form-control ev-roomId">
+                </div>
+                <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                  <label class="form-label">名称</label>
+                  <input type="text" class="form-control ev-roomName">
+                </div>
+                <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                  <label class="form-label">标准</label>
+                  <select class="selectpicker ev-roomType">
+                    <option value="0">标准间</option>
+                    <option value="1">家庭间</option>
+                    <option value="2">单人间</option>
+                  </select>
+                </div>
+                <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                  <label class="form-label">描述</label>
+                  <textarea class="form-control ev-roomDes" rows="3" name="textarea" style="resize: none;"></textarea>
+                </div>
+                <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                  <label class="form-label">币种</label>
+                  <select class="selectpicker ev-roomPriceType" >
+                    <option value="0">$</option>
+                    <option value="1">#</option>
+                    <option value="2">￥</option>
+                  </select>
+                </div>
+                <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                  <label class="form-label">价格</label>
+                  <input type="text" class="form-control ev-roomPrice">
+                </div>
+                <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+
+                  <label class="form-label">状态</label>
+                  <div class="btn-group" data-toggle="buttons">
+                    <label  class="btn btn-default ev-roomState">
+                      <input  type="radio" name="options"> 闲置
+                    </label>
+                    <label  class="btn btn-default ev-roomState">
+                      <input  type="radio" name="options"> 已预订
+                    </label>
+                    <label  class="btn btn-default ev-roomState">
+                      <input  type="radio" name="options"> 已入住
+                    </label>
+                  </div>
+                </div>
+                <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                  <label class="form-label">服务</label>
+                  <div class="form-inline btn-group ev-service" data-toggle="buttons">
+                    <div class="checkbox left">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="0" style="opacity: 0;">免费咖啡</label>
+                    </div>
+                    <div class="checkbox left">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="1" style="opacity: 0;">免费牛奶</label>
+                    </div>
+                    <div class="checkbox left">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="2" style="opacity: 0;">免费茶水</label>
+                    </div>
+                    <div class="checkbox left">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="3" style="opacity: 0;">吹风机</label>
+                    </div>
+                    <div class="checkbox left">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="4" style="opacity: 0;">空调</label>
+                    </div>
+                    <div class="checkbox left">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="5" style="opacity: 0;">冰箱</label>
+                    </div>
+                    <div class="checkbox left">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="6" style="opacity: 0;">电视</label>
+                    </div>
+                    <div class="checkbox left">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="7" style="opacity: 0;">免费wifi</label>
+                    </div>
+                    <div class="checkbox left">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="8" style="opacity: 0;">热水洗浴</label>
+                    </div>
+                    <div class="checkbox">
+                      <label  class="btn btn-default ev-roomService"><input type="checkbox"  name="options" value="9" style="opacity: 0;">房间打扫</label>
+                    </div>
+                  </div>
+                </div>
+	              <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+	                <label class="form-label">照片</label>
+	                <input type="file" class="form-control ev-uploadImg"  multiple accept="image/*" >
+	                <div class="row ev-postImage-container">
+	                  <!--<div class="col-md-6">
+	                    <a href="#" class="thumbnail">
+	                      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507751416212&di=09e0ce7f00fbe7c8da3750d6d5def98b&imgtype=0&src=http%3A%2F%2Fimg.sc115.com%2Fuploads%2Fsc%2Fjpgs%2F1507%2Fapic12948_sc115.com.jpg" alt="...">
+	                    </a>
+	                    <span class="close-icon">X</span>
+	                  </div>
+	                  <div class="col-md-6">
+	                    <a href="#" class="thumbnail">
+	                      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507751416212&di=09e0ce7f00fbe7c8da3750d6d5def98b&imgtype=0&src=http%3A%2F%2Fimg.sc115.com%2Fuploads%2Fsc%2Fjpgs%2F1507%2Fapic12948_sc115.com.jpg" alt="...">
+	                    </a>
+	                  </div>
+	                  <div class="col-md-6">
+	                    <a href="#" class="thumbnail">
+	                      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507751416212&di=09e0ce7f00fbe7c8da3750d6d5def98b&imgtype=0&src=http%3A%2F%2Fimg.sc115.com%2Fuploads%2Fsc%2Fjpgs%2F1507%2Fapic12948_sc115.com.jpg" alt="...">
+	                    </a>
+	                  </div>
+	                  <div class="col-md-6">
+	                    <a href="#" class="thumbnail">
+	                      <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507751416212&di=09e0ce7f00fbe7c8da3750d6d5def98b&imgtype=0&src=http%3A%2F%2Fimg.sc115.com%2Fuploads%2Fsc%2Fjpgs%2F1507%2Fapic12948_sc115.com.jpg" alt="...">
+	                    </a>
+	                  </div>-->
+	                </div>
+	              </div>
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-primary ev-submitInfo">确定</button>
+              <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="templatemo-footer">
+        <div class="templatemo-copyright">
+          <p>Copyright &copy; 2017 The Country Comfort</p>
+        </div>
+      </footer>
+    </div>
+  <div class="alert alert-warning">
+    <a href="#" class="close" data-dismiss="alert">
+      &times;
+    </a>
+    <strong>警告！</strong>您的网络连接有问题。
+  </div>
+    <script src="js/jquery.min.js"></script>
+  <script src="/js/thirdParty/jquery/jquery.json-2.4.js"></script>
+  <script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/Chart.min.js"></script>
+    <script src="js/templatemo_script.js"></script>
+    <script src="js/edit_room.js"></script>
+</body>
+</html>

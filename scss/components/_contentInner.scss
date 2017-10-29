@@ -1,0 +1,130 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../modules/_common-modules";
+//公共变量引用
+@import "../variables/_variables";
+
+.contentInner {
+    width: 750px;
+    position: relative;
+    margin: 0 auto;
+  /*margin-top:rem(16px);*/
+}
+@include query(){
+    .contentInner{
+        margin-top: 0;
+    }
+}
+.contentItem {
+    border: 1px solid #dfdfdf;
+    box-shadow: 1px 1px 1px #eee;
+    background-color: #fff;
+    font-size: rem(15px);
+    padding: 0 rem(15px);
+}
+//课程表
+.timetables{
+    border: 1px solid #e5e5e5;
+    box-shadow: 1px 1px 1px #eee;
+    background-color: #fff;
+    font-size: rem(15px);
+    padding: 0 0 0 rem(24px);
+}
+//系列课程
+.seriesCourses{
+    border: 1px solid #e5e5e5;
+    box-shadow: 1px 1px 1px #eee;
+    background-color: #fff;
+    font-size: rem(15px);
+//  padding: 0 0 0 rem(24px);
+    .bestItem{
+        margin-left: rem(25px);
+        width: 340px;
+    }
+}
+//添加更多课程
+.contentInnerMore {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-top: none;
+    box-sizing: border-box;
+    height: 55px;
+    p{
+        display: inline-block;
+        height: rem(27px);
+        margin-top: rem(13px);
+        vertical-align: middle;
+        font-size: rem(15px);
+        margin-left: rem(275px);
+        cursor: pointer;
+    }
+}
+//模块顶部标题样式
+.contentItemHeader{
+    height: 45px;
+    margin-top: rem(13px);
+    background: #fff;
+    border: 1px solid #e6eaed;
+    border-bottom: none;
+    
+    h2 {
+        font-size: 16px;
+        color: #909090;
+        font-weight: normal;
+        line-height: 45px;
+        margin-left: rem(24px);
+        
+        
+    }
+}
+
+
+@include query() {
+    .contentItem {
+       font-size: rem(18px);
+       &Header{
+           font-size: rem(15px);
+           
+       }
+    }
+    .contentItemHeader{
+        height: rem(40px);
+        margin-top: rem(13px);
+        background: #fff;
+        border: 1px solid #e6eaed;
+        border-bottom: none;
+        
+        h2 {
+            font-size: rem(15px);
+            color: #909090;
+            font-weight: normal;
+            margin-top: rem(10px);
+            margin-left: rem(12px);
+            
+        }
+    }
+    .seriesCourses{
+        border: 1px solid #e5e5e5;
+        box-shadow: 1px 1px 1px #eee;
+        background-color: #fff;
+        font-size: rem(15px);
+        
+        .bestItem{
+            width: 87%;
+        }
+    }
+    .contentInnerMore {
+        height: rem(40px);
+        p{
+            display: inline-block;
+            height: rem(27px);
+            margin-top: rem(13px);
+            vertical-align: middle;
+            font-size: rem(15px);
+            margin-left: rem(110px);
+            cursor: pointer;
+        }
+    }
+}
+

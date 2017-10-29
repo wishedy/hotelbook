@@ -1,0 +1,55 @@
+@charset "UTF-8";
+// 底部选择栏
+// Created by qiangkailiang on 2016/11/08
+// 功能库引入
+
+.yd-bottomSelectorBox {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.2s linear;
+    .yd-bottomSelector {
+        position: absolute;
+        bottom: rem(5px);
+        border-bottom: 1px solid #eee;
+        left: 0;
+        right: 0;
+        box-sizing: border-box;
+        padding: 0 rem(5px);
+        opacity: 0;
+        transform: translateY(100%);
+        transition: all 0.2s linear;
+    }
+    .yd-bottomSelectorItemBox {
+        border-radius: rem(5px);
+        overflow: hidden;
+    }
+    .yd-bottomSelectorItem {
+        text-align: center;
+        background-color: #fff;
+        color: #555;
+        font-size: rem(17px);
+        height: rem(55px);
+        line-height: rem(55px);
+    }
+    .yd-bottomSelectorItemBox.cancel {
+        margin-top: rem(5px);
+        .yd-bottomSelectorItem {
+            color: #2899e6;
+        }
+    }
+}
+
+.yd-bottomSelectorBox.on {
+    z-index: 5;
+    opacity: 1;
+    .yd-bottomSelector {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

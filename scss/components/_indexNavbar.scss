@@ -1,0 +1,98 @@
+@charset "UTF-8";
+//首页导航组件
+//Created by qiangkailiang on 2016/07/31
+//公共方法模块调用
+@import "../modules/common-modules";
+.yd-sortItems{
+    padding: rem(10px) rem(7.5px);
+    font-size: rem(14px);
+    box-sizing: border-box;
+    position: relative;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e4e9ed;
+    margin-top: rem(4px);
+    li{
+        padding:0 rem(7.5px);
+        color: #808080;
+        display:inline-block;
+        &.sortActive{
+            color: #3598db;
+        }
+    }
+    span{
+        color: #808080;
+        display: inline-block;
+        height: rem(12px);
+        overflow: hidden
+    }
+}
+.yd-searchNavbar {
+    box-sizing: border-box;
+    padding: rem(10px) rem(15px);
+    position: relative;
+    background-color: #f8f8f8;
+    font-size: rem(16px);
+    ul {
+        @include flex();
+        @include justify-content(space-between);
+        @include align-items(center);
+        li {
+            color: #666;
+        }
+        a {
+            @include unstyled-link();
+            color: #666;
+        }
+        .active a {
+            color: #3598db;
+            position: relative;
+            &:after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: rem(2px);
+                width: 100%;
+                background-color: #3598db;
+                bottom: rem(-15px);
+            }
+        }
+    }
+}
+
+// .yd-newActive {
+//     position: absolute;
+//     left: 0;
+//     top: 0;
+//     right: 0;
+//     bottom: 0;
+//     background-color: #2899e6;
+//     opacity: 0;
+//     text-align: center;
+//     color: #fff;
+//     visibility: hidden;
+//     transition: all 0.3s linear;
+//     -webkit-transition: all 0.3s linear;
+//     @include font-dpr(14px);
+//     height: 100%;
+//     z-index: 2;
+//     margin-top: rem(80px);
+//     &:before {
+//         content: "";
+//         height: 100%;
+//         display: inline-block;
+//         vertical-align: middle;
+//     }
+//     span {
+//         vertical-align: middle;
+//         display: inline-block;
+//     }
+//     strong {
+//         font-weight: normal;
+//         color: #fef5ad;
+//     }
+// }
+
+.show {
+    opacity: .9;
+    visibility: visible;
+}

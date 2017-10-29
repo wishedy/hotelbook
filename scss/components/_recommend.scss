@@ -1,0 +1,56 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../modules/_common-modules";
+//展开收起
+@import "common/_updown";
+
+/*推荐部分左右滑动*/
+.yd_c_bg{
+  position: relative;
+}
+.slideLeft{
+  position: absolute;
+  left:2px;
+  top: 90px;
+  z-index: 5;
+  display: inline-block;
+  background: url("/image/classes/course/left_normal.png") no-repeat;
+  height:70px;
+  width:36px;
+}
+.slideRight{
+  position: absolute;
+  right: 0;
+  top: 90px;
+  z-index: 5;
+  display: inline-block;
+  background: url("/image/classes/course/right_normal.png") no-repeat;
+  height:70px;
+  width:36px;
+}
+.slideLeft{
+  &.activation{
+    position: absolute;
+    left: 0;
+    top: 90px;
+    z-index: 5;
+    display: inline-block;
+    background: url("/image/classes/course/left.png") no-repeat;
+    height:70px;
+    width:70px;
+  }
+}
+
+.slideRight{
+  &.activation {
+    position: absolute;
+    right: 0;
+    top: 90px;
+    z-index: 5;
+    display: inline-block;
+    background: url("/image/classes/course/right.png") no-repeat;
+    height: 70px;
+    width: 70px;
+  }
+}

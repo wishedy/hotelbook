@@ -1,0 +1,16 @@
+@charset "UTF-8";
+//公共方法模块调用
+@import "../../modules/_common-modules";
+
+/*pc端内容区背景*/
+.yd_t_bg {
+  background: url(/image/classes/department/bj01.png) no-repeat;
+  height: 7px;
+}
+.yd_c_bg {
+  background: url(/image/classes/department/bj02.png) repeat-y;
+}
+.yd_b_bg {
+  background: url(/image/classes/department/bj03.png) no-repeat;
+  height: 4px;
+}

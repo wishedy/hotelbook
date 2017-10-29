@@ -1,0 +1,71 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../../modules/_common-modules";
+/*展开*/
+.icon-upMore{
+  float: right;
+  font-size: rem(14px);
+  color: #73859e;
+  cursor: pointer;
+  margin-bottom:rem(20px);
+  i{
+    width: rem(13px);
+    height: rem(13px);
+    display: inline-block;
+    margin-right: rem(5px);
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-2px -70px;
+    vertical-align: middle;
+  }
+}
+
+/*收起*/
+.packUp{
+  float: right;
+  @include cursor();
+  i{
+    width: .8125rem;
+    height: .8125rem;
+    display: inline-block;
+    margin-right: .3125rem;
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-25px -70px;
+    vertical-align: middle;
+  }
+  span{
+    font-size:rem(14px);
+    color: #73859e;
+  }
+}
+
+.coursePic-right{
+  display: none;
+}
+
+@include query(){
+  .icon-upMore{
+    i{
+      width: rem(13px);
+      height: rem(13px);
+      display: inline-block;
+      margin-right: rem(5px);
+      background: url("/image/classes/department/dropdown.png") no-repeat;
+      vertical-align: middle;
+      background-size: cover;
+    }
+  }
+  .packUp{
+    i{
+      width: .8125rem;
+      height: .8125rem;
+      display: inline-block;
+      margin-right: .3125rem;
+      background: url("/image/classes/department/pack_up.png") no-repeat;
+      vertical-align: middle;
+      background-size: contain;
+    }
+  }
+}

@@ -1,0 +1,647 @@
+@charset "UTF-8";
+//图标模块
+// 推荐资源用户
+%icon-person {
+    content: "";
+    width: rem(26px);
+    height: rem(25px);
+    display: block;
+    margin: 0 auto;
+    background: url("/image/person.png") center center no-repeat;
+    background-size: cover;
+}
+
+// 关注数
+%icon-follower {
+    content: "";
+    width: rem(18px);
+    height: rem(15px);
+    display: inline-block;
+    margin-right: rem(10px);
+    background: url("/image/follower.png") center center no-repeat;
+    background-size: cover;
+}
+
+// 评论数
+%icon-comment {
+    width: rem(16px);
+    height: rem(15px);
+    display: inline-block;
+    margin-right: rem(5px);
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-307px 0;
+    vertical-align: middle;
+}
+
+// 下载
+%icon-load {
+    width: rem(16px);
+    height: rem(16px);
+    display: inline-block;
+    margin-right: rem(5px);
+    background: url('/image/index/icon_download.png') center center no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+
+// 搜索
+%icon-search {
+  width: rem(18px);
+  height: rem(19px);
+  display: inline-block;
+  margin-right: rem(10px);
+  background-image: url('/image/sprite/common.png');
+  background-repeat: no-repeat;
+  background-position:-88px 0;
+  cursor: pointer;
+}
+
+// 消息
+%icon-message {
+  width: rem(26px);
+  height: rem(20px);
+  display: inline-block;
+  background-image: url('/image/sprite/common.png');
+  background-repeat: no-repeat;
+  background-position:-27px 0;
+  cursor: pointer;
+}
+// 首页
+%icon-home {
+  width: rem(27px);
+  height: rem(27px);
+  display: inline-block;
+  background-image: url('/image/sprite/common.png');
+  background-repeat: no-repeat;
+  background-position:0 0;
+  cursor: pointer;
+}
+// 反馈
+%icon-feedback {
+  width: rem(19px);
+  height: rem(23px);
+  display: inline-block;
+  background-image: url('/image/sprite/common.png');
+  background-repeat: no-repeat;
+  background-position:-53px 0;
+  cursor: pointer;
+}
+
+//邮箱图标
+%icon-mailbox {
+    content: "";
+    display: inline-block;
+    width: rem(18px);
+    height: rem(14px);
+    background: url('/image/icon_mail.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
+
+// 消息
+/*%icon-message {
+    content: "";
+    width: rem(19px);
+    height: rem(19px);
+    display: inline-block;
+    margin-right: rem(6px);
+    background: url("/image/index/home_message.png") center center no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+}*/
+
+// 右方箭头
+%icon-rArrow {
+    width: rem(12px);
+    height: rem(12px);
+    display: inline-block;
+    margin-right: rem(15px);
+    margin-top: rem(2px);
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-1px -31px;
+    vertical-align: middle;
+}
+// 左向箭头
+%icon-leftArrow {
+    width: rem(12px);
+    height: rem(12px);
+    display: inline-block;
+    background: url("/image/index/course_list_more.png") center center no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+    transform:rotate(180deg);
+}
+
+
+// 返回
+%icon-return {
+  width: rem(19px);
+    width: 19px\9;
+  height: rem(19px);
+    height: 19px\9;
+  display: inline-block;
+  background: url("/image/personal/nav_back_black@2x.png") center center no-repeat;
+  background-size: cover;
+  vertical-align: middle;
+}
+//关注提醒
+%icon-msgFollow {
+    content: "";
+    display: inline-block;
+    width: rem(37px);
+    height: rem(37px);
+    background: url('/image/msg_follow.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: rem(24px);
+}
+
+//评论我的
+%icon-msgComment {
+    content: "";
+    display: inline-block;
+    width: rem(37px);
+    height: rem(37px);
+    background: url("/image/index/course_list_comments.png") center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: rem(24px);
+}
+
+//提醒谁看
+%icon-msgRemind {
+    content: "";
+    display: inline-block;
+    width: rem(37px);
+    height: rem(37px);
+    background: url('/image/msg_remind.png') center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: rem(24px);
+}
+
+//赞了我的
+%icon-msgLike {
+    content: "";
+    display: inline-block;
+    width: rem(37px);
+    height: rem(37px);
+    background: url('/image/msg_like.png') center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: rem(24px);
+}
+//动态资讯
+%icon-msgInformation {
+  content: "";
+  display: inline-block;
+  width: rem(37px);
+  height: rem(37px);
+  background: url('/image/message/zixun@2x.png') center center no-repeat;
+  background-size: contain;
+  vertical-align: middle;
+  margin-right: rem(24px);
+}
+
+//加入课程
+%icon-addClass {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(13px);
+    height: rem(13px);
+    background: url("/image/index/main_join class.png") center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: rem(6px);
+    margin-left: rem(10px);
+}
+
+//回到顶部
+%icon-toTop {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(21px);
+    height: rem(14px);
+    background-image: url('/image/sprite/common.png');
+    background-repeat: no-repeat;
+    background-position:-127px 0;
+    vertical-align: middle;
+    margin-top: rem(16px);
+    margin-left: rem(13px);
+}
+// 意见反馈
+%icon-suggestion{
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(22px);
+    height: rem(22px);
+    background-image: url('/image/sprite/common.png');
+    background-repeat: no-repeat;
+    background-position:-106px 0;
+    vertical-align: middle;
+
+}
+//添加系类课程
+%icon-addCourse {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(25px);
+    height: rem(25px);
+    box-sizing: border-box;
+    background: url('/image/index/course_list_add.png') center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-right: rem(5px);
+}
+
+//二维码
+%icon-code {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(16px);
+    height: rem(27px);
+    background-image: url('/image/sprite/common.png');
+    background-repeat: no-repeat;
+    background-position:-72px 0;
+    vertical-align: middle;
+    margin-left: rem(16px);
+    margin-top: rem(10px);
+}
+
+//分享
+%icon-share {
+    float: left;
+    width: rem(22px);
+    height: rem(22px);
+    background-image: url('/image/sprite/common.png');
+    background-repeat: no-repeat;
+    background-position:-148px 0;
+    margin-left: rem(13px);
+    margin-top: rem(14px);
+}
+
+
+//微信
+%icon-weixin {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(50px);
+    height: rem(29px);
+    background: url('/image/index/share_weixin.png') center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-bottom: rem(11px);
+}
+
+//qq
+%icon-qq {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(50px);
+    height: rem(29px);
+    background: url('/image/index/share_qq.png') center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-bottom: rem(11px);
+}
+
+//qq空间
+%icon-zone {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(50px);
+    height: rem(29px);
+    background: url('/image/index/share_qqzone.png') center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-bottom: rem(11px);
+}
+//微博
+%icon-weibo {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(50px);
+    height: rem(29px);
+    background: url('/image/index/share_wb.png') center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-bottom: rem(11px);
+}
+
+//链接
+%icon-link {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(50px);
+    height: rem(30px);
+    background: url('/image/index/share_link.png') center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-bottom: rem(11px);
+}
+
+//邮箱
+%icon-email {
+    content: "";
+    display: inline-block;
+    float: left;
+    width: rem(50px);
+    height: rem(30px);
+    background: url('/image/index/share_me.png') center center no-repeat;
+    background-size: contain;
+    vertical-align: middle;
+    margin-bottom: rem(11px);
+}
+
+
+// 我的 完善简介
+%icon-introPerfect {
+    content: "";
+    display: inline-block;
+    width: rem(11px);
+    width: 11px;
+    height: rem(11px);
+    height: 11px;
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-134px -31px;
+    vertical-align: middle;
+    margin-right: rem(5px);
+    margin-right: 5px;
+}
+
+
+// 我的 设置
+%icon-personalConfig {
+    display: inline-block;
+    width: rem(19px);
+    width: 19px;
+    height: rem(19px);
+    height: 19px;
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-153px -31px;
+    vertical-align: middle;
+}
+
+// 我的 错题本
+%icon-personalWrong {
+    content: "";
+    display: inline-block;
+    width: rem(18px);
+    width: 18px;
+    height: rem(21px);
+    height: 21px;
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-62px -31px;
+    vertical-align: middle;
+    margin-right: rem(15px);
+    margin-right: 15px;
+}
+
+// 我的 消息
+%icon-personalMsg {
+    content: "";
+    display: inline-block;
+    width: rem(24px);
+    width: 24px;
+    height: rem(24px);
+    height: 24px;
+    background: url('/image/personal/icon_message_def@2x.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: rem(15px);
+    margin-right: 15px;
+}
+
+// 我的 讨论
+%icon-personalDiscuss {
+    content: "";
+    display: inline-block;
+    width: rem(24px);
+    width: 24px;
+    height: rem(24px);
+    height: 24px;
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-82px -31px;
+    vertical-align: middle;
+    margin-right: rem(15px);
+    margin-right: 15px;
+}
+
+// 我的 收藏
+%icon-personalCollect {
+    content: "";
+    display: inline-block;
+    width: rem(24px);
+    width: 24px;
+    height: rem(24px);
+    height: 24px;
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-107px -31px;
+    vertical-align: middle;
+    margin-right: rem(15px);
+    margin-right: 15px;
+}
+
+// 我的 历史记录
+%icon-personalHistory {
+    content: "";
+    display: inline-block;
+    width: rem(24px);
+    width: 24px;
+    height: rem(24px);
+    height: 24px;
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-38px -31px;
+    vertical-align: middle;
+    margin-right: rem(15px);
+    margin-right: 15px;
+}
+
+// vip图标
+%icon-vip {
+    display: inline-block;
+    width: rem(15px);
+    width: 15px;
+    height: rem(12px);
+
+    height: 12px;
+    background: url('/image/personal/mark_vip.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-left: rem(5px);
+}
+
+// 下拉箭头
+%icon-downArrow {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    width: rem(12px);
+    height: 12px;
+    height: rem(12px);
+    background: url('/image/personal/Nav_discuss_dropdown@2x.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
+
+// 右向箭头
+%icon-rightArrow {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    width: rem(6px);
+    height: 15px;
+    height: rem(15px);
+    background: url('/image/personal/list_forward@2x.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+}
+
+
+// 资料编辑
+%icon-msgConfig {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    width: rem(15px);
+    height: 15px;
+    height: rem(15px);
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-293px -31px;
+    vertical-align: middle;
+    margin-right: rem(5px);
+}
+
+// 添加图标
+%icon-add {
+    content: "";
+    display: inline-block;
+    width: 13px;
+    width: rem(13px);
+    height: 13px;
+    height: rem(13px);
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-334px -31px;
+    vertical-align: middle;
+    margin-right: rem(5px);
+}
+
+// 搜索图标
+%icon-searchMark {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    width: rem(15px);
+    height: 15px;
+    height: rem(15px);
+    background: url('/image/personal/Nav_search@2x.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: rem(6px);
+}
+
+// 他人主页返回
+%icon-whiteRightArrow {
+    content: "";
+    display: inline-block;
+    width: 19px;
+    width: rem(19px);
+    height: 19px;
+    height: rem(19px);
+    background: url('/image/personal/Nav_back_white@2x.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: rem(6px);
+}
+
+// 消息 讨论
+%icon-msgDiscuss {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    width: rem(35px);
+    height: 35px;
+    height: rem(35px);
+    background: url('/image/message/message_discuss.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: rem(12px);
+}
+
+// 消息 赞
+%icon-msgLike {
+    content: "";
+    display: inline-block;
+    width: 35px;
+    width: rem(35px);
+    height: 35px;
+    height: rem(35px);
+    background: url('/image/message/message_praise.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: rem(12px);
+}
+
+// 系统消息
+%icon-system {
+    content: "";
+    display: inline-block;
+    width: 19px;
+    width: rem(19px);
+    height: 19px;
+    height: rem(19px);
+    background-image: url('/image/sprite/icon.png');
+    background-repeat: no-repeat;
+    background-position:-221px -31px;
+    vertical-align: middle;
+    margin-right: rem(6px);
+}
+
+// 消息 条目箭头
+%icon-msgItemArrow {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    width: rem(15px);
+    height: 15px;
+    height: rem(15px);
+    background: url('/image/message/system_list_forward.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: rem(6px);
+}
+
+// 消息通知 分享
+%icon-msgNoticeShare{
+    content: "";
+    display: inline-block;
+    width: 19px;
+    width: rem(19px);
+    height: 19px;
+    height: rem(19px);
+    background: url('/image/message/nav_share.png') center center no-repeat;
+    background-size: 100%;
+    vertical-align: middle;
+    margin-right: rem(6px);
+}

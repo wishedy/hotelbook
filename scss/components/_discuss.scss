@@ -1,0 +1,577 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../modules/_common-modules";
+//展开收起
+@import "common/_updown";
+
+.exercise-discuss{
+  max-height:75%;
+  overflow: auto;
+  text-align: left;
+  //display: inline-block;
+}
+/*讨论*/
+.lucency{
+  filter:alpha(opacity=0);
+  -moz-opacity:0;
+  -khtml-opacity: 0;
+  opacity: 0;
+}
+
+.discuss-content{
+  .discussAll_title{
+    border:solid #eee 1px;
+    height: rem(44px);
+    line-height: rem(44px);
+    .all_text{
+      float: left;
+      font-size:rem(14px);
+      color:#808080;
+    }
+    ul{
+      position: relative;
+      border:solid 1px #dfdfdf;
+      background: #f4f4f4;
+      width: rem(85px);
+      height: rem(25px);
+      line-height: rem(25px);
+      font-size: rem(11px);
+      color: #909090;
+      float: right;
+      border-radius: 3rem;
+      margin: rem(9px) 0 0 0;
+      li{
+        float: left;
+        width: rem(38px);
+        text-align: center;
+        @include cursor();
+      }
+      .selected{
+        position: relative;
+        border:solid 1px #909090;
+        background: #fff;
+        color: #555;
+        border-radius: 3rem;
+        float: left;
+        width: rem(44px);
+      }
+    }
+  }
+  .discussList{
+    li{
+      padding: rem(16px) 0 rem(16px) 0;
+      border-bottom:solid 1px #eee;
+      color: #333;
+      font-size: rem(17px);
+      line-height: rem(27px);
+      @include cursor();
+      .clear{
+        margin-top: 6px;
+      }
+      .checkDiscuss{
+        float: left;
+        color: #73859e;
+        font-size: rem(14px);
+        cursor: pointer;
+      }
+      .discussDelete{
+        float: left;
+        font-size: 14px;
+        color: #909090;
+        display: block;
+        margin-right: 10px;
+        cursor: pointer;
+        display: none;
+      }
+
+      .icon-upMore{
+        float: right;
+        margin-bottom: 0;
+      }
+      &.upmore{
+        .discussThink{
+          float: left;
+          width: 81%;
+          display:block;
+          white-space:nowrap;
+          overflow:hidden;
+          text-overflow:ellipsis;
+        }
+      }
+
+      .userTime{
+        margin-top:rem(3px);
+        .userCont{
+          float: left;
+          .userImg{
+            float: left;
+            height: rem(40px);
+            width: rem(40px);
+            background: #eee;
+            border-radius: 50%;
+            img{
+              position: relative;
+              width: rem(40px);
+              height: rem(40px);
+              border-radius: 50%;
+            }
+          }
+          dl{
+            float: left;
+            margin-left: .9375rem;
+            .list-name {
+              margin: 0 0 .3125rem 0;
+              font-size:rem(16px);
+              line-height: rem(16px);
+              color: #222;
+            }
+            dt{
+              font-size: .8125rem;
+              color: #808080;
+              line-height: rem(20px);
+            }
+          }
+        }
+        .time{
+          float: right;
+          color: #909090;
+          font-size: rem(13px);
+          cursor: default;
+        }
+      }
+      .previousDiscuss{
+        font-size: rem(15px);
+        color: #808080;
+        margin: rem(10px) 0;
+        border-left: solid rem(3px) #f4f4f4;
+        height: rem(15px);
+        line-height: rem(15px);
+        padding-left:rem(10px) ;
+        display:block;
+        white-space:nowrap;
+        overflow:hidden;
+        text-overflow:ellipsis;
+      }
+
+      .discussAds {
+        margin-top: rem(15px);
+        .oneAds {
+          padding: 0;
+          @include clearfix();
+          li {
+            border: none;
+            img {
+              width: rem(462px);
+              height: rem(348px);
+            }
+          }
+        }
+        .moreAds {
+          @include clearfix();
+          li {
+            padding: 0;
+            &:last-child{
+              margin:0;
+            }
+            border: none;
+            float: left;
+            margin-right:rem(8px);
+            //margin-right: 5px\9;
+            position: relative;
+            img {
+              width: rem(222px);
+              height: rem(222px);
+            }
+            .numImg {
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: 5;
+              background: #000;
+              filter: alpha(opacity=50); /*IE滤镜，透明度50%*/
+              -moz-opacity: 0.5; /*Firefox私有，透明度50%*/
+              opacity: 0.5; /*其他，透明度50%*/
+              width: rem(222px);
+              width: 222px\9;
+              height: rem(222px);
+              height: 222px\9;
+            }
+
+            i{
+              position: absolute;
+              left: 0;
+              top: 0;
+              z-index: 5;
+              width: rem(222px);
+              /*height: rem(222px);*/
+              color: #fff;
+              font-size: rem(18px);
+              text-align: center;
+              line-height: rem(222px);
+              &:after{
+                content: "";
+                display: inline-block;
+                width: rem(8px);
+                height: rem(12px);
+                background: url("/image/classes/course/course_list_more.png") right no-repeat;
+                background-size: cover;
+                vertical-align: middle;
+                margin-left:rem(5px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@include query(){
+  .discuss-content{
+    .discussList{
+      li{
+        .discussAds{
+          .oneAds{
+            li{
+              img{
+                width: rem(231px);
+                height:rem(174px);
+              }
+            }
+          }
+          .moreAds{
+            li{
+              margin-right:rem(5px);
+              img{
+                width: rem(111px);
+                height:rem(111px);
+              }
+              .numImg{
+                width: rem(111px);
+                height: rem(111px);
+              }
+
+
+              i{
+                line-height:rem(111px);
+                width: rem(111px);
+                text-align: center;
+                font-size: rem(15px);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+/*发表讨论*/
+/*.disscussFunction{
+  .aswer{
+    position: relative;
+    &:after{
+      content: '';
+      @include triangle(rem(20px),#fff,up);
+      position: absolute;
+      bottom: -20%;
+      right: 50%;
+    }
+    &:before{
+      content: '';
+      @include triangle(rem(20.5px),#000,up);
+      position: absolute;
+      bottom: -20%;
+      right: 50%;
+    }
+  }
+}*/
+.discussList{
+  .discussPublish{
+    width: 101.8%;
+    margin: 5px 0 0 -30px;
+  }
+}
+
+.discussPublish{
+  /*width: 101.3%;
+  margin: 5px 0 0 -28px;*/
+  background: #f5f7f6;
+  padding: 15px 24px 22px;
+  textarea{
+    border:solid 1px #dfdfdf;
+    padding:10px 15px;
+    width: 100%;
+    height: 90px;
+    position: relative;
+    resize: none;
+    box-sizing: border-box;
+    border-radius: 4px;
+    vertical-align: top;
+    color: #555;
+    font-size: 15px;
+    font-family: microsoft yahei;
+  }
+  .uploadImg{
+    border:solid 1px #dfdfdf;
+    border-top:none;
+    padding: 15px;
+    background: #fff;
+    position: relative;
+    @include clearfix();
+    li{
+      float: left;
+      margin-right:5px;
+      position: relative;
+      padding: 0;
+      border: none;
+      line-height: normal;
+      position: relative;
+      img{
+        width: 52px;
+        height: 52px;
+      }
+      button{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 5;
+        background: url("/image/classes/course/icon_commentDelImg.png") no-repeat;
+        width: 12px;
+        height: 12px;
+      }
+    }
+    .imgNum{
+      position: absolute;
+      right:13px;
+      bottom: 8px;
+      z-index: 3;
+      font-size: 12px;
+      color: #969696;
+      background: #fff;
+      border: 2px solid #fff;
+    }
+  }
+  .discussPublishImg{
+    @include clearfix();
+    margin-top:20px;
+  }
+  .uploadIcon{
+    font-size: 12px;
+    cursor: pointer;
+    color: #969696;
+    text-align: left;
+    position: relative;
+    float: left;
+    input{
+      cursor: pointer;
+      filter:alpha(opacity=0);    /*IE8支持*/
+    }
+    &:before{
+      content: '';
+      background-image: url('/image/sprite/icon.png');
+      background-repeat: no-repeat;
+      background-position:-55px -90px;
+      width: 16px;
+      height: 13px;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right:5px;
+    }
+  }
+  .uploadBut{
+    float: right;
+    .al-commentCancel {
+      color: #aaa;
+      font-size: 14px;
+      vertical-align: middle;
+      margin-right: 15px;
+      cursor: pointer;
+      margin-left: 10px;
+      margin-top: 5px;
+    }
+    .al-commentCommit {
+      position: relative;
+      width: 75px;
+      height: 30px;
+      font-size: 14px;
+      text-align: center;
+      line-height: 30px;
+      color: #fff;
+      background-color: #2899e6;
+      border-radius: 50px;
+      vertical-align: middle;
+      cursor: pointer;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*未登录*/
+.loginNone{
+  background: #f5f7f6;
+  padding: rem(55px) 0;
+  width: 753px;
+  margin-left: -30px;
+  .commLogin{
+     font-size: rem(15px);
+    color: #808080;
+    text-align: center;
+  }
+
+  .loginGo{
+    width: rem(159px);
+    height: rem(37px);
+    text-align: center;
+    line-height: rem(37px);
+    border: solid 1px #546690;
+    border-radius: 3rem;
+    color: #546690;
+    font-size: rem(15px);
+    margin: rem(15px) auto 0;
+    @include cursor();
+  }
+}
+
+
+.disscussFunction{
+  float: right;
+  .aswer{
+    float: left;
+    font-size: rem(13px);
+    color: #909090;
+    cursor: pointer;
+    margin-right: rem(30px);
+    i{
+      background-image: url('/image/sprite/icon.png');
+      background-repeat: no-repeat;
+      background-position:-37px -90px;
+      width: rem(15px);
+      height: rem(15px);
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: rem(4px);
+    }
+  }
+  .praise{
+    float: left;
+    font-size: rem(13px);
+    color: #909090;
+    cursor: pointer;
+    i {
+      background-image: url('/image/sprite/icon.png');
+      background-repeat: no-repeat;
+      background-position:-18px -90px;
+      width: rem(15px);
+      height: rem(15px);
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: rem(4px);
+    }
+    .selected{
+      background-image: url('/image/sprite/icon.png');
+      background-repeat: no-repeat;
+      background-position:0 -90px;
+    }
+  }
+}
+
+
+
+
+.qustionWrite{
+  width: 753px;
+  .discussPublish{
+    margin: 0;
+    background: #f5f7f6;
+    padding: 15px 30px 22px;
+    width: 693px;
+  }
+}
+.discussThink {
+  font-size: rem(16px);
+  color: #333;
+  line-height: rem(26px);
+  /*margin-top: 10px;*/
+}
+
+.queAnalysisIn .discuss-content .discussList li .discussPublish li{
+  padding: 0;
+  border: none;
+}
+
+.postImgloadingBg{
+  background: #31394c;
+  filter:alpha(opacity=70); /*IE滤镜，透明度50%*/
+  -moz-opacity:0.7; /*Firefox私有，透明度50%*/
+  opacity:0.7;/*其他，透明度50%*/
+  width: 52px;
+  height: 52px;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: 5;
+}
+.postImgloading{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+  background: url("/image/personal/loading_big@2x.png") no-repeat;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  margin: -10px;
+  animation: rotate 1.5s linear forwards infinite;
+}
+
+
+
+
+@include query(){
+  .disscussFunction{
+    .praise{
+      i {
+        background: url("/image/classes/course/main_discuss_praise.png") no-repeat;
+        background-size: contain;
+        width: rem(15px);
+        height: rem(15px);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: rem(4px);
+      }
+    }
+    .aswer{
+      i{
+        background: url("/image/classes/course/main_discuss_reply.png") no-repeat;
+        width: rem(15px);
+        height: rem(15px);
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: rem(4px);
+        background-size: cover;
+      }
+      &:after{
+        display: none;
+      }
+      &:before{
+        display: none;
+      }
+    }
+  }
+}

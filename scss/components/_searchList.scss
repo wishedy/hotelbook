@@ -1,0 +1,222 @@
+@charset "UTF-8";
+//搜索列表组件
+//Created by qiangkailiang on 2016/07/31
+//公共方法模块调用
+.yd-searchHead {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 5;
+}
+
+.yd-searchResult {
+    // margin-bottom: rem(20px);
+    background-color: #fff;
+}
+
+.yd-searchItemTitle {
+    font-size: rem(12px);
+    color: #808080;
+    height: rem(28px);
+    line-height: rem(28px);
+    border-bottom: 1px solid #dfdfdf;
+    padding-left: rem(15px);
+}
+
+.yd-searchResultItem em {
+    font-style: normal;
+    color: #3598db;
+}
+
+.yd-searchInputBar {
+    background-color: #f4f7f6;
+    padding: rem(10px);
+    box-sizing: border-box;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    input {
+        -webkit-appearance: none;
+        height: rem(40px);
+        line-height: rem(40px);
+        padding: 0;
+        padding-left: rem(30px);
+        box-shadow: none;
+        border: 1px solid #eee;
+        background: #fff;
+        border-radius: rem(5000px);
+        box-sizing:border-box;
+        width: 100%;
+        box-sizing: border-box;
+        font-size: rem(12px);
+        color: #222;
+        font-family: "microsoft yahei";
+        vertical-align: middle;
+        overflow: visible;
+        transition: all 0.2s linear;
+        -webkit-transition: all 0.2s linear;
+        outline:medium;
+
+    }
+    input.focus{
+        width: 90%;
+    }
+
+    .yd-searchCancel.show {
+        display: inline-block;
+        color: #3598db !important;
+    }
+    input::-webkit-input-placeholder {
+        font-size: rem(15px);
+        color: #909090;
+        vertical-align: rem(-3px);
+        display: inline-block;
+        font-family: "microsoft yahei";
+
+    }
+    .icon-searchMark {
+        position: absolute;
+        left: rem(20px);
+        top: 50%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        display: inline-block;
+        margin-top: -0.15rem;
+    }
+    .yd-searchCancel {
+        @include font-dpr(15px);
+        color: #3598db !important;
+        margin-left: rem(25px);
+        vertical-align: middle;
+        display: none;
+        padding: 0;
+        .icon-searchCancel {
+            position: absolute;
+            left: 69%;
+            display: none;
+            &:before {
+                vertical-align: baseline;
+            }
+        }
+    }
+}
+
+.yd-searchTips {
+    border-bottom: 1px solid $outerBorderColor;
+    text-align: left;
+    @include font-dpr(13px);
+    color: #909090;
+    padding-left: rem(30px);
+    height: rem(50px);
+    line-height: rem(50px);
+    background-color: #fff;
+    .icon-backArrow:before {
+        transform: scale(0.7);
+        -webkit-transform: scale(0.7);
+    }
+}
+
+.yd-searchResultItem {
+    margin-left: rem(15px);
+    padding-right: rem(15px);
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    font-size: rem(15px);
+    color: #222;
+    height: rem(50px);
+    line-height: rem(50px);
+    display: block;
+    @include ellipsis();
+    cursor: pointer;
+  span{
+    color:#2899E6;
+  }
+}
+
+.yd-searchResultItem.selected {
+    background-color: #fbfbfb;
+    margin-left: 0;padding-left: rem(15px);
+}
+
+.yd-searchFailed {
+    margin-top: rem(70px);
+    text-align: center;
+    @include font-dpr(14px);
+    color: #5f6f8f;
+    a {
+        display: inline-block;
+        margin-top: rem(20px);
+        padding: rem(10px) rem(45px)
+    }
+}
+
+.yd-noResult {
+    margin: rem(200px) 0;
+}
+
+.yd-searchFocusMask {
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 3;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+
+.yd-searchFocusMaskShow {
+    opacity: 1;
+    visibility: visible;
+}
+
+.yd-searchHeadShow {
+    margin-top: rem(-97.5px)
+}
+
+// 获取焦点——头部隐藏
+.yd-searchHead {
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+}
+
+.yd-indexHeader .yd-selectNone a{
+    color:#909090;
+}
+.yd-indexHeader .yd-selectAllRight a{
+    color:#2899e6;
+}
+
+
+.yd-searchingNoResult{
+    text-align: center;
+    padding-bottom: rem(80px);
+    h3{
+        font-weight: normal;
+        color: #909090;
+        margin-top: rem(25px);
+        margin-bottom: rem(10px);
+    }
+    .btn-primary{
+        padding: rem(7.5px) rem(23px);
+    }
+}
+
+.yd-searchNoResult{
+    text-align: center;
+    padding-bottom: rem(80px);
+    h3{
+        font-weight: normal;
+        color: #909090;
+        margin-top: rem(25px);
+        margin-bottom: rem(10px);
+    }
+    p{
+        color: #2899e6;
+        font-size: rem(15px);
+    }
+}

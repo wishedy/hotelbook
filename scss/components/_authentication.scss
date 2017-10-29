@@ -1,0 +1,574 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../modules/_common-modules";
+@import "_tagSelectorBox";
+//公共变量引用
+@import "../variables/_variables";
+
+
+.authentication{
+  background: #f4f7f6;
+  overflow: auto;
+  .width{
+/*    width: 375px;*/
+    margin: 0 auto;
+    .title{
+      position: relative;
+      height: 54px;
+      line-height: rem(54px);
+      .title_text{
+        text-align: center;
+        color: #555;
+        font-size: rem(18px);
+        line-height: rem(54px);
+      }
+      .authNo{
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 5;
+        color: #ccc;
+        font-size: rem(17px);
+      }
+    }
+
+    .Jurisdiction{
+      background: #566ca0;
+      padding: rem(25px) 0 rem(25px) 0;
+      position: relative;
+      .authNone{
+        position: absolute;
+        right: 24px;
+        top:24px;
+        z-index: 3;
+        color: #fff;
+        font-size: 14px;
+        cursor: pointer;
+      }
+      .userNormal{
+        text-align: center;
+        width: rem(50px);
+        height: rem(50px);
+        margin: 0 auto;
+        padding:0 0 rem(20px) ;
+        img{
+          width: 100%;
+          height: 100%;
+
+
+        }
+      }
+      .rz-after{
+        color: #fff;
+        font-size: rem(15px);
+        text-align: center;
+      }
+    }
+    .rzInput{
+      /*margin-top:rem(20px);*/
+    }
+
+  }
+}
+
+
+
+/*pc垂直居中*/
+.authentication-out{
+  width: 100% !important;
+  height: 100% !important;
+}
+.authentication{
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  &:before{
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+  }
+  .width{
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.styleBorder{
+  border-bottom: solid 1px #ccc;
+
+}
+.authenticationStyle{
+  text-align: left;
+  @include clearfix() ;
+  /*margin-top:rem(25px) ;*/
+  .styleTitle{
+    font-size: rem(18px);
+    color: #808080;
+    line-height: rem(34px);
+    float: left;
+  }
+  .selectBorder{
+    width: 230px;
+    min-height: 34px;
+    line-height: rem(34px);
+    height: auto;
+    font-size: 15px;
+    padding-left: 10px;
+    border-radius: 3px;
+    border: 1px solid #dbdbdb;
+    float: left;
+    position: relative;
+  }
+  .authenticationList{
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px #c5ced6, -2px -2px 20px #c5ced6;
+    position: absolute;
+    z-index: 15;
+    left: 0;
+    top: 40px;
+    padding:rem(4px) rem(24px) rem(24px) rem(24px);
+    li{
+      font-size: rem(15px);
+      color: #333;
+      line-height: rem(15px);
+      margin-top:rem(20px);
+      cursor: default;
+    }
+  }
+  .pitchOn{
+    font-size: rem(20px);
+    color: #222;
+    line-height: rem(20px);
+    padding: 30px 0 20px 0;
+    border-bottom: solid 1px #eee;
+    &:before{
+      content: '';
+      margin-right: 15px;
+      width: rem(25px);
+      height: rem(25px);
+      display: inline-block;
+      background: url(/image/authority/authentication/auth_select.png) no-repeat;
+      background-size: cover;
+      vertical-align: middle;
+    }
+  }
+  .authenticationNum{
+    color: #808080;
+    font-size: rem(18px);
+  }
+  .uploadPhoto{
+    margin: rem(40px) 0 rem(50px) 0;
+    text-align: center;
+    .leftNormalImg{
+      position: relative;
+      float: left;
+      width: 45%;
+      .authenticationFile{
+        position: absolute;
+        top: 0;
+        z-index: 10;
+        font-size: 32px;
+        cursor: pointer;
+        right: 0;
+        filter:alpha(opacity=0); /*IE滤镜，透明度50%*/
+        -moz-opacity:0; /*Firefox私有，透明度50%*/
+        opacity:0;/*其他，透明度50%*/
+        outline: none;
+        width: 168px;
+        height:151px;
+      }
+      .againPopup{
+
+        .againPopupBg{
+          background: #31394c;
+          filter:alpha(opacity=60); /*IE滤镜，透明度50%*/
+          -moz-opacity:0.6; /*Firefox私有，透明度50%*/
+          opacity:0.6;/*其他，透明度50%*/
+          width: rem(167px);
+          height: rem(108px);
+          border-radius: rem(4px);
+          position: absolute;
+          top: 1px;
+          left:1px;
+          z-index: 5;
+
+        }
+        .againPopupText{
+          font-size: rem(18px);
+          color: #fff;
+          position: absolute;
+          top: 1px;
+          left:1px;
+          z-index: 5;
+          width: rem(166px);
+          text-align: center;
+          line-height: rem(108px);
+        }
+      }
+      img{
+        width: 100%;
+        margin-bottom: rem(20px);
+        height: rem(106px);
+        border: 2px dashed #98a3bc;
+        border-radius: 3px;
+      }
+    }
+    .rightNormalImg{
+      float: right;
+      width: 45%;
+      img{
+        width: 100%;
+        margin-bottom: rem(20px);
+      }
+    }
+  }
+}
+
+
+.errortipHeader{
+  width:100%;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  font-size: .875rem;
+  color: #f35555;
+  background: #ffefef;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  bottom: rem(-36px);
+  z-index: 11;
+  margin-left: -11.75rem;
+
+  &:before{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: .3125rem;
+    background: url(/image/authority/login/login_prompt.png) no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+  }
+}
+
+
+/*认证拒绝*/
+.refuseTitle{
+  font-size: rem(20px);
+  color: #546690;
+
+}
+.refuseText{
+  font-size: rem(18px);
+  color: #ff333333;
+  margin:rem(60px) auto rem(50px);
+  width: 80%;
+  line-height: rem(30px);
+  text-align: left;
+}
+.authenticationNone{
+  font-size: rem(16px);
+  color: #546690;
+  margin-top:rem(30px);
+  cursor: pointer;
+}
+.yd-tagSelectorBox{
+  text-align: left;
+  left: 80px;
+  top: 55px;
+}
+
+
+.checkboxXl{
+  overflow: auto;
+  height: rem(28px);
+  width: rem(280px);
+  @include clearfix();
+  li{
+    float: left;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    margin-top: 3px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "宋体";
+    display: inline-block;
+    cursor: pointer;
+    margin:0 6px 6px 0;
+    i {
+      font-style: normal;
+      margin-left: 10px;
+      font-family: "microsoft yahei";
+    }
+  }
+}
+
+.titleInput.overflow{
+  //height: auto;
+  padding: 10px 0 4px 0;
+  height: rem(40px);
+}
+
+.al-tagSelectorBox {
+  width: 350px;
+  height: auto;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 8px 8px 20px #c5ced6, -2px -2px 20px #c5ced6;
+  position: absolute;
+  z-index: 1;
+  left: 80px;
+  top: 55px;
+  text-align: left;
+  border: solid 1px #eee;
+  .al-tagSelectorBoxTitle {
+    font-size: 18px;
+    line-height: 18px;
+    color: #333;
+    padding: 20px 25px;
+    border-bottom: 1px solid #efefef;
+    .al-tagSelectorBoxCloseBtn {
+      float: right;
+      font-size: 15px;
+      color: #909090;
+      cursor: pointer;
+    }
+
+  }
+  .al-tagSelectorItem {
+    padding: 20px 25px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #efefef;
+  }
+  .al-tagSelectorList{
+    &:before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      width: 4px;
+      height: 4px;
+      background-color: #2899e6;
+      margin-right: 7px;
+      float: left;
+      margin-top:10px;
+    }
+    @include clearfix();
+    span {
+      margin-left: 0;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      font-size: 15px;
+      display: inline-block;
+      cursor: pointer;
+      color: #333;
+      padding: 5px 7px;
+      line-height: 15px;
+      float: left;
+    }
+    .active {
+      font-size: 15px;
+      //color: #3598db;
+      color: #CCCCCC;
+    }
+  }
+  .al-tagSelectorBoxFootBtn {
+    padding: 20px 18px;
+    /* button{
+       display: inline-block;
+       float: left;
+     }*/
+  }
+  .al-personalAdviceSubmit{
+    border-radius: 50px;
+    position: relative;
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #2899e6;
+    margin-right: 6px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .al-personalAdviceCancel {
+    color: #aaa;
+    cursor: pointer;
+  }
+}
+
+.technical{
+  display: inline-block;
+  vertical-align: middle;
+  line-height: rem(28px);
+  height: rem(28px);
+  width: rem(280px);
+  overflow: auto;
+}
+.checkboxXl{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.paddingBot{
+  //padding-bottom: rem(5px);
+  margin-top: rem(6px);
+  height: rem(28px);
+}
+
+.title-technical{
+  line-height: rem(54px);
+}
+.authentication-Style2 .styleTitle{
+  line-height: rem(36px);
+}
+.fileSuccess{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  width: rem(400px);
+  height: rem(200px);
+  border: 1px solid black;
+  color: #666666;
+  p{
+    padding: 50px 30px;
+    border-bottom: 1px solid black;
+    line-height: rem(30px);
+  }
+  button{
+    width: 100%;
+    text-align: center;
+    line-height: rem(30px);
+    vertical-align: middle;
+    color: blue;
+  }
+}
+.input-technical{
+  position: relative;
+  li{
+    position: relative;
+    list-style: none;
+    display: inline-block;
+    height: 26px;
+    line-height: 26px;
+    padding: 0 10px;
+    margin-top: 3px;
+    border: 1px solid #dbdbdb;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "宋体";
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 6px 6px 0;
+    i{
+      font-style: normal;
+      padding-left: 10px;
+      font-family: "microsoft yahei";
+    }
+  }
+}
+.input-base{
+  position: relative;
+}
+.set-down{
+  position: absolute;
+  left: rem(80px);
+  z-index: 20;
+  background-color: white;
+  border: 1px solid #dbdbdb;
+  cursor: default;
+  width: rem(350px);
+  padding: 10px 20px;
+  box-shadow: 8px 8px 20px #c5ced6,-2px -2px 20px #c5ced6;
+  header{
+    font-size: 18px;
+    line-height: 18px;
+    color: #333;
+    padding: 20px 25px;
+    border-bottom: 1px solid #efefef;
+    margin-bottom: 10px;
+    span{
+      float: right;
+      font-size: 15px;
+      color: #909090;
+      cursor: pointer;
+    }
+  }
+  li{
+    line-height: 30px;
+  }
+}
+
+
+.errortipHeader1{
+  width: 375px;
+  margin: auto;
+  left:0;
+  right: 0;
+  height: 2.1875rem;
+  line-height: 2.1875rem;
+  font-size: .875rem;
+  color: #f35555;
+  background: #ffefef;
+  text-align: center;
+  position: absolute;
+  //left: 50%;
+  //bottom: rem(-36px);
+  z-index: 11;
+  top:0;
+  //margin-left: -11.75rem;
+
+  &:before{
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    display: inline-block;
+    margin-right: .3125rem;
+    background: url(/image/authority/login/login_prompt.png) no-repeat;
+    background-size: cover;
+    vertical-align: middle;
+  }
+}
+.yd-loading1{
+  position: absolute;
+  width: rem(190px);
+  width: 190px\9;
+  height: rem(156px);
+  height: 156px\9;
+  left: 50%;
+  top: 50%;
+  margin-left: rem(-95px);
+  margin-left: -95px\9;
+  margin-top: rem(-78px);
+  margin-top: -78px\9;
+  z-index: 20;
+  background: rgb(0,0,0);
+  background: rgba(0,0,0,.8);
+  filter:alpha(opacity=80);
+  border-radius: 4px;
+  img{
+    margin-top: rem(16px);
+    margin-bottom: rem(15px);
+    animation: rotate 1.5s linear forwards infinite;
+    //@include animate(rotate, 1s, linear, infinite);
+  }
+  p{
+    color: white;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+
+.authentication{
+  .authCommonNonepadding{
+    padding-top: 0;
+  }
+}

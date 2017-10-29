@@ -1,0 +1,483 @@
+@charset "UTF-8";
+//表单组件
+//Created by qiangkailiang on 2016/07/31
+//公共方法模块调用
+@import "../modules/common-modules";
+//公共变量引用
+@import "../variables/_variables";
+
+.yd-tableModule {
+  /*margin-top: rem(10px);*/
+  margin-bottom: 10px;
+  background-color: #fff;
+  /*border-bottom: 1px solid #dfdfdf;*/
+  /*border: solid 1px #e3e8ed;*/
+  textarea {
+    background: none;
+    overflow-y: visible;
+    font-family: "microsoft yahei";
+    resize: none;
+    box-sizing: border-box;
+    width: 100%;
+    color: #333;
+    font-size: rem(16px);
+    line-height: rem(26px);
+    border: none;
+    outline: medium;
+    display: none;
+    min-height:150px;
+    border: solid 1px #eee;
+    border-radius: 3px;
+    padding: 5px 10px;
+  }
+}
+.yd-tableModuleItem {
+  /*margin: 0 rem(15px);*/
+  padding: rem(12px) 0 0;
+  position: relative;
+  box-sizing: border-box;
+  &:last-child{
+    padding-bottom: rem(25px);
+  }
+  &:nth-last-child(1) {
+    border-bottom: none;
+  }
+  a {
+    color: #555;
+  }
+  .icon-rightArrow {
+    float: right;
+    padding-right: rem(15px);
+  }
+  h3 {
+    font-size: rem(15px);
+    color: #666;
+    font-weight: normal;
+    display: inline-block;
+    width: 76px;
+    text-align: right;
+    line-height: 34px;
+    vertical-align: top;
+  }
+  span {
+    font-size: rem(15px);
+    color: #ccc;
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  p {
+    font-size: rem(13px);
+    color: #aaaaaa;
+  }
+}
+
+.yd-tableModuleItemInput {
+  font-size: rem(15px);
+  color: #ccc;
+  /*position: absolute;
+  left: rem(100px);
+  left:100px\9;*/
+  display: inline-block;
+  line-height: 30px;
+  margin-left: rem(20px);
+  margin-left: 20px\9;
+  width: 80%;
+  vertical-align: -webkit-baseline-middle;
+  span{
+    max-width:30rem;
+    display: inline;
+    vertical-align: middle;
+    /*@include ellipsis();
+    height: 30px\9;*/
+  }
+  a {
+    color: #aaaaaa;
+  }
+  & > input {
+    color: #222;
+    background: none;
+    font-family: "Microsoft Yahei";
+    padding: 0;
+    margin: 0;
+    width: 230px;
+    height: 34px;
+    line-height: 34px;
+    border: solid 1px #dbdbdb;
+    border-radius: 3px;
+    padding-left: 10px;
+  }
+  .yd-selectComplete {
+    font-size: rem(15px);
+    color: #333;
+  }
+}
+
+input::-ms-input-placeholder {
+  color: #ccc
+}
+
+input::-webkit-input-placeholder {
+  color: #ccc
+}
+.yd-tableModuleContent {
+  padding: 0 rem(24px);
+ /* border-bottom: 1px solid #dfdfdf;*/
+  position: relative;
+  p {
+    line-height: 1.75;
+    font-size: rem(15px);
+    color: #222222;
+  }
+  .yd-tableModuleContentText {
+    font-size: rem(17px);
+    color: #ccc;
+    margin-bottom: rem(26px);
+    display: block;
+    position: relative;
+    word-break: break-all;
+    .yd-contentShow {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+    }
+  }
+  .yd-pushInContentNum {
+    position: absolute;
+    font-size: rem(12px);
+    right: rem(15px);
+    bottom: rem(15px);
+    color: #cccccc;
+    font-style: normal;
+  }
+  .yd-timeRange {
+    color: #777777;
+    font-size: rem(13px);
+    vertical-align: middle;
+    display: inline-block;
+    margin: rem(15px) 0;
+    &:before {
+      content: "";
+      @include square(rem(4px));
+      background-color: #2899e6;
+      display: inline-block;
+      vertical-align: middle;
+      margin-right: rem(12px);
+    }
+  }
+  .yd-basicMsgTag {
+    margin-top: rem(20px);
+    button {
+      padding: rem(7.5px) rem(10px);
+      border: 1px solid #e0e2e8;
+      color: #777777;
+      font-size: rem(13px);
+      margin-right: rem(10px);
+    }
+  }
+}
+
+//添加工作经历
+.yd-personalMsgAdd {
+  @include font-dpr(14px);
+  color: #3598db;
+  text-align: center;
+  display: block;
+  height: rem(40px);
+  line-height: rem(40px);
+  &:before {
+    content: "+";
+    color: #3598db;
+    margin-right: rem(5px);
+    font-size: rem(20px);
+    display: inline-block;
+    vertical-align: bottom;
+  }
+}
+
+//信息修改图标——定位
+.yd-tableModuleContentConfigBtn {
+  position: absolute;
+  right: rem(15px);
+  top: rem(15px);
+}
+
+//select样式重置
+.yd-tableModuleSelect {
+  font-size: rem(17px);
+  color: #ccc;
+  display: inline-block;
+  margin-right: rem(10px);
+  select {
+    border: none;
+    background: none;
+    padding: 0;
+    margin: 0;
+    font-size: rem(15px);
+    color: #333;
+    font-family: "microsoft yahei";
+    display: inline-block;
+    vertical-align: middle;
+    padding-left: rem(10px);
+  }
+
+  .yd-dateSelector {
+    border-bottom: 1px solid #e4e9ed;
+    padding-bottom: rem(5px);
+  }
+}
+
+.yd-timeSelect {
+  height: 26px;
+  border-radius: 5px;
+  border: 1px solid #dbdbdb;
+  background-color: #f2f2f2;
+  background-image: -webkit-linear-gradient(bottom, #f2f2f2, #ffffff);
+  background-image: linear-gradient(to top, #f2f2f2, #ffffff);
+  display: inline-block;
+  position: relative;
+  -pie-background: linear-gradient(to bottom, #f2f2f2, #ffffff);
+}
+.yd-personalContentAdd {
+  text-align: center;
+  padding: rem(13px) 0;
+  border-bottom: 1px solid #eee;
+  a {
+    color: #73859E;
+    font-size: rem(15px);
+  }
+  span {
+    vertical-align: middle;
+  }
+}
+.yd-tableSexSelector {
+  margin-right: rem(40px);
+  font-size: rem(15px);
+  display: inline-block;
+  vertical-align: middle;
+  p {
+    color: #222;
+    cursor: pointer;
+    span {
+      vertical-align: middle;
+      font-size: rem(15px);
+    }
+    i {
+      display: inline-block;
+      vertical-align: middle;
+      position: relative;
+      overflow: hidden;
+      margin-right: rem(10px);
+      @include circle(rem(20px),
+              #fff);
+      box-sizing: border-box;
+      border: rem(1px) solid #73859e;
+    }
+  }
+}
+
+.timeArea {
+  p {
+    display: inline-block;
+    vertical-align: middle;
+    cursor: pointer;
+  }
+  .yd-personalMsgConfig {
+    color: #73859E;
+  }
+  .yd-personalMsgDelete {
+    color: #A3A7AA
+  }
+}
+
+.yd-tableSexSelector.on {
+  p {
+    i {
+      position: relative;
+      filter: "progid: DXImageTransform.Microsoft.AlphaImageLoader( src='/image/personal/all_choose_yet@2x.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='/image/personal/all_choose_yet@2x.png', sizingMethod='scale')";
+      background: transparent url('/image/personal/all_choose_yet@2x.png') center center no-repeat;
+      background-size: cover;
+      border: none;
+    }
+    span {
+      color: #222;
+    }
+    &:before {
+      filter: " progid: DXImageTransform.Microsoft.AlphaImageLoader( src='/image/personal/all_choose_yet@2x.png', sizingMethod='scale')";
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader( src='/image/personal/all_choose_yet@2x.png', sizingMethod='scale')";
+      background: transparent url('/image/personal/all_choose_yet@2x.png') center center no-repeat;
+      background-size: cover;
+      border: none;
+    }
+  }
+}
+
+.yd-tableModule.configOff {
+  .yd-tableSexSelector.on {
+    p:before {
+      background: transparent url('/image/personal/list_yet disable@2x.png') center center no-repeat;
+      background-size: 100%;
+      border: none;
+    }
+  }
+  .yd-tableSexSelector {
+    p:before {
+      border: rem(1px) solid #cccccc;
+    }
+  }
+  .yd-tableModuleItemInput {
+    span {
+      color: #333;
+    }
+  }
+}
+
+.yd-mainTextareaBox {
+  text-align: center;
+  & > article {
+    background-color: #fff;
+  }
+  textarea {
+    width: 100%;
+    resize: none;
+    height: 500px;
+    border: none;
+    box-sizing: border-box;
+    font-family: "microsoft yahei";
+    padding: rem(19px) rem(15px);
+    padding-bottom: 0;
+  }
+}
+
+.yd-inputNum {
+  color: #f35555;
+  font-size: rem(12px);
+  position: absolute;
+  right: rem(15px);
+  bottom: rem(15px);
+}
+
+.yd-saveBtnBox {
+  text-align: center;
+}
+
+select.selected {
+  color: #222;
+}
+
+// .yd-fixedTopToDownBox {
+//     position: fixed;
+//     width: 100%;
+//     top: 0;
+//     bottom: 0;
+//     right: 0;
+//     left: 0;
+//     background-color: rgba(0, 0, 0, 0.8);
+//     z-index: 111;
+//     opacity: 0;
+//     transform: translateY(-100%);
+//     transition: all 0.2s linear;
+//     text-align: center;
+//     &:before {
+//         content: "";
+//         display: inline-block;
+//         vertical-align: middle;
+//         height: 100%;
+//     }
+//     & > .yd-mainTextareaBox {
+//         display: inline-block;
+//         vertical-align: middle;
+//     }
+// }
+// .yd-fixedTopToDownBox.show {
+//     opacity: 1;
+//     transform: translateY(0%);
+// }
+.yd-tableItemContent {
+  padding: 0 rem(30px);
+  padding-bottom: rem(30px);
+  padding-left: 115px;
+}
+
+.yd-timeSelect span {
+  color: #222;
+  padding-right: rem(15px);
+}
+input[disabled="disabled"],
+select[disabled="disabled"] {
+  color: #333;
+}
+
+.Ev-selectDisable {
+  position: relative;
+  span {
+    color: #ccc;
+  }
+  select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+}
+.yd-detailedTableItem {
+  padding: 5px 24px 0; //设置页
+  margin: 0 -24px 0 -24px; //设置页
+  /*border-top: 1px solid #ecf0f2; //设置页
+  border-bottom: 1px solid #ecf0f2;*/
+  display: none;
+  span {
+    margin-left: 40px;
+  }
+  p {
+    width: 76px;
+    text-align: right;
+    height: 34px;
+    line-height: 34px;
+    white-space: nowrap;
+    font-size: 16px;
+    color: #222;
+    display: inline-block;
+    vertical-align: top;
+  }
+  input {
+    width: 230px;
+    height: 34px;
+    line-height: 34px;
+    font-family: "microsoft yahei";
+    font-size: 15px;
+    padding-left: 10px;
+    border-radius: 3px;
+    position: relative;
+    border: 1px solid #dbdbdb;
+  }
+}
+
+.yd-tableErrorTips {
+  font-size: 13px;
+  font-family: "宋体";
+  color: #f34b4b;
+  margin-left: 10px;
+  display: none;
+  width: auto !important;
+  vertical-align: middle;
+  span {
+    margin-left: 0;
+    vertical-align: middle;
+    color: #f34b4b;
+  }
+  i {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    float: none;
+    vertical-align: middle;
+    margin-right: 4px;
+    background: transparent url('//img10.allinmd.cn/v3/common/icon/error_tips.png') center center no-repeat;
+  }
+}
+
+.showIb {
+  display: inline-block !important;
+}
+

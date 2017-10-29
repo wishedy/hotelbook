@@ -1,0 +1,76 @@
+@charset "UTF-8";
+//内容区块 基本样式结构
+//公共方法模块调用
+@import "../modules/_common-modules";
+@import "../components/_tagSelectorBox";
+//公共变量引用
+@import "../variables/_variables";
+
+.answerAnalysis {
+  .answerATitle {
+    width: 83%;
+    margin: 0 auto;
+    background: url("/image/classes/course/answer_line.png") repeat-x 0 rem(30px);
+    text-align: center;
+    padding: rem(20px) 0;
+    span {
+      display: inline-block;
+      font-size: rem(15px);
+      line-height: rem(15px);
+      color: #909090;
+      padding: 0 rem(10px);
+      background: #fff;
+    }
+  }
+  .aswerDisplay {
+    font-size: rem(16px);
+    line-height: rem(16px);
+    margin: rem(18px) 0 rem(21px) 0;
+    .trueAswer {
+      color: #2cc17b;
+      margin-right: rem(40px);
+    }
+    .falseAswer {
+      color: #f35555;
+    }
+  }
+  .aAnalysis_text {
+    font-size: rem(15px);
+    line-height: rem(26px);
+    color: #555;
+    margin-bottom: rem(20px);
+    @include clearfix();
+  }
+  .knowledgePoint {
+    .title {
+      font-size: rem(15px);
+      line-height: rem(15px);
+      color: #808080;
+    }
+    .knowledgeList {
+      li {
+        padding: rem(10px) rem(13px);
+        margin: rem(15px) rem(10px) 0 0;
+        font-size: rem(14px);
+        color: #555;
+        border: solid 1px #ccc;
+        border-radius: 3em;
+        float: left;
+        line-height: rem(14px);
+      }
+    }
+  }
+}
+@include query(){
+  .answerAnalysis {
+    .answerATitle {
+      span {
+        font-size: rem(13px);
+        line-height: rem(13px);
+        color: #909090;
+        padding: 0 rem(10px);
+        background: #fff;
+      }
+    }
+  }
+}

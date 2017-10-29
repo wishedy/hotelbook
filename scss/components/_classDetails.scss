@@ -1,0 +1,361 @@
+@charset "UTF-8";
+//评论时间轴组件
+//Created by qiangkailiang on 2016/08/12
+//公共方法模块调用
+@import "../modules/common-modules";
+// 变量入口引入
+@import "../variables/_variables";
+.exercise-discuss{
+  background-color: #eef3f8;
+  width: 46.875rem;
+  margin: 6.25rem auto;
+  overflow: auto;
+}
+.yd-timelineContent {
+    /*margin-top: rem(10px);*/
+}
+
+.courseTopBg{
+  background-color: #fff;
+  padding-top: rem(52px);
+}
+.al-replayComment{
+  background: #fff;
+  position: relative;
+  margin-top: rem(20px);
+  &:before {
+    content: "";
+    height: 0;
+    width: 0;
+    border-top: 7.5px solid transparent;
+    border-bottom: 7.5px solid #fff;
+    border-left: 7.5px solid transparent;
+    border-right: 7.5px solid transparent;
+    display: inline-block;
+    position: absolute;
+    top: -14px;
+    left: 35px;
+  }
+}
+.yd-indexHeader .yd-indexHeaderItem .yd-timelineContentItemDelete {
+    font-size: rem(20px);
+    font-weight: 900;
+    color: #909090;
+    position: relative;
+}
+
+.yd-detailsDeleteBox {
+    font-size: rem(15px);
+    position: absolute;
+    font-weight: normal;
+    background-color: #fff;
+    right: 0;
+    box-shadow: 0 0 rem(1px) #fff, 0 0 rem(2px) #fff, 0 0 rem(3px) #fff, 0 0 rem(4px) #fff, 0 0 rem(6px) #fff, 0 0 rem(8px) rgba(0, 0, 0, 0.7);
+    margin-top: rem(10px);
+    margin-left: rem(-100px);
+    line-height: 1;
+    text-align: center;
+    padding: rem(10px) rem(15px);
+    &:after {
+        content: "";
+        @include triangle(rem(15px), #fff, up);
+        display: inline-block;
+        position: absolute;
+        top: rem(-28px);
+        right: rem(20px);
+        z-index: 2;
+    }
+    &:before {
+        content: "";
+        @include triangle(rem(35px), #e4e4e4, up);
+        display: inline-block;
+        position: absolute;
+        top: -0.45rem;
+        right: 0.24rem;
+        z-index: 1;
+    }
+}
+
+.yd-timelineTitle {
+    border-bottom: 1px solid #eee;
+    padding: rem(20px) rem(24px);
+    @include clearfix();
+    h2 {
+        font-size: rem(17px);
+        color: #222;
+        font-weight: normal;
+        vertical-align: middle;
+        display: inline-block;
+        width: 100%;
+        @include ellipsis();
+    }
+    .btn-primary {
+        vertical-align: middle;
+        display: inline-block;
+        background-color: #3598db;
+        color: #fff;
+        float: right;
+    }
+}
+
+.yd-timelineContentItemBox {
+    position: relative;
+    .yd-timeline {
+        width: rem(3px);
+        background-color: #e0ecf4;
+        display: block;
+        position: absolute;
+        left: rem(46px);
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+    &.first{
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            background: #fff;
+            width: 3rem;
+            top: 0;
+            bottom: 5.5rem;
+            z-index: 2;
+        }
+    }
+    &.last{
+        &:before{
+            content: '';
+            display: block;
+            position: absolute;
+            background: #fff;
+            width: 3rem;
+            top: 3.5rem;
+            bottom: 0;
+            z-index: 2;
+        }
+    }
+}
+.yd-timelineContentItem {
+    padding: rem(20px) rem(24px) 0;
+    display: table;
+    width: 100%;
+    box-sizing: border-box;
+    &:nth-last-child(1) {
+        /*border-top: 1px solid #eee;*/
+    }
+    @at-root {
+        .yd-timelineUserImg {
+            display: table-cell;
+            padding-right: rem(9px);
+            position: relative;
+            z-index: 2;
+            border-radius: 50%;
+
+            a {
+                display: block;
+                padding: 0.05rem 0;
+                @include circle(rem(40px), #fff);
+                img {
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: top;
+                    border-radius: 50%;
+                  border: 4px solid #fff;
+                }
+            }
+        }
+
+
+        .yd-timelineContentTextBox {
+            display: table-cell;
+            width: 100%;
+          border-bottom: 1px solid #eee;
+          padding-bottom: 1.25rem;
+          word-break: break-all;
+          word-wrap: break-word;
+            .yd-timelineContentAuthor {
+                position: relative;
+                a {
+                    font-size: rem(16px);
+                    color: #333;
+                    display: block;
+                }
+                span {
+                    font-size: rem(13px);
+                    color: #777;
+                    display: block;
+                    margin-top: rem(5px);
+                }
+                .yd-timelineTime {
+                    position: absolute;
+                    right: 0;
+                    top: 25%;
+                    color: #909090;
+                  font-size: 0.8125rem;
+                }
+            }
+        }
+        .yd-timelineContentText {
+            line-height: 1.5;
+            font-size: rem(15px);
+            color: #222;
+            margin-top: rem(10px);
+            a {
+                color: #777
+            }
+        }
+        .yd-timelineImgBox {
+            @include clearfix();
+            padding-right: rem(50px);
+            margin-top: rem(30px);
+            .yd-timelineImg {
+                //@include square(rem(180px));
+                @include square(180px);
+                float: left;
+                margin-right: rem(10px);
+                margin-bottom: rem(10px);
+                position: relative;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    vertical-align: top;
+                }
+            }
+        }
+        .yd-moreImgMask {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            background-color:rgb(0,0,0);
+            background-color: rgba(0, 0, 0, .5);
+            filter:alpha(opacity=50);
+            color: #fff;
+            text-align: center;
+            &:before {
+                content: "";
+                display: inline-block;
+                vertical-align: middle;
+                height: 100%;
+            }
+            span {
+                padding: 0 rem(3px);
+            }
+            p {
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+    }
+}
+
+.yd-timelineFooter {
+    /*border-bottom: 1px solid #dfdfdf;*/
+    text-align: center;
+    @include clearfix();
+    padding: 0 rem(24px) rem(20px);
+}
+.yd-timelineFooterBtn {
+    float: left;
+    width: 25%;
+    box-sizing: border-box;
+    font-size: rem(12px);
+    color: #626f8c;
+    border: 1px solid #eee;
+    border-top: none;
+    border-bottom: none;
+    &:nth-child(1){
+    	border-left: none;
+    }
+    &:nth-last-child(1){
+    	border-right: none;
+    }
+}
+.yd-timelineContentCollected{
+	.icon-detailsCollect:before{
+		background-image: url(/images/img50/pages/details/details_collect_on.png);
+	}
+}
+.yd-timelineContentLiked{
+	.icon-detailsLike:before{
+		background-image: url(/images/img50/pages/details/details_like_on.png);
+	}
+}
+.yd-replayComment {
+    position: relative;
+    margin-top: rem(25px);
+    .yd-timelineContentItem {
+        border-bottom: 1px solid #eee;
+    }
+}
+
+.yd-replayComment:before {
+    content: "";
+    @include triangle(rem(25px), #fff, up);
+    display: block;
+    position: absolute;
+    top: rem(-24px);
+    left: rem(50px);
+}
+
+.yd-detailsBackToIndex {
+    position: fixed;
+    left: rem(12.5px);
+    bottom: rem(20px);
+    @include circle(rem(35px), #4ba2df);
+    text-align: center;
+    z-index: 5;
+    display: inline-block;
+    box-shadow: rem(3px) rem(3px) rem(5px) rgba(0, 0, 0, .2);
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+    img {
+        width: rem(34px);
+        height: rem(30px);
+        vertical-align: middle;
+    }
+}
+.yd-timelineContentText.yd-timelineContentDelete{
+	color: #bdbdbd;
+}
+
+
+
+.al-commentDetailsTitle {
+  height: rem(52px);
+  padding: 0 rem(24px);
+  width: 100%;
+    left: 50%\9;
+    margin-left:rem(-375px)\9;
+  color: #333;
+  font-size: rem(18px);
+  background-color: #fff;
+  box-sizing: border-box;
+  border-bottom: 1px solid #e4e9ed;
+  line-height: rem(52px);
+  position: fixed;
+  width: 750px;
+  z-index: 10;
+}
+.al-commentDetailsClose {
+  float: right;
+  cursor: pointer;
+  width: rem(16px);
+  height: rem(16px);
+  background: transparent url(//img10.allinmd.cn/v3/common/icon/icon_close.png) center center no-repeat;
+  margin-top: rem(19px);
+}
+
+.discussBorNone{
+  border: none;
+}
+
+.al-replayComment .yd-timelineContentItemBox .yd-timeline{
+  display: none;
+}

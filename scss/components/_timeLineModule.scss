@@ -1,0 +1,85 @@
+@charset "UTF-8";
+//表单组件
+//Created by qiangkailiang on 2016/07/31
+//公共方法模块调用
+@import "../../modules/common-modules";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+
+.yd-historyTimeline {
+  margin-top: rem(8px);
+  border-bottom: 1px solid #dfdfdf;
+  background-color: #fff;
+  &Title {
+    color: #909090;
+    font-size: rem(14px);
+    padding: rem(12px) rem(15px);
+  }
+}
+.yd-historyTimelineContent {
+  padding-left: rem(45px);
+  padding-left:45px\9;
+  position: relative;
+  &:before {
+    content: "";
+    width: 1px;
+    height: 100%;
+    display: block;
+    background-color: #eee;
+    position: absolute;
+    left: rem(25.5px);
+    z-index: 1;
+  }
+  &Item {
+    padding: rem(15px) 0 rem(17px);
+    border-bottom: 1px solid #eee;
+    &:nth-last-child(1) {
+      border-bottom: none;
+    }
+    article {
+      & > a {
+        color: #333;
+        font-size: rem(17px);
+        margin-bottom: rem(8px);
+        display: block;
+        line-height: 1.5;
+        &:before {
+          content: "";
+          behavior: url(/js/third-party/pie/pie.htc);
+          @include circle(rem(5px), #fff);
+          border: 2px solid #73859e;
+          display: inline-block;
+          position: absolute;
+          left: rem(22.3px);
+          margin-top: rem(10px);
+          z-index: 3;
+        }
+        span {
+          padding-right: rem(5px);
+        }
+      }
+      & > p {
+        color: #909090;
+        font-size: rem(12px);
+        .category {
+          padding-right: rem(10px);
+        }
+        .time {
+          i {
+            padding-left: rem(5px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.yd-historyTimelineContent.today {
+  .yd-historyTimelineContentItem {
+    article > a {
+      &:before {
+        border: 2px solid #ffa800;
+      }
+    }
+  }
+}

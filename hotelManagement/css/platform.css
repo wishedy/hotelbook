@@ -1,0 +1,66 @@
+.table-bordered > thead > tr > th,
+.table-bordered > thead > tr > td {
+  border-bottom: 0;
+}
+/*弹框样式*/
+.modal-header {
+  background-color: #222;
+  color: #fff;
+}
+.modal-header .close {
+  color: #fff;
+  font-weight: normal;
+}
+label {
+  font-weight: normal;
+  float: left;
+}
+.form-label {
+  width: 50px;
+  padding-right: 10px;
+  text-align: right;
+}
+.selectpicker,
+.form-control {
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 200px !important;
+  height: 32px;
+}
+.modal-dialog .btn-default,
+.modal-dialog .btn-primary {
+  margin: 0 10px 0 0 !important;
+  font-size: 12px;
+  border-radius: 2px !important;
+}
+.ev-service {
+  width: 80%;
+  diaplsy: inline-block;
+  float: left;
+}
+div.checkbox {
+  float: left;
+  margin-bottom: 10px !important;
+}
+.input[type=radio],
+input[type=checkbox] {
+  margin: 0;
+}
+input[type="file"] {
+  padding: 2px;
+}
+/*按钮样式*/
+.btn {
+  height: 32px;
+  line-height: 32px;
+  padding-top: 0;
+  padding-bottom: 0;
+  text-align: center;
+}
+/*分页*/
+.page-info {
+  text-align: center;
+}
+.page-info .pagination {
+  display: inline-block;
+}

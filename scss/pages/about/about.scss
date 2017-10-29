@@ -1,0 +1,113 @@
+@import "../../components/common/header";
+@import "../../variables/variables";
+.Gambier-serviceList{
+  width: 100%;
+  .Gambier-serviceList-container{
+    width: 1200px;
+    min-height: 820px;
+    height: auto;
+    margin: 0 auto;
+    .Gambier-characteristic{
+      @include clearfix();
+      .Gambier-characteristic-item{
+        float: left;
+        width: 390px;
+        height: 320px;
+        margin: 0 10px 20px 0;
+        position: relative;
+        .Gambier-characteristic-background{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .Gambier-characteristic-title{
+          font-size: 26px;
+          color: #fff;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+          display: block;
+          h1{
+            margin: 240px 0 0 20px;
+          }
+        }
+        .Gambier-characteristic-mask{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,0.7);
+          display: none;
+          .Gambier-characteristic-bar{
+            margin-top: 200px;
+            margin-bottom: 20px;
+            @include clearfix();
+            h1{
+              float: left;
+              font-size: 26px;
+              color: #fff;
+              margin-left: 10px;
+            }
+            button{
+              float: right;
+              margin-right: 30px;
+              width: 70px;
+              height: 30px;
+              line-height: 30px;
+              font-size: 14px;
+              a{
+                line-height: 30px;
+                float: left;
+                width: 100%;
+                height: 100%;
+                font-size: 14px;;
+              }
+            }
+
+          }
+          .Gambier-characteristic-des{
+            font-size: 18px;
+            line-height: 26px;
+            color: #fff;
+            padding: 0 30px 0 10px;
+          }
+
+        }
+      }
+      .Gambier-characteristic-item:hover{
+        .Gambier-characteristic-title{
+          display: none;
+
+        }
+        .Gambier-characteristic-mask{
+          display: block;
+        }
+      }
+    }
+    .Gambier-characteristic-pagination{
+      margin: 23px auto 30px auto;
+      width: 300px;
+      .swiper-pagination-bullet{
+        width: 20px;
+        height: 20px;
+        margin: 0 13px;
+        background: $greenBack;
+        opacity: .5;
+      }
+      .swiper-pagination-bullet-active{
+        opacity: 1;
+      }
+    }
+  }
+}

@@ -1,0 +1,356 @@
+@charset "UTF-8";
+//消息列表组件
+//Created by qiangkailiang on 2016/08/10
+//公共方法模块调用
+@import "../../modules/common-modules";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+.yd-noContentTips{
+    background-color: #fff;
+
+    .btn-primary{
+        margin-top:rem(40px);
+        display: none;
+    }
+}
+.yd-msgListPart {
+    background-color: #fff;
+}
+.yd-newsNum {
+    text-align: center;
+    top: 20%;
+    margin-top: rem(-7.5px);
+    margin-right: rem(15px);
+    @include circle(rem(17px), #f35555);
+    display: block;
+    position: absolute;
+    right: -5%;
+    font-size: rem(12px);
+    line-height: rem(17px);
+    text-align: center;
+    color: #fff;
+}
+.al-headerTopNav{
+    .yd-newsNum{
+        right: -20%;
+        top: 30%;;
+    }
+}
+.yd-messageHeader{
+    padding: 0 .9375rem;
+    border-bottom: 1px solid #dfdfdf;
+    background-color: #fff;
+    height: 3.25rem;
+    line-height: 3.25rem;
+    margin-top:rem(16px);
+  .informationNav{
+    font-size: 16px;
+    color: #909090;
+  }
+    & > h3{
+        font-weight: 400;
+        font-size: 1.125rem;
+        color: #333;
+    }
+    & > .EV-selectToDelete{
+        position: static;
+        float: right;
+      @include cursor();
+    }
+}
+.yd-msgListAllSelectorTitle {
+    height: rem(40px);
+    line-height: rem(40px);
+    padding-left: rem(15px);
+    color: #73859e;
+    font-size: rem(15px);
+    display: none;
+    border-bottom: 1px solid $innerBorderColor;
+    span {
+        vertical-align: middle;
+        display: inline-block;
+    }
+    &:before {
+        content: "";
+        display: inline-block;
+        @include circle(rem(19px), transparent);
+        border: 1px solid #b4b4b4;
+        margin-right: rem(10px);
+        vertical-align: middle;
+    }
+}
+
+.yd-msgListPartBottomShow {}
+
+// .yd-indexHeader {
+//     position: fixed;
+//     top: 0;
+//     left: 0;
+//     right: 0;
+//     z-index: 2;
+// }
+.yd-msgListPart.yd-msgListConfigType {
+    padding-bottom: rem(41px);
+    .yd-msgListAllSelectorTitle {
+        display: block;
+    }
+    .yd-msgListItem {
+        margin-left: rem(50px);
+        position: relative;
+        padding-left: 0;
+        &:before {
+            content: "";
+            display: inline-block;
+            @include circle(rem(19px), transparent);
+            border: 1px solid #b4b4b4;
+            position: absolute;
+            left: rem(-35px);
+            top: 0;
+            margin-top: rem(20px);
+          @include cursor();
+        }
+    }
+    .yd-msgListItem.yd-msgListItemDeleteSelected:before {
+        background: transparent url('/image/message/select_delete_yet.png') center center no-repeat;
+        background-size: cover;
+        border: none;
+    }
+}
+
+.yd-msgListItem {
+    border-bottom: 1px solid #eee;
+    padding: rem(20px) rem(24px);
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+}
+@include query(){
+  .yd-msgListItem {
+    padding: rem(20px) rem(15px);
+  }
+}
+.yd-msgListTitle {
+    @include clearfix();
+    display: table;
+    width: 100%;
+    .yd-msgListHeadImg {
+        @include circle(rem(30px),
+        transparent);
+        vertical-align: middle;
+        display: table-cell;
+        position: relative;
+
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                border-radius: 50%;
+                vertical-align: top;
+                position: relative;
+            }
+        }
+    }
+}
+
+.yd-msgListTitleContent {
+    display: table-cell;
+    padding-left: rem(10px);
+    vertical-align: middle;
+    a {
+        font-size: rem(14px);
+        color: #333;
+        display: inline-block;
+        vertical-align: middle;
+        .icon-vipUser {
+            margin-left: rem(4px);
+        }
+    }
+    .yd-msgListStatus {
+        font-size: rem(14px);
+        color: #aaa;
+        margin-left: rem(9px);
+        vertical-align: middle;
+    }
+    .yd-msgListTime {
+        font-size: rem(13px);
+        float: right;
+        color: #aeaeae;
+    }
+}
+
+.yd-msgListItemContent {
+    padding-left: rem(35px);
+    a {
+        font-size: rem(16px);
+        color: #222;
+        margin-top: rem(12px);
+        line-height: 1.5;
+        display: block;
+        cursor: pointer;
+        word-break:break-all;
+    }
+}
+
+.yd-msgListItemContent.yd-msgHasDeletedOrShield p {
+    color: #909090;
+}
+
+.yd-msgListTitleContent.yd-msgListManyUserNews {
+    width: 100%;
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        @include circle(rem(6px),
+        #f34b4b);
+        margin-right: rem(3px);
+    }
+}
+
+.yd-msgListDeleteBtns {
+    box-sizing: border-box;
+    height: rem(41px);
+    line-height: rem(41px);
+    font-size: rem(15px);
+    float: right;
+    @include clearfix();
+    button {
+        text-align: center;
+        box-sizing: border-box;
+        height: 100%;
+        float: left;
+        margin-left:rem(20px);
+    }
+    .yd-msgListDeleteSelectAll {
+        color: #555;
+        border-right: 1px solid #eee;
+    }
+    .yd-msgListDelete {
+        color: #aaa;
+    }
+    .yd-msgListDeleteHasItem {
+        color: #f34b4b;
+    }
+    .yd-msgListHasReaded {
+        color: #73859e;
+    }
+}
+
+.yd-msgListDeleteBtns.show {
+    opacity: 1;
+    transform: translateY(0%);
+    -webkit-transform: translateY(0%);
+}
+
+.yd-msgListItemMyContent {
+    font-size: rem(14px);
+    color: #808080;
+    margin-top: rem(12px);
+    padding-top: rem(15px);
+    border-top: 1px solid #eee;
+}
+
+.yd-msgListItem.delete {
+    opacity: 0;
+    visibility: hidden;
+}
+.yd-msgListClass {
+    padding-left: rem(35px);
+    margin-top: rem(5px);
+    white-space: nowrap;
+    @include ellipsis();
+    span {
+        color: #aeaeae;
+        border: 1px solid #dfdfdf;
+        border-radius: rem(2px);
+        font-size: rem(12px);
+        vertical-align: middle;
+        display: inline-block;
+        padding: rem(2px) rem(4px);
+    }
+    p {
+        font-size: rem(14px);
+        color: #aeaeae;
+        margin-left: rem(5px);
+        @include ellipsis();
+        display: inline-block;
+        width: 80%;
+        vertical-align: middle;
+    }
+}
+
+.yd-msgListSelectorAll {
+    height: rem(50px);
+    line-height: rem(50px);
+    box-sizing: border-box;
+    border: 1px solid #e4e9ed;
+    border-bottom: 1px solid #ecf0f2;
+    margin-top: -1px;
+    background-color: #F7FAFC;
+    color: #b4b4b4;
+    padding: 0 rem(15px);
+    position: relative;
+    display: none;
+    cursor: pointer;
+    span.sa {
+        display: inline-block;
+        em{
+            vertical-align: middle;
+            display: inline-block;
+            font-style: normal;
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            width: 1.1875rem;
+            vertical-align: middle;
+            height: 1.1875rem;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid #b4b4b4;
+            margin-right: rem(7px);
+        }
+    }
+
+}
+
+.yd-msgListSelectorAll.yd-msgListItemDeleteSelected span.sa {
+    &:before {
+        background: transparent url('/image/message/select_delete_yet.png') center center no-repeat;
+        background-size: cover;
+        border: none;
+    }
+}
+
+.yd-msgListItem.yd-msgListNoRead {
+    .yd-msgListHeadImg a {
+        position: relative;
+        &:before {
+            content: "";
+            border: rem(1px) solid #fff;
+            background-color: #f34b4a;
+            width: 8px;
+            width: rem(8px);
+            height: 8px;
+            height: rem(8px);
+            position: absolute;
+            border-radius: 50%;
+            right: -3px;
+            top: -3px;
+        }
+    }
+}
+.newTips {
+    width: rem(8px);
+    height: rem(8px);
+    background-color: #f35555;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-radius: 50%;
+}

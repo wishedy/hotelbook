@@ -1,0 +1,114 @@
+@charset "UTF-8";
+//微信二维码弹层组件
+//Created by qiangkailiang on 2016/11/23
+//公共方法模块调用
+@import "../../modules/_common-modules";
+//公共变量引用
+@import "../../variables/_yiding-variables";
+
+
+.weixin_border_wx_succ_err{
+    height:113px;
+    padding:20px;
+    width:290px;
+}
+
+.weixin_border_t{
+    background:url("//modules.allinmd.cn/weixin/images/border_t.png") no-repeat;
+    height:1px;
+    width:330px;
+    display:none;
+}
+.weixin_border_c{
+    background:url("//modules.allinmd.cn/weixin/images/border_l_r.png") repeat-y;
+
+    padding:20px;
+    width:290px;
+}
+.weixin_border_b{
+    background:url("//modules.allinmd.cn/weixin/images/border_b.png") no-repeat;
+    height:4px;
+    width:330px;
+    display:none;
+}
+.weixin_border_cont{
+  position: absolute;
+  top:48px;
+  right:0;
+  z-index: 2;
+    background-color: #fff;
+    border:1px solid #EEEEEE;
+}
+.weixin_border_jt{
+    position:absolute;
+    left:22px;
+    top:-5px;
+    z-index:2;
+    background:url("images/wx_jt.png") no-repeat;
+    height:6px;
+    width:10px;
+    display:none;
+}
+.wx_ewm{
+    float:left;
+}
+.wx_ewm_text{
+    float:right;
+    width:170px;
+}
+.wx_ewm_text_t{
+    font-size:14px;
+    color:#333;
+    line-height:14px;
+    margin-bottom:10px;
+}
+.wx_ewm_text_b{
+    font-size:12px;
+    line-height:18px;
+    color:#969696;
+}
+.weixin_border_c_text{
+    /* width:195px; */
+    text-align:center;
+    margin:0 auto;
+}
+.weixin_border_c_text_t{
+    font-size:14px;
+    color:#333;
+    margin-bottom:10px;
+}
+.weixin_border_c_text_c{
+    font-size:12px;
+    color:#666;
+    line-height:18px;
+}
+.weixin_border_c_text_b{
+    font-size:12px;
+    color:#969696;
+    margin-top:20px;
+}
+.wx_t_line_height{
+    line-height:25px;
+}
+.wx_popup_but{
+    width:180px;
+    margin:20px auto 0;
+}
+.wx_popup_but_common{
+    height:28px;
+    width:70px;
+    border-radius:3px;
+    line-height:28px;
+    text-align:center;
+    color:#fff;
+    cursor:pointer;
+}
+.wx_popup_but01{
+    float:left;
+    background:#3a9eeb;
+    
+}
+.wx_popup_but02{
+    float:right;
+    background:#9da6b0;
+}

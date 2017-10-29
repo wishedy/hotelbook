@@ -1,0 +1,87 @@
+@charset "UTF-8";
+//类Confirm模态窗组件
+//Created by qiangkailiang on 2016/08/09
+
+.yd-confirmModalMask {
+    /*background-color: rgba(0,0,0,.3);*/
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;text-align: center;
+    display: none\9;
+    transition: opacity 0.3s linear;
+    z-index: 10;
+    &:before{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+}
+
+
+.yd-confirmModalMask.show {
+    opacity: 1;
+    visibility: visible;
+    display: block\9;
+}
+.yd-confirmModal {
+    width: rem(270px);
+    background-color: #fff;
+    border-radius: rem(10px);
+    text-align: center;
+    display: inline-block;
+    vertical-align: middle;
+    .yd-confirmModalContent {
+        padding: rem(25px) rem(20px);
+       font-size: rem(15px);
+        border-bottom: 1px solid $innerBorderColor;
+        h2{
+            margin-bottom: rem(20px);
+            //font-weight:normal;
+        }
+        p{
+            /*padding: 0 rem(35px);*/
+            line-height: 1.5;
+        }
+        &:before {
+            content: "";
+            display: inline-block;
+            height: 100%;
+            vertical-align: middle;
+        }
+        & > article {
+            display: inline-block;
+            vertical-align: middle;
+        }
+    }
+    .yd-confirmModalBtns {
+        @include clearfix();
+        button {
+            float: left;
+            width: 50%;
+            box-sizing: border-box;
+            text-align: center;
+            height: rem(45px);
+            line-height: rem(45px);
+            font-size: rem(16px);
+            &:nth-child(1) {
+                border-right: 1px solid $innerBorderColor;
+            }
+            &:nth-last-child(1) {
+                border-right: none;
+            }
+        }
+        .yd-confirmModalCancelBtn {
+            color: #2899e6;
+        }
+        .yd-confirmModalEnsureBtn {
+            color: #2899e6;
+            font-weight: 700;
+        }
+    }
+}

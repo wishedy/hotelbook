@@ -1,0 +1,363 @@
+@import "../../components/common/header";
+@import "../../variables/variables";
+.Gambier-bookList{
+  width: 100%;
+  .Gambier-bookList-container{
+    width: $width;
+    min-height: 340px;
+    padding:60px 0;
+    height: auto;
+    margin: 0 auto;
+    .Gambier-bookList-list{
+      width: 1200px;
+      @include clearfix();
+      margin: 0 auto;
+      .Gambier-bookList-item{
+        width: 392px;
+        margin-right: 8px;
+        height: 320px;
+        margin-bottom: 20px;
+        position: relative;
+        float: left;
+
+        .Gambier-bookList-img{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .Gambier-bookList-title{
+            font-size: 26px;
+            font-weight: 700;
+            position: absolute;
+          bottom: 0;
+          left: 0;
+          z-index: 1;
+          line-height: 78px;
+          padding-left: 20px;
+          color: #fff;
+          display: block;
+        }
+        .Gambier-bookList-mask{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0,0,0,.7);
+          z-index: 2;
+          display: none;
+          .Gambier-bookList-maskTitle{
+            font-size: 26px;
+            margin-top: 54px;
+            font-weight: 700;
+            line-height: 94px;
+            padding-left: 20px;
+            color: #fff;
+          }
+          .Gambier-bookList-des{
+            padding: 0 20px;
+            color: #fff;
+            font-size: 18px;
+            line-height: 36px;
+
+          }
+          .Gambier-bookList-bar{
+            padding: 0 20px;
+            .Gambier-bookList-price{
+              font-size: 26px;
+              color: #f35833;
+            }
+            .Gambier-bookList-bookNow,.Gambier-bookList-learnMore{
+              width: 70px;
+              height: 30px;
+              font-size: 14px;
+              line-height: 30px;
+              border-radius: 4px;
+              margin: 0 10px 0 110px;
+            }
+            .Gambier-bookList-learnMore{
+              background: #da6834;
+              margin: 0;
+            }
+          }
+        }
+
+      }
+      .Gambier-bookList-item:hover{
+        .Gambier-bookList-title{
+          display: none;
+
+        }
+        .Gambier-bookList-mask{
+          display: block;
+        }
+      }
+    }
+    .Gambier-bookList-pagination{
+      //width: auto;
+      width: 300px;
+      margin: 0 auto;
+      @include  clearfix();
+      height: 24px;
+      .Gambier-bookList-page{
+        float: left;
+        width: 24px;
+        height: 24px;
+        border: 1px solid #cfcfcf;
+        color: #cfcfcf;
+        text-align: center;
+        line-height: 24px;
+        margin: 0 10px;
+        &.active{
+          background: $greenBack;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+}
+.Gambier-book-panel{
+  width: 100%;
+
+  .Gambier-book-panel-container{
+    width: 1000px;
+    margin-top: 53px;
+    min-height: 711px;
+    height: auto;
+    margin-right: auto;
+    margin-left: auto;
+    .Gambier-book-title{
+      font-size: 18px;
+      color: $greenBack;
+    }
+    .Gambier-book-left{
+      float: left;
+
+
+      .Gambier-book-form{
+        padding-left: 40px;
+        width: 436px;
+        min-height: 300px;
+        height: auto;
+        .Gambier-form-bar{
+          margin-top: 30px;
+          min-height: 28px;
+          height: auto;
+          line-height: 28px;
+          @include clearfix();
+          .form-title,.form-sign{
+            font-size: 14px;
+            color: #535759;
+            float: left;
+          }
+          .form-sign{
+              margin-left: 14px;
+            background: url("/img/pages/index/sign.png") no-repeat right top;
+            width: 12px;
+            height: 18px;
+            background-size: 70%;
+          }
+          .form-input{
+            float: right;
+            .Gambier-form-input,.Gambier-form-input:focus{
+              border: 1px solid #d1d1d1;
+              color: #333;
+              height: 28px;
+              width: 150px;
+              margin-right: 180px;
+              padding-left: 10px;
+              border-radius: 4px;
+              margin-left: 5px;
+              outline: none;
+            }
+            .error-tips,.error-tips:focus{
+              border: none;
+              color: rgba(208, 23, 3, 1);
+              height: 28px;
+              width: 150px;
+              margin-right: 180px;
+              padding-left: 10px;
+              border-radius: 4px;
+              margin-left: 5px;
+              border-color: #66afe9;
+              outline: 0;
+              -webkit-box-shadow: inset 0 1px 1px rgba(221, 21, 18, 0.5), 0 0 8px rgba(208, 23, 3, 0.8);
+              box-shadow: inset 0 1px 1px rgba(221, 21, 18, 0.5), 0 0 8px rgba(208, 23, 3, 0.8);
+            }
+          }
+          .form-checkBox{
+            color: #d1d1d1;
+            border-radius: 4px;
+            margin-left: 12px;
+            width: 210px;
+            height: 46px;
+            float: left;
+            label{
+              margin-right: 14px;
+            }
+          }
+          .form-until{
+            float: left;
+            color: #737779;
+            line-height: 28px;
+            font-size: 14px;
+            text-align: center;
+          }
+          .form-input-live{
+            float: left;
+            .Gambier-form-input,.Gambier-form-input:focus{
+              /*margin: 0;
+              float: left;
+              width: 150px;*/
+              background: url("/img/pages/index/calendar.png") no-repeat 135px 50%;
+              background-size: 12%;
+              border: 1px solid #d1d1d1;
+              outline: none;
+              cursor: pointer;
+              margin-right: 0;
+            }
+          }
+          .form-input-live-first{
+            .Gambier-form-input,.Gambier-form-input:focus{
+              margin-left: 14px;
+              margin-right: 1px;
+              border: 1px solid #d1d1d1;
+              outline: none;
+            }
+          }
+          .form-input-live-second{
+            .Gambier-form-input,.Gambier-form-input:focus{
+              margin-left: 1px;
+              border: 1px solid #d1d1d1;
+              outline: none;
+            }
+          }
+
+        }
+        .Gambier-form-remark{
+          .form-sign{
+            background: none;
+          }
+          .form-input{
+            float: left;
+            textarea,textarea:focus{
+              resize: none;
+              border: 1px solid #d1d1d1;
+              color: #333;
+              border-radius: 4px;
+              margin-left: 15px;
+              width: 316px;
+              padding: 7px;
+              height: 96px;
+              outline: none;
+            }
+          }
+        }
+      }
+      .Gambier-submit{
+        width: 74px;
+        height: 28px;
+        font-size: 14px;
+        line-height: 28px;
+        margin-left: 300px;
+        margin-top: 20px;
+      }
+    }
+    .Gambier-book-right{
+      float: right;
+      width: 424px;
+      .Gambier-book-title{
+        color: #333;
+        border-left: 2px solid $greenBack;
+        padding-left: 10px;
+        margin-bottom: 22px;
+      }
+      .Gambier-room-img{
+        margin: 0 0 22px 0;
+        .Gambier-room-item{
+          width: 423px;
+          height: 270px;
+          figure{
+            width: 100%;
+            height: 100%;
+            img{
+              width: 100%;
+              height: 100%;
+
+            }
+          }
+        }
+      }
+      .Gambier-room-bar{
+        min-height: 36px;
+        color: #333;
+        line-height: 36px;
+        height: auto;
+        .Gambier-room-title{
+          color: #999;
+        }
+      }
+      .Gambier-book-liveIn{
+        margin-top: 22px;
+      }
+      .Gambier-liveIn-sign{
+        .Gambier-liveIn-item{
+          float: left;
+          margin: 10px 25px 0 0;
+          color: #333;
+          width: 183px;
+          font-size: 16px;
+          @include clearfix();
+          height: 28px;
+          i{
+            float: left;
+            width: 28px;
+            height: 28px;
+            background: url("/img/pages/index/forbid.png") no-repeat 50% 50%;
+            background-size:cover;
+          }
+          .Gambier-liveIn-des{
+            height: 28px;
+            line-height: 28px;
+            margin-left: 10px;
+          }
+        }
+      }
+      .Gambier-cooperation-img{
+        width: 654px;
+        height: 507px;
+        img{
+          width: 100%;
+          height: 100%;
+
+        }
+      }
+    }
+    .Gambier-cooperation-right{
+      float: left;
+      margin-left: 70px;
+    }
+
+  }
+  .Gambier-book-cooperation-container{
+    width:1200px ;
+    .Gambier-book-left{
+      .Gambier-book-form{
+        .Gambier-form-bar{
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+.Gambier-book-cooperation{
+  border-top:20px solid #f6f6f6;
+}

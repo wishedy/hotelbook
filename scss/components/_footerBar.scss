@@ -1,0 +1,58 @@
+@charset "UTF-8";
+//公共页脚组件
+//Created by qiangkailiang on 2016/07/29
+@import "../modules/_common-modules";
+//公共变量引用
+
+@import "../variables/_variables";
+
+//页脚功能栏
+.al-footerBar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    background-color: #fff;
+    padding: rem(6px) rem(45px);
+    @include flex();
+    @include justify-content(space-between);
+    @include align-items(center);
+    box-shadow: 0px rem(-1px) rem(5px) rgba(0,0,0,0.3);
+    overflow: visible;
+}
+.al-footerBarItem {
+    text-align: center;
+    display: block;
+    font-size: rem(12px);
+    .al-footerBarItemTitle {
+        margin-top: rem(6px);
+        color: #73859E;
+    }
+    img {
+        vertical-align: top;
+        display: block;
+        margin: auto;
+    }
+    &:nth-child(1) {
+        img {
+            width: rem(19px);
+            height: rem(19px);
+        }
+    }
+    &:nth-child(2) {
+        img {
+            width: rem(19px);
+            height: rem(19px);
+        }
+    }
+    &:nth-child(3) {
+        img {
+            width: rem(19px);
+            height: rem(19px);
+        }
+    }
+}
+.al-footerBarItemTitle.active{
+    color: #ffb31e !important;
+}

@@ -1,0 +1,58 @@
+@charset "UTF-8";
+// 课程掌握程度 比例分割块
+// Created by qiangkailiang on 2016/11/03
+// 功能库引入
+@import "../../modules/_common-modules";
+// 变量入口引入
+@import "../../variables/_yiding-variables";
+.yd-exercisesGetRadio {
+    background-color: #fff;
+    margin-bottom:rem(16px);
+    border:1px solid #dfdfdf;
+    section {
+        text-align: center;
+        font-size: 0;
+        margin: rem(15px);
+    }
+    &Item {
+        display: inline-block;
+        
+        position: relative;
+
+        text-align: center;
+        width: 32%;
+        min-width: 110px;
+        max-width: 446px;
+        border-radius: 20px;
+        border-radius: rem(2px);
+        overflow: hidden;
+
+        a {
+            padding: rem(22.5px) 0;
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: #fff;
+            & > h3 {
+                font-weight: normal;
+                font-size: rem(23px);
+            }
+            & > p {
+                font-size: rem(13px);
+                margin-top: rem(5px);
+            }
+        }
+    }
+    .wrong a {
+        background-color: #f27575;
+    }
+    .will a {
+        background-color: #50abe9;
+    }
+    .will {
+        padding: 0 rem(6px)
+    }
+    .get a {
+        background-color: #8c9baf;
+    }
+}

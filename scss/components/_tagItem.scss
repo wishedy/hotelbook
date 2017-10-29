@@ -1,0 +1,187 @@
+
+@charset "UTF-8";
+//标签列表
+//公共方法模块调用
+@import "../modules/_common-modules";
+
+//公共变量引用
+@import "../variables/_variables";
+
+.contentArea {
+    font-size: 0;
+    /*text-align: center;*/
+    //padding-left: rem(30px);
+    padding-top: rem(20px);
+    clear: both;
+    &:last-child{
+        text-align: left;
+    }
+}
+
+.bestItem {
+    padding: rem(12px) rem(15px);
+    width: rem(180px);
+    border: 1px solid #ececec;
+    display: inline-block;
+    text-align: left;
+    //width: 45%;
+    box-sizing: border-box;
+    position: relative;
+    //margin-right: 30px;
+    margin-bottom: 20px;
+   /* height: rem(90px);*/
+  width: 340px;
+    &:hover {
+        box-shadow: 5px 5px 4px #eee;
+    }
+
+    &Img {
+        display: block;
+        float: left;
+        border-radius: 50%;
+        vertical-align: top;
+        width: rem(70px);
+        height: rem(70px);
+        /*margin-top:4px;*/
+        img {
+            width: 100%;
+            height: 100%;
+            vertical-align: middle;
+            border-radius: 50%;
+        }
+    }
+    &Msg {
+        font-size: 1rem;
+        display: block;
+        float: left;
+        vertical-align: top;
+        margin-left: rem(15px);
+        margin-top: rem(10px);
+      width: rem(120px);
+        & > a {
+            font-size: rem(16px);
+            /*font-weight: bold;*/
+            color: #333;
+            width: 120px;
+            display:block;
+            white-space:nowrap;
+            overflow:hidden;
+            text-overflow:ellipsis;
+        }
+        & > p {
+            font-size: rem(14px);
+            color: #909090;
+            margin-top: rem(12px);
+        }
+        & > p{
+            
+            & > b{
+                font-weight: 100;
+            }
+           
+        }
+    }
+    .watcherNum {
+        position: absolute;
+        right: rem(20px);
+        top: rem(10px);
+        & > p {
+            font-size: rem(14px);
+            color: #909090;
+            margin-top: rem(15px);
+        }
+    }
+    .addClass{
+      float: right;
+        width: rem(71px);
+        border: 1px solid #ffa800;
+        border-radius: rem(20px);
+        padding: rem(8px) 0;
+        cursor: pointer;
+      margin-top: 20px;
+      @include clearfix();
+        & > p {
+            font-size: rem(14px);
+            color: #ffc554;
+            line-height: rem(14px);
+            text-align: left;
+            height:14px;
+        }
+    }
+    .addClassActive{
+        display: none;
+        position: absolute;
+        right: rem(16px);
+        top: rem(32px);
+        text-align: center;
+        vertical-align: middle;
+        width: rem(71px);
+        height: rem(21px);
+        border: 1px solid #d2d2d2;
+        border-radius: rem(20px);
+        padding-top: rem(8px);
+        cursor: pointer;
+        & > p {
+            font-size: rem(14px);
+            color: #d2d2d2;
+            margin-top: rem(-3px);
+        }
+    }
+}
+
+@include query() {
+    .bestItem {
+        width: auto;
+        display: block;
+        margin-right: 0;
+        margin-bottom: 0;
+        border: none;
+        border-bottom: 1px solid #dee6ee;
+        
+        .bestItemImg{
+            margin-left: rem(-15px);
+        }
+        
+        .addClass{
+            position: absolute;
+            right: 0;
+            top: rem(24px);
+            width: rem(71px);
+            height: rem(21px);
+            border: 1px solid #ffc554;
+            border-radius: rem(20px);
+            padding-top: rem(8px);
+            cursor: pointer;
+            & > p {
+                font-size: rem(14px);
+                color: #ffc554;
+                
+            }
+        }
+        .addClassActive{
+            display: none;
+            position: absolute;
+            right: rem(0px);
+            top: rem(24px);
+            text-align: center;
+            vertical-align: middle;
+            width: rem(71px);
+            height: rem(21px);
+            border: 1px solid #d2d2d2;
+            border-radius: rem(20px);
+            padding-top: rem(8px);
+            cursor: pointer;
+            & > p {
+                font-size: rem(14px);
+                color: #d2d2d2;
+                
+            }
+    }
+        
+        
+        
+    }
+    .contentArea {
+        padding: 0;
+    }
+}

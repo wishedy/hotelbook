@@ -1,0 +1,198 @@
+@charset "UTF-8";
+//公共页脚  组件
+//返回页面顶部  组件
+//Created by qiangkailiang on 2016/07/26
+
+
+//公共页脚样式：begin
+.yd-mainFooter {
+  position: absolute;
+  left:0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  height:158px;
+  width: 100%;
+  z-index: 1;
+  text-align: left;
+}
+
+.yd-mainFooterInner {
+  width: 690px;
+  margin: 0 auto;
+  padding:34px 0 27px;
+  @include clearfix();
+}
+.yd-mainFooterContent {
+  float: left;
+}
+.yd-mainFooterErWeiCode {
+  float: right;
+}
+.yd-mainFooterLinks {
+  text-align: left;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  a {
+    color: #73859e;
+    font-size:15px;
+    display: inline-block;
+    border-right: 1px solid #c7cdd7;
+    padding: 0 24px;
+  }
+}
+
+.yd-mainFooterMsg{
+  display: inline-block;
+  vertical-align: middle;
+  margin-left:46px;
+  .yd-mainFooterMsgImg{
+    display: inline-block;
+    vertical-align: middle;
+    /*margin-right:18px;*/
+    &.marginR{
+      margin-right:30px;
+    }
+    img{
+      vertical-align: top;
+    }
+  }
+}
+.yd-mainFooterRecordMsg{
+  font-size: 13px;
+  color: #aeaeae;
+  margin-top:26px;
+  p{margin-top:12px;}
+}
+.yd-mainFooterErWeiCode{
+  margin-left:20px;
+}
+//公共页脚样式：end
+
+
+
+
+//回到顶部样式：begin
+.yd-backToTop {
+  position: fixed;
+  right: 60px;
+  bottom:180px;
+  z-index: 3;
+  .yd-backToTopItem {
+    width: 50px;
+    height: 40px;
+    background-color:rgba(162,185,205,0.5);
+    background-color:#c9d6e3\9;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 40px;
+    margin-top: 6px;
+    position: relative;
+  }
+  .yd-backToTopFirst {
+    width:49px;
+    height:46px;
+    background: transparent url('//img10.allinmd.cn/v3/common/icon/backTopIcon.png') center center no-repeat;
+  }
+  .yd-shareBox {
+    top: 50%;
+    margin-top:-40px;
+    margin-left:-286px;
+    width:265px;
+    height:90px;
+    text-align: center;
+    background-color: #fff;
+    border: 1px solid #e4e9ed;
+    border-radius: 5px;
+    position: absolute;
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.14), -3px -2px 8px rgba(0, 0, 0, 0.14);
+    &:before {
+      content: "";
+      @include triangle(15px, #fff, right);
+      position: absolute;
+      right: -14px;
+      top: 50%;
+      margin-top: -7px;
+    }
+    .yd-shareListItem {
+      display: inline-block;
+      margin:20px 0;
+      img {
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin: 0 auto;
+      }
+      figcaption {
+        margin-top:-3px;
+        font-size: 12px;
+        font-family: "宋体";
+        color: #777;
+      }
+    }
+  }
+  .yd-clickToShowErweiCode {
+    padding-top: 10px;
+    box-sizing: border-box;
+    margin-top:30px;
+    .yd-erweiCodeShareBox {
+      width:186px;
+      height:216px;
+      margin-left:-205px;
+      &:before{
+        top: 0;
+        margin-top: 35px;
+      }
+      figcaption{
+        font-size: 14px;
+        color: #909090;
+        margin-top:-35px; //二维码文本样式 9/21 16:10
+      }
+    }
+    .yd-shareListItem{
+      width:148px;
+      height:156px;
+      img{
+        width: 100%;
+        height: 100%;
+        vertical-align: top;
+      }
+    }
+
+  }
+}
+.yd-weixinErweiCodeBox{
+  background:transparent url('//img10.allinmd.cn/v3/friends/weixin_boxbg.png') center center no-repeat;
+  width: 268px;
+  height: 232px;
+  padding: 25px 0;
+  box-sizing:border-box;
+  text-align: center;
+  & > span{
+    font-size: 14px;
+    color: #909090;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+  & > img{
+    width: 150px;
+    height: 150px;
+    vertical-align: top;
+
+  }
+}
+//二维码图标
+.icon-erweiCodeBottom {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  background: transparent url('//img10.allinmd.cn/v3/common/icon/fixed_erweiIcon.png') center center no-repeat;
+  vertical-align: top;
+}
+//回到顶部样式：end
+
+.icon-suggestion{
+  @extend %icon-suggestion;
+}

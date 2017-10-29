@@ -1,0 +1,213 @@
+//公共方法模块调用
+@import "../modules/_common-modules";
+//公共变量引用
+@import "../variables/_variables";
+.yd-tagSelectorBox {
+    width: 450px;
+    height: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 8px 8px 20px #c5ced6, -2px -2px 20px #c5ced6;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 40px;
+    display: none;
+    border: solid 1px #eee;
+    .yd-tagSelectorBoxTitle {
+        font-size: 18px;
+        color: #333;
+        padding:10px 25px;
+        border-bottom: 1px solid $innerBorderColor;
+        .yd-tagSelectorBoxCloseBtn {
+            float: right;
+            font-size: 15px;
+            color: #909090;
+            cursor: pointer;
+        }
+    }
+    .yd-tagSelectorItem {
+        padding: 20px 25px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid $innerBorderColor;
+      @include clearfix();
+        button {
+          behavior: url(/js/third-party/pie/PIE.htc);
+          position: relative;
+            padding: 6px 12px;
+            border: 1px solid #dbdbdb;
+            border-radius: 50px;
+            background-color: #fff;
+            color: #909090;
+            font-size: 15px;
+            cursor: pointer;
+            margin-right: 12px;
+            margin-bottom: 12px;
+          display: inline-block;
+          float: left;
+            &:hover {
+                background-color: #f9f6fb;
+            }
+        }
+        button.active {
+            color: #fff;
+            background-color: #2899e6;
+        }
+    }
+    .yd-tagSelectorBoxFootBtn {
+        padding: 10px 18px;
+
+    }
+    .yd-personalAdviceSubmit {
+        margin-top: 0;
+    }
+}
+
+.yd-tagSelectorList {
+    &:before {
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        @include square(4px);
+        background-color: #2899e6;
+        margin-right: 7px;
+    }
+    span {
+        margin-left: 0;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        font-size: 15px;
+        display: inline-block;
+        cursor: pointer;
+        color: #333;
+        padding: 5px 7px;
+        &:hover {
+            background-color: #f6f9fb;
+        }
+    }
+    span.active {
+        font-size: 15px;
+        color: #3598db;
+    }
+}
+
+.yd-tableTextarea {
+    width: 638px;
+    height: 114px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    position: relative;
+    resize: none;
+    padding: 10px;
+    font-size: 16px;
+    color: #555;
+    margin: 30px 24px 0;
+}
+
+.yd-tableTextareaShort {
+    width: 515px;
+    height: 74px;
+    margin-top: 0;
+    vertical-align: top;
+}
+
+.yd-personal {
+    input:focus {
+        border: 1px solid #3598db;
+        box-shadow: 1px 1px 1px #3598db, -1px -1px 1px #3598db;
+    }
+}
+
+.yd-tableItemConnectText {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    color: #909090;
+    font-size: 16px;
+    font-style: normal;
+}
+
+.yd-tableItemCheckbox {
+    display: inline-block;
+    vertical-align: middle;
+    font-weight: normal;
+    color: #333;
+    font-size: 16px;
+    font-style: normal;
+    margin-left: 10px;
+    i {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+.yd-tableItemCheckboxOff i {
+    background: transparent url('//img10.allinmd.cn/v3/common/icon/icon_checkbox_off.png') center center no-repeat;
+}
+
+.yd-tableItemCheckboxOn i {
+    background: transparent url('//img10.allinmd.cn/v3/common/icon/icon_checkbox_on.png') center center no-repeat;
+}
+
+.yd-tableWriteComplateConfig {
+    display: inline-block;
+    position: absolute;
+    right: 32px;
+    bottom: 37px;
+    display: none;
+    a {
+        display: inline-block;
+        font-size: 14px;
+        color: #A3A7AA;
+    }
+    .yd-tableWriteComplateConfigBtn {
+        font-size: 14px;
+        color: #3598db;
+        padding-right: 25px;
+    }
+}
+.yd-personalAdviceSubmit {
+  position: relative;
+    border-radius: 50px;
+    width: 75px;
+    height: 30px;
+    line-height: 30px;
+    background-color: #2899e6;
+    margin-top:25px;
+    margin-right: 6px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 13px;
+}
+.yd-personalAdviceCancel {
+    color: #aaa;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.yd-tagSelectorBox.hide {
+    display: none;
+}
+
+.yd-tableModuleConfigTitle {
+    @include clearfix();
+    padding:0 rem(15px);
+    border-bottom: 1px solid #eee;
+    background-color: #fff;
+    /*margin-top: 20px;*/
+    height: rem(52px);
+  line-height: rem(52px);
+    h2 {
+        font-weight: normal;
+        font-size: rem(16px);
+        color: #333;
+    }
+    p {
+        float: right;
+        font-size: rem(14px);
+        color: #38a1f0;
+        cursor: pointer;
+    }
+}

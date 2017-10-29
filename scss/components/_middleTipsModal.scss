@@ -1,0 +1,92 @@
+@charset "UTF-8";
+//中部黑色弹框组件
+//Created by qiangkailiang on 2016/08/08
+//公共方法模块调用
+.al-middleTipsBox {
+    position: fixed;
+    left: 10%;
+    top: 0;
+    right: 10%;
+    bottom: 0;
+    text-align: center;
+    pointer-events:none;
+    z-index: 20;
+    //z-index: 1\9;
+    &:before{
+        content: "";
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+    }
+}
+
+.al-middleTipsModal {
+    padding: rem(35px) rem(30px);
+    background-color: rgba(10, 30, 43, 0.7);
+    text-align: center;
+    color: #fff;
+    z-index: 9;
+    border-radius: rem(10px);
+    box-sizing: border-box;
+    display: inline-block;
+    vertical-align: middle;
+    .al-middleTipsModalText {
+        font-size: rem(14px);
+        display: inline-block;
+    }
+    .al-loading {
+        display: inline-block;
+        img {
+            width: rem(30px);
+            height: rem(30px);
+            vertical-align: top;
+            @include animate(rotate, 1s, linear, infinite);
+        }
+    }
+    .al-loadingFinish {
+        display: none;
+
+        img {
+            width: rem(38px);
+            height: rem(25.5px);
+            vertical-align: top;
+            margin-bottom: rem(12.5px);
+        }
+    }
+    &.ev-showStatus {
+        background-color: rgba(10, 30, 43, 0.7);
+    }
+}
+
+.ev-commTips {
+    background-color: rgba(10, 30, 43, 0.7);
+    opacity: 0;
+    transform: scale(0);
+    -webkit-transform: scale(0);
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    .al-middleTipsModalText p{
+        line-height: 1.5;
+    }
+}
+
+.ev-commTips.show {
+    opacity: 1;
+    transform:scale(1);
+    -webkit-transform:scale(1);
+}
+
+.ev-loading {
+    background-color: rgba(10, 30, 43, 0)
+}
+
+@include keyframes (rotate) {
+    0% {
+        transform: rotate(0);
+        -webkit-transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+        -webkit-transform: rotate(360deg);
+    }
+}

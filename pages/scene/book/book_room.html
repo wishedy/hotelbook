@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>甘比尔山乡村舒适国际酒店</title>
+    <link rel="shortcut icon" type="image/x-icon" href="idealogo.ico">
+    <meta name="keywords" content="Comfort Mt Gambier International（甘比尔山乡村舒适国际酒店）">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/book/book.css">
+    <link rel="stylesheet" href="/js/thirdParty/swiper/swiper.min.css">
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/js/common/rem.js"></script>
+</head>
+<body>
+<section class="Gambier-mainInner">
+    <header class="Gambier-header">
+        <section class="Gambier-header-container">
+            <ul class="Gambier-header-list">
+                <li class="Gambier-header-item"><span>中文</span>|<span>英文</span></li>
+                <li class="Gambier-header-item">登录</li>
+                <li class="Gambier-header-item">注册</li>
+            </ul>
+        </section>
+    </header>
+    <nav class="Gambier-nav">
+        <section class="Gambier-nav-container">
+            <div class="Gambier-logo">
+                <figure class="Gambier-logoImg">
+                    <img src="/img/pages/index/logo.png" alt="logo">
+                </figure>
+                <p class="Gambier-logoTitle">
+                    Gambier
+                </p>
+            </div>
+            <ul class="Gambier-nav-list">
+                <li class="Gambier-nav-item"><a href="/">首页</a></li>
+                <li class="Gambier-nav-item active"><a href="/pages/scene/book/book_room.html">酒店预订</a></li>
+                <li class="Gambier-nav-item"><a href="/pages/scene/about/cooperation.html">合作共赢</a></li>
+                <li class="Gambier-nav-item"><a href="/pages/scene/about/about.html">关于我们</a></li>
+                <li class="Gambier-nav-item"><a href="/pages/scene/link/link.html">联系我们</a></li>
+            </ul>
+        </section>
+    </nav>
+    <script type="text/x-handlebars-template" id="banner">
+        {{#each list}}
+        <div class="Gambier-banner-item swiper-slide" style="background:url('{{imgUrl}}') no-repeat 50% 50%;background-size:cover;">
+            <div class="Gambier-banner-content">
+                <div class="Gambier-banner-title">{{title}}</div>
+                <div class="Gambier-banner-subtitle">{{subtitle}}</div>
+                <button class="Gambier-banner-learnMore">了解更多</button>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <section class="Gambier-banner swiper-container">
+        <section class="Gambier-banner-container swiper-wrapper">
+
+            <div class="Gambier-banner-item swiper-slide"></div>
+            <div class="Gambier-banner-item swiper-slide"></div>
+        </section>
+        <section class="swiper-pagination Gambier-banner-pagination"></section>
+    </section>
+    <section class="Gambier-bookList">
+        <section class="Gambier-bookList-container">
+            <script type="text/x-handlebars-template" id="room-list">
+                {{#each list}}
+                <li class="Gambier-bookList-item">
+                    <figure class="Gambier-bookList-img"><img src="{{imgSelect imgUrl}}" alt=""></figure>
+                    <h1 class="Gambier-bookList-title">{{title}}</h1>
+                    <div class="Gambier-bookList-mask">
+                        <h1 class="Gambier-bookList-maskTitle">{{title}}</h1>
+                        <p class="Gambier-bookList-des">{{roomTypeChange roomType}}{{ellipsis  description 70}}</p>
+                        <div class="Gambier-bookList-bar">
+                            <span class="Gambier-bookList-price">{{priceType aud}}{{price}}</span>
+                            <button class="Gambier-bookList-bookNow"><a href="http://www.hotelbook.cn/pages/scene/book/book_info.html?roomId={{id}}">现在预订</a></button>
+                            <button class="Gambier-bookList-learnMore"><a href="http://www.hotelbook.cn/pages/scene/book/room_detail.html?roomId={{id}}">查看更多</a></button>
+                        </div>
+                </li>
+                {{/each}}
+            </script>
+            <ul class="Gambier-bookList-list">
+
+                <li class="Gambier-bookList-item">
+                    <figure class="Gambier-bookList-img"><img src="/img/pages/index/banner.jpg" alt=""></figure>
+                    <h1 class="Gambier-bookList-title">房间标题</h1>
+                    <div class="Gambier-bookList-mask">
+                        <h1 class="Gambier-bookList-maskTitle">房间标题</h1>
+                        <p class="Gambier-bookList-des">花园翼豪华房 - 市景(中宾)[含早](预付)(全新加坡最豪华自助早餐)(独家限时优惠)(携程自营)</p>
+                        <div class="Gambier-bookList-bar">
+                            <span class="Gambier-bookList-price">$9999</span>
+                            <button class="Gambier-bookList-bookNow">现在预订</button>
+                            <button class="Gambier-bookList-learnMore">查看更多</button>
+                        </div>
+                </li>
+                <li class="Gambier-bookList-item">
+                    <figure class="Gambier-bookList-img"><img src="/img/pages/index/banner.jpg" alt=""></figure>
+                    <h1 class="Gambier-bookList-title">房间标题</h1>
+                    <div class="Gambier-bookList-mask">
+                        <h1 class="Gambier-bookList-maskTitle">房间标题</h1>
+                        <p class="Gambier-bookList-des">花园翼豪华房 - 市景(中宾)[含早](预付)(全新加坡最豪华自助早餐)(独家限时优惠)(携程自营)</p>
+                        <div class="Gambier-bookList-bar">
+                            <span class="Gambier-bookList-price">$9999</span>
+                            <button class="Gambier-bookList-bookNow">现在预订</button>
+                            <button class="Gambier-bookList-learnMore">查看更多</button>
+                        </div>
+                </li>
+                <li class="Gambier-bookList-item">
+                    <figure class="Gambier-bookList-img"><img src="/img/pages/index/banner.jpg" alt=""></figure>
+                    <h1 class="Gambier-bookList-title">房间标题</h1>
+                    <div class="Gambier-bookList-mask">
+                        <h1 class="Gambier-bookList-maskTitle">房间标题</h1>
+                        <p class="Gambier-bookList-des">花园翼豪华房 - 市景(中宾)[含早](预付)(全新加坡最豪华自助早餐)(独家限时优惠)(携程自营)</p>
+                        <div class="Gambier-bookList-bar">
+                            <span class="Gambier-bookList-price">$9999</span>
+                            <button class="Gambier-bookList-bookNow">现在预订</button>
+                            <button class="Gambier-bookList-learnMore">查看更多</button>
+                        </div>
+                </li>
+                <li class="Gambier-bookList-item">
+                    <figure class="Gambier-bookList-img"><img src="/img/pages/index/banner.jpg" alt=""></figure>
+                    <h1 class="Gambier-bookList-title">房间标题</h1>
+                    <div class="Gambier-bookList-mask">
+                        <h1 class="Gambier-bookList-maskTitle">房间标题</h1>
+                        <p class="Gambier-bookList-des">花园翼豪华房 - 市景(中宾)[含早](预付)(全新加坡最豪华自助早餐)(独家限时优惠)(携程自营)</p>
+                        <div class="Gambier-bookList-bar">
+                            <span class="Gambier-bookList-price">$9999</span>
+                            <button class="Gambier-bookList-bookNow">现在预订</button>
+                            <button class="Gambier-bookList-learnMore">查看更多</button>
+                        </div>
+                </li>
+                <li class="Gambier-bookList-item">
+                    <figure class="Gambier-bookList-img"><img src="/img/pages/index/banner.jpg" alt=""></figure>
+                    <h1 class="Gambier-bookList-title">房间标题</h1>
+                    <div class="Gambier-bookList-mask">
+                        <h1 class="Gambier-bookList-maskTitle">房间标题</h1>
+                        <p class="Gambier-bookList-des">花园翼豪华房 - 市景(中宾)[含早](预付)(全新加坡最豪华自助早餐)(独家限时优惠)(携程自营)</p>
+                        <div class="Gambier-bookList-bar">
+                            <span class="Gambier-bookList-price">$9999</span>
+                            <button class="Gambier-bookList-bookNow">现在预订</button>
+                            <button class="Gambier-bookList-learnMore">查看更多</button>
+                        </div>
+                </li>
+                <li class="Gambier-bookList-item">
+                    <figure class="Gambier-bookList-img"><img src="/img/pages/index/banner.jpg" alt=""></figure>
+                    <h1 class="Gambier-bookList-title">房间标题</h1>
+                    <div class="Gambier-bookList-mask">
+                        <h1 class="Gambier-bookList-maskTitle">房间标题</h1>
+                        <p class="Gambier-bookList-des">花园翼豪华房 - 市景(中宾)[含早](预付)(全新加坡最豪华自助早餐)(独家限时优惠)(携程自营)</p>
+                        <div class="Gambier-bookList-bar">
+                            <span class="Gambier-bookList-price">$9999</span>
+                            <button class="Gambier-bookList-bookNow">现在预订</button>
+                            <button class="Gambier-bookList-learnMore">查看更多</button>
+                        </div>
+                </li>
+                <li class="Gambier-bookList-item">
+                    <figure class="Gambier-bookList-img"><img src="/img/pages/index/banner.jpg" alt=""></figure>
+                    <h1 class="Gambier-bookList-title">房间标题</h1>
+                    <div class="Gambier-bookList-mask">
+                        <h1 class="Gambier-bookList-maskTitle">房间标题</h1>
+                        <p class="Gambier-bookList-des">花园翼豪华房 - 市景(中宾)[含早](预付)(全新加坡最豪华自助早餐)(独家限时优惠)(携程自营)</p>
+                        <div class="Gambier-bookList-bar">
+                            <span class="Gambier-bookList-price">$9999</span>
+                            <button class="Gambier-bookList-bookNow">现在预订</button>
+                            <button class="Gambier-bookList-learnMore">查看更多</button>
+                        </div>
+                </li>
+                <li class="Gambier-bookList-item">
+                    <figure class="Gambier-bookList-img"><img src="/img/pages/index/banner.jpg" alt=""></figure>
+                    <h1 class="Gambier-bookList-title">房间标题</h1>
+                    <div class="Gambier-bookList-mask">
+                        <h1 class="Gambier-bookList-maskTitle">房间标题</h1>
+                        <p class="Gambier-bookList-des">花园翼豪华房 - 市景(中宾)[含早](预付)(全新加坡最豪华自助早餐)(独家限时优惠)(携程自营)</p>
+                        <div class="Gambier-bookList-bar">
+                            <span class="Gambier-bookList-price">$9999</span>
+                            <button class="Gambier-bookList-bookNow">现在预订</button>
+                            <button class="Gambier-bookList-learnMore">查看更多</button>
+                        </div>
+                </li>
+            </ul>
+            <script type="text/x-handlebars-template" id="page">
+                {{#each list}}
+                <span class="Gambier-bookList-page {{activeClass @index}}">{{this}}</span>
+                {{/each}}
+            </script>
+            <div class="Gambier-bookList-pagination">
+
+                <span class="Gambier-bookList-page">2</span>
+                <span class="Gambier-bookList-page">3</span>
+                <span class="Gambier-bookList-page">4</span>
+                <span class="Gambier-bookList-page">5</span>
+                <span class="Gambier-bookList-page">6</span>
+            </div>
+        </section>
+    </section>
+    <footer class="Gambier-footer">
+        <section class="Gambier-footer-container">
+            <p class="Gambier-footer-copyright">
+                <span class="Gambier-footer-des">版权 © 1996–Country Comfort Mt Gambier International（甘比尔山乡村舒适国际酒店）. 版权所有</span>
+                <a class="Gambier-footer-about">关于我们</a>
+                <span class="Gambier-footer-phone"><i></i>800-878-8874</span>
+            </p>
+            <div class="Gambier-footer-collaborate">
+                <ul>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png" title="Booking.com" alt="Booking.com" height="26" width="91">
+
+                    </li>
+                    <li>
+                        <img src="https://q.bstatic.com/static/img/tfl/group_logos/logo_priceline/f80e129541f2a952d470df2447373390f3dd4e44.png" title="Priceline" alt="Priceline" height="26" width="91">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_kayak/83ef7122074473a6566094e957ff834badb58ce6.png" title="Kayak" alt="Kayak" height="26" width="79">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_agoda/3d4f6ca8a45a376f2193f1e88d1ac8369f585e76.png" title="Agoda" alt="Agoda" height="26" width="70">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_rentalcars/6bc5ec89d870111592a378bbe7a2086f0b01abc4.png" title="Rentalcars" alt="Rentalcars" height="26" width="109">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_opentable/a4b50503eda6c15773d6e61c238230eb42fb050d.png" title="OpenTable" alt="OpenTable" height="26" width="95">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    <nav class="Gambier-scrollTop">
+        <div class="Gambier-detail-bar">
+            我要合作
+        </div>
+        <div class="Gambier-top">
+            返回顶部
+        </div>
+    </nav>
+</section>
+<script src="/js/thirdParty/jquery/jquery-1.8.0.min.js"></script>
+<script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.js"></script>
+<script src="/js/common/common.js"></script>
+<script src="/js/common/jquery.scroll.js"></script>
+<script src="/js/thirdParty/jquery/jquery.json-2.4.js"></script>
+<script src="/js/thirdParty/swiper/swiper.min.js"></script>
+<script src="/js/scene/book/scene.book.js"></script>
+</body>
+</html>

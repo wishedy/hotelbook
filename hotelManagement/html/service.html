@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
+    <title>Dashboard, Free HTML5 Admin Template</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="../css/templatemo_main.css">
+    <link rel="stylesheet" href="../css/platform.css" />
+    <!--
+    Dashboard Template
+    http://www.templatemo.com/preview/templatemo_415_dashboard
+    -->
+</head>
+<body>
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="navbar-header">
+        <div class="logo"><h1>甘特尔山国际酒店</h1></div>
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </div>
+</div>
+<div class="template-page-wrapper">
+    <div class="navbar-collapse collapse templatemo-sidebar">
+        <ul class="templatemo-sidebar-menu">
+            <li>
+                <div class="row" style="margin: 0 auto;">
+                    <div class="col-lg-10" style="border-radius: 50%">
+                        <a href="#" class="thumbnail" style="border-radius: 50%">
+                            <img style="border-radius: 50%" src="https://timgsa.baidu.com/timg?image&amp;quality=80&amp;size=b9999_10000&amp;sec=1507751416212&amp;di=09e0ce7f00fbe7c8da3750d6d5def98b&amp;imgtype=0&amp;src=http%3A%2F%2Fimg.sc115.com%2Fuploads%2Fsc%2Fjpgs%2F1507%2Fapic12948_sc115.com.jpg" alt="...">
+                        </a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="../index.html"><i class="fa fa-home"></i>房间管理</a></li>
+            <li class="sub">
+                <a href="javascript:;">
+                    <i class="fa fa fa-users"></i>客户管理 <div class="pull-right"><span class="caret"></span></div>
+                </a>
+                <ul class="templatemo-submenu">
+                    <li><a href="edit_user.html"><i class="fa fa fa-users"></i>酒店预订</a></li>
+                    <li><a href="#"><i class="fa fa fa-users"></i>加盟合作</a></li>
+                </ul>
+            </li>
+            <li class="sub open">
+                <a href="javascript:;">
+                    <i class="fa fa-map-marker"></i>网站管理 <div class="pull-right"><span class="caret"></span></div>
+                </a>
+                <ul class="templatemo-submenu">
+                    <li><i class="icon-plus-sign-alt"></i><a href="edit_banner.html">主位设置</a></li>
+                    <li class="active"><a href="service.html">特色服务</a></li>
+                    <li><a href="circum.html">周边景点</a></li>
+                    <li ><a href="business.html">主营业务</a></li>
+                </ul>
+            </li>
+            <!--<li><a href="data-visualization.html"><i class="fa fa-cubes"></i><span class="badge pull-right">9</span>Data Visualization</a></li>
+            <li><a href="maps.html"><i class="fa fa-map-marker"></i><span class="badge pull-right">42</span>Maps</a></li>
+            <li><a href="tables.html"><i class="fa fa-users"></i><span class="badge pull-right">NEW</span>Manage Users</a></li>
+            <li><a href="preferences.html"><i class="fa fa-cog"></i>Preferences</a></li>-->
+            <li><a href="javascript:;" data-toggle="modal" data-target="#confirmModal"><i class="fa fa-sign-out"></i>Sign Out</a></li>
+        </ul>
+    </div><!--/.navbar-collapse -->
+
+    <div class="templatemo-content-wrapper">
+        <div class="templatemo-content">
+            <ol class="breadcrumb">
+                <li><a href="#">网站管理</a></li>
+                <li class="active">特色服务</li>
+            </ol>
+            <h1>特色服务</h1>
+            <p>酒店所有特色服务的管理</p>
+
+            <div class="row margin-bottom-30">
+                <div class="col-md-12">
+                    <ul class="nav nav-pills">
+                        <li class="active"><button type="submit" class="btn btn-success ev-add-info"  data-toggle="modal" data-target="#confirmModal">新增服务</button></li>
+                    </ul>
+                </div>
+            </div>
+            <script   id="tpl-user-info" type="text/x-handlebars-template">
+                {{#each list}}
+                <tr>
+                    <td>{{title}}</td>
+                    <td>{{content}}</td>
+                    <td><div class="row">
+                        <div class="col-lg-12">
+                            <a href="#" class="thumbnail">
+                                <img src="{{imgUrl}}" alt="预览图片">
+                            </a>
+                        </div>
+                    </div></td>
+                    <td><span class="btn btn-link ev-edit-info" style="color:#5cb85c;"  data-toggle="modal" data-target="#confirmModal" data-index="{{@index}}">编辑</span><span   class="btn btn-link ev-delete-room"   data-index="{{@index}}" style="color: #d9534f;">删除</span></td>
+                </tr>
+                {{/each}}
+            </script>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="btn-group pull-right" id="templatemo_sort_btn">
+                        <button type="button" class="btn btn-default">Sort by</button>
+                        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                            <span class="caret"></span>
+                            <span class="sr-only">Toggle Dropdown</span>
+                        </button>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">First Name</a></li>
+                            <li><a href="#">Last Name</a></li>
+                            <li><a href="#">Username</a></li>
+                        </ul>
+                    </div>
+                    <div class="table-responsive">
+                        <h4 class="margin-bottom-15">以下是所有酒店特色服务信息</h4>
+                        <table class="table table-striped table-hover table-bordered">
+                            <thead>
+                            <tr>
+                                <th class="text-center">特色服务</th>
+                                <th class="text-center col-lg-4">描述</th>
+                                <th class="text-center col-lg-5">背景</th>
+                                <th class="text-center">编辑</th>
+                            </tr>
+                            </thead>
+                            <tbody class="ev-info-list">
+                            <tr>
+                                <td>John</td>
+                                <td>房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容房间的描述内容描述内容</td>
+                                <td><div class="row">
+                                    <div class="col-lg-12">
+                                        <a href="#" class="thumbnail">
+                                            <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507751416212&di=09e0ce7f00fbe7c8da3750d6d5def98b&imgtype=0&src=http%3A%2F%2Fimg.sc115.com%2Fuploads%2Fsc%2Fjpgs%2F1507%2Fapic12948_sc115.com.jpg" alt="...">
+                                        </a>
+                                    </div>
+                                </div></td>
+                                <td><span  class="btn btn-link" style="color:#5cb85c;"  data-toggle="modal" data-target="#confirmModal" data-index="{{@index}}">编辑</span><span  class="btn btn-link ev-delete-room"  data-index={{@index}} style="color: #d9534f;">删除</span></td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--<ul class="pagination pull-right col-lg-8" style="margin-left:auto;margin-right:auto;">
+                        <li class="disabled"><a href="#">&laquo;</a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">3 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">4 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">5 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">&raquo;</a></li>
+                    </ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="confirmModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h4 class="modal-title" id="myModalLabel">编辑特色服务</h4>
+                </div>
+                <div class="modal-body clearfix">
+                    <form class="form-inline" role="form">
+                        <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                            <label class="form-label">名称</label>
+                            <input type="text" class="form-control ev-title">
+                        </div>
+                        <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                            <label class="form-label">描述</label>
+                            <textarea class="form-control ev-des" rows="3" name="textarea" style="resize: none;"></textarea>
+                        </div>
+                        <div class="form-group col-lg-12" style="margin-bottom: 15px;">
+                            <label class="form-label">照片</label>
+                            <input  type="file" class="form-control ev-uploadImg" accept="image/*" >
+                            <div class="row ev-postImage-container" style="margin-top: 10px;">
+                                <div class="col-md-6">
+                                    <a href="#" class="thumbnail">
+                                        <img src="https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1507751416212&di=09e0ce7f00fbe7c8da3750d6d5def98b&imgtype=0&src=http%3A%2F%2Fimg.sc115.com%2Fuploads%2Fsc%2Fjpgs%2F1507%2Fapic12948_sc115.com.jpg" alt="...">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <span  class="btn btn-primary ev-submit">确定</span>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="templatemo-footer">
+        <div class="templatemo-copyright">
+            <p>Copyright &copy; 2017 The Country Comfort</p>
+        </div>
+    </footer>
+</div>
+
+<script src="../js/jquery.min.js"></script>
+<script src="/js/thirdParty/jquery/jquery.json-2.4.js"></script>
+<script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.js"></script>
+<script src="../js/bootstrap.min.js"></script>
+<script src="../js/Chart.min.js"></script>
+<script src="../js/templatemo_script.js"></script>
+<script src="../js/edit_info.js"></script>
+<script>
+    editObj.init(5);
+</script>
+</body>
+</html>

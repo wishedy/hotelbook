@@ -1,0 +1,544 @@
+@import "../../components/common/header";
+@import "../../variables/variables";
+.Gambier-mainInner{
+  .Gambier-intro{
+    width: 100%;
+    .Gambier-intro-container{
+      margin: 0 auto;
+      width: $width;
+      height: auto;
+      min-height: 348px;
+      position: relative;
+      .Gambier-intro-content{
+        color: #333;
+        font-size: 16px;
+        line-height: 32px;
+      }
+      .Gambier-intro-learnMore{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+    }
+  }
+  .Gambier-business{
+    width: 100%;
+    .Gambier-business-container{
+      min-height: 462px;
+      margin: 0 auto;
+      height: auto;
+      width: $width;
+      .Gambier-business-list{
+        width: 1058px;
+       // min-width: 900px;
+        height: 320px;
+        @include clearfix();
+        margin: 0 auto;
+        .Gambier-business-item{
+          width: 192px;
+          height: 320px;
+          transition: width 500ms ease;
+          background:  url("/img/pages/index/banner.jpg") no-repeat center 50%;
+          background-size: cover;
+          float: left;
+          position: relative;
+          .Gambier-business-title{
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: rgba(0,0,0,0.7);
+            width: 100%;
+            height: 100%;
+            p{
+              font-size: 30px;
+              line-height: 40px;
+              color: #fff;
+              font-weight: 700;
+              margin: 0 auto;
+              width: 32px;
+              text-align: center;
+              padding-top: 50px;
+            }
+          }
+          .Gambier-business-activeBar,.Gambier-business-des{
+            display: none;
+          }
+          &.active{
+            width: 290px;
+            transition: width 1s ease;
+            .Gambier-business-title{
+              display: none;
+            }
+            .Gambier-business-activeBar{
+              width: 254px;
+              margin: 0 auto;
+              padding-top: 200px;
+              display: block;
+              @include clearfix();
+              .Gambier-business-activeTitle{
+                  line-height: 32px;
+                  font-size: 24px;
+                  color: #fff;
+                float: left;
+              }
+              button{
+                width: 70px;
+                height: 28px;
+                font-size: 12px;
+                float: right;
+                border-radius: 5px;
+                margin-top: 7px;
+                a{
+                  line-height: 28px;
+                  float: left;
+                  width: 100%;
+                  height: 100%;
+                  font-size: 12px;;
+                }
+              }
+            }
+            .Gambier-business-des{
+              width: 254px;
+              margin: 0 auto;
+              font-size: 12px;
+              line-height: 20px;
+              color: #fff;
+              display: block;
+            }
+
+          }
+        }
+      }
+    }
+  }
+  .Gambier-service{
+    width: 100%;
+    .Gambier-service-container{
+      width: $width;
+      min-height: 300px;
+      height: auto;
+      margin: 0 auto;
+      .Gambier-service-bar{
+        width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        height: 180px;
+        overflow: hidden;
+        .Gambier-service-change{
+          position: absolute;
+          width: 23px;
+          height: 23px;
+          top: 54px;
+          left: 0;
+          background: url("/img/pages/index/left.png") no-repeat center 50%;
+          background-size: cover;
+          cursor: pointer;
+        }
+        .Gambier-service-right{
+          background: url("/img/pages/index/right.png") no-repeat center 50%;
+          background-size: cover;
+          right: 0;
+          left: auto;
+
+        }
+        .Gambier-service-list{
+          white-space: nowrap;
+          @include clearfix();
+          min-width: 1200px;
+          height: 180px;
+          width: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          .Gambier-service-item{
+            width: 240px;
+            height: 100%;
+            display: inline-block;
+            .Gambier-service-img{
+              width: 120px;
+              height:120px;
+              margin: 0 auto;
+              border-radius: 50%;
+              border: 1px solid #c2cbc4;
+              background: url("/img/pages/index/wash.png") no-repeat 50% 50%;
+            }
+            .Gambier-service-title{
+              color: #333;
+              font-size: 20px;
+              line-height: 60px;
+              text-align: center;
+            }
+          }
+          .Gambier-service-item:hover{
+            .Gambier-service-img{
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+              background-image:  url("/img/pages/index/washLight.png");
+              background-repeat: no-repeat ;
+            }
+          }
+          .Gambier-service-wash{
+            .Gambier-service-img{
+              background: url("/img/pages/index/wash.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-wash:hover{
+
+            .Gambier-service-img{
+              background: url("/img/pages/index/washLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+              //background-repeat: no-repeat ;
+            }
+          }
+          .Gambier-service-bus{
+            .Gambier-service-img{
+              background: url("/img/icon/bus.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-bus:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/busLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-dining{
+            .Gambier-service-img{
+              background: url("/img/icon/dining.png") no-repeat 50% 50%;
+
+            }
+
+          }
+          .Gambier-service-dining:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/diningLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-meeting{
+            .Gambier-service-img{
+              background: url("/img/icon/meeting.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-meeting:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/meetingLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-clean{
+            .Gambier-service-img{
+              background: url("/img/icon/clean.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-clean:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/cleanLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-parking{
+            .Gambier-service-img{
+              background: url("/img/icon/parking.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-parking:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/parkingLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-wifi{
+            .Gambier-service-img{
+              background: url("/img/icon/WIFI.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-wifi:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/WIFILight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-hour{
+            .Gambier-service-img{
+              background: url("/img/icon/hours.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-hour:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/hoursLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-fitness{
+            .Gambier-service-img{
+              background: url("/img/icon/fitness_icon.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-fitness:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/fitness_iconLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-coffee{
+            .Gambier-service-img{
+              background: url("/img/icon/coffee.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-coffee:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/coffeeLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-milk{
+            .Gambier-service-img{
+              background: url("/img/icon/Milk-Bottle.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-milk:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/Milk-Bottle-Light.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-tea{
+            .Gambier-service-img{
+              background: url("/img/icon/tea.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-tea:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/teaLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-wind{
+            .Gambier-service-img{
+              background: url("/img/icon/airConditioner.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-wind:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/airConditionerLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-conditioner{
+            .Gambier-service-img{
+              background: url("/img/icon/airconditionerBar.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-conditioner:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/airconditionerBarLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-refrigerator{
+            .Gambier-service-img{
+              background: url("/img/icon/refrigerator.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-refrigerator:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/refrigeratorLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-tv{
+            .Gambier-service-img{
+              background: url("/img/icon/tv.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-tv:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/tvLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+          .Gambier-service-bath{
+            .Gambier-service-img{
+              background: url("/img/icon/bathtub.png") no-repeat 50% 50%;
+            }
+
+          }
+          .Gambier-service-bath:hover{
+
+            .Gambier-service-img{
+              background: url("/img/icon/bathtubLight.png") no-repeat 50% 50%;
+              border: 1px solid $greenBack;
+              background-color:$greenBack ;
+            }
+          }
+        }
+      }
+
+    }
+  }
+  .Gambier-circum{
+    width: 100%;
+    @include clearfix();
+    .Gambier-circum-container{
+      width: 1000px;
+      margin: 0 auto;
+      .Gambier-circum-left{
+        width: 520px;
+        height: 480px;
+        position: relative;
+        float: left;
+        .Gambier-circum-view{
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .Gambier-circum-des{
+          width: 500px;
+          padding: 10px 30px;
+          height: 70px;
+          position: absolute;
+          bottom:0;
+          left: 0;
+          background: rgba(0,0,0,.5);
+          .Gambier-circum-siteTitle{
+            color: #fff;
+            font-size: 24px;
+            line-height: 40px;
+          }
+        }
+
+      }
+      .Gambier-circum-right{
+        width: 480px;
+        height: 480px;
+        float: left;
+        position: relative;
+        .Gambier-circum-scenic{
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          .Gambier-circum-list{
+            width: 480px;
+            .Gambier-circum-item{
+              position: relative;
+              width: 160px;
+              height: 160px;
+              float: left;
+              .Gambier-circum-mask{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: rgba(0,0,0,.6);
+              }
+              figure{
+                width: 160px;
+                height: 160px;
+                img{
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+            }
+            .Gambier-circum-item:hover{
+              .Gambier-circum-mask{
+                display: none;
+
+              }
+            }
+
+          }
+        }
+        .swiper-pagination{
+          .swiper-pagination-bullet-active{
+            background: #fff;
+            opacity: 1 !important;
+          }
+          .swiper-pagination-bullet{
+            background: #fff;
+            opacity: .4;
+          }
+        }
+
+        button{
+          position: absolute;
+          right: 20%;
+          bottom:0;
+        }
+      }
+      .Gambier-circum-bottom{
+        height: 88px;
+        width: 100%;
+        margin: 0 auto;
+        float: left;
+        button{
+          margin: 20px auto;
+          display: block;
+        }
+      }
+    }
+  }
+  .Gambier-title{
+    font-size: 34px;
+    line-height: 122px;
+    text-align: center;
+    color: $greenBack;
+    font-weight: 500;
+  }
+}

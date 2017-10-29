@@ -1,0 +1,230 @@
+@charset "UTF-8";
+//重新认证
+//Created by qiangkailiang on 2016/11/29
+//申请信息变更：begin
+.ev-applyAuthConent {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    margin-left: -375px;
+    display: none;
+}
+
+.yd-applyInfoChangeBox {
+    border: 1px solid #e4e9ed;
+    background-color: #fff;
+    width: 750px;
+    padding: 60px 0;
+    text-align: center;
+    .yd-infoChangeHead {
+        figcaption {
+            color: #3598db;
+            font-size: 24px;
+        }
+        .yd-infoChangePrompt {
+            margin: 24px 0 50px;
+            color: #666;
+        }
+    }
+}
+
+.yd-infoChangeDetailsBox {
+    margin: 0 auto;
+    text-align: left;
+    padding-left: 110px;
+    .yd-infoChange_place {
+        margin-top: -10px;
+        .yd-infoChangeContent {
+            vertical-align: bottom;
+        }
+    }
+    .yd-workTitleInfo {
+        border: 1px solid #dbdbdb;
+        width: 268px;
+        height: 34px;
+        padding: 0 10px;
+        border-radius: 3px;
+        vertical-align: middle;
+    }
+    .yd-majorChangeInfo {
+        border: 1px solid #dbdbdb;
+        width: 268px;
+        min-height: 34px;
+        padding: 0 10px;
+        border-radius: 3px;
+        vertical-align: middle;
+    }
+    .yd-tableErrorTips {
+        //错误提示样式
+        font-size: 13px;
+        font-family: "宋体";
+        color: #f34b4b;
+        margin-left: 10px;
+        display: none;
+        width: auto;
+        i {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            vertical-align: sub;
+            margin-right: 4px;
+            background: transparent url('//img10.allinmd.cn/v3/common/icon/error_tips.png') center center no-repeat;
+        }
+    }
+}
+
+.yd-infoChangeDetails {
+    margin-bottom: 20px;
+    p {
+        color: #666;
+        display: inline-block;
+        width: 72px;
+        text-align: right;
+        margin-right: 38px;
+        height: 36px;
+        line-height: 36px;
+    }
+    .yd-infoChangeContent {
+        display: inline-block;
+        position: relative;
+        text-align: left;
+        color: #333;
+        font-size: 17px;
+        input {
+            border: 1px solid #dbdbdb;
+            width: 268px;
+            height: 34px;
+            padding: 0 10px;
+            line-height: 34px;
+            border-radius: 3px;
+            font-size: 15px;
+        }
+        .yd-selectIcon {
+            position: absolute;
+            width: 0;
+            height: 0;
+            border: 6px solid transparent;
+            border-top: 6px solid #A1A8B0;
+            top: 15px;
+            right: 10px;
+        }
+        .yd-tableItemRadio {
+            margin-right: 50px;
+        }
+        .yd-workTitleInfo input:focus,
+        .yd-majorChangeInfo input:focus {
+            border: 1px solid #dbdbdb;
+        }
+    }
+}
+
+.yd-infoChangeContent {
+    div {
+        line-height: 26px;
+        margin-top: 4px;
+        .yd-majorChangeInfoItem {
+            height: 26px;
+            border: 1px solid #dbdbdb;
+            font-size: 12px;
+            font-family: "宋体";
+            display: inline-block;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+            margin-right: 3px;
+            padding: 0 8px;
+            i {
+                margin-left: 6px;
+            }
+        }
+    }
+}
+
+.yd-majorChoiceDetails {
+    //专业选择后显示样式
+    .yd-tableItemTagsList {
+        text-align: left;
+        width: 290px;
+        vertical-align: top;
+        margin-left: 0;
+    }
+}
+
+.yd-infoChangeBtn {
+    text-align: right;
+    padding-right: 170px;
+    margin-top: 30px;
+    span {
+        color: #aaa;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    .yd-submitBtn {
+        display: inline-block;
+        margin: 0 10px 0 20px;
+        border-radius: 50px;
+        position: relative;
+        width: 76px;
+        height: 30px;
+        text-align: center;
+        line-height: 30px;
+        background-color: #2899e6;
+        color: #fff;
+        &:hover {
+            background-color: #52a9e4;
+        }
+    }
+}
+
+//申请信息变更：end
+//变更信息提示弹框：begin
+.yd-changeInfoPop {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
+
+.yd-changeInfoPopBox {
+    width: 500px;
+    height: 260px;
+    background-color: #fff;
+    margin: 300px auto;
+    border-radius: 5px;
+    text-align: center;
+    color: #333;
+    .yd-deletePromptClose {
+        float: right;
+        cursor: pointer;
+        width: 13px;
+        height: 13px;
+        background: url("//img10.allinmd.cn/v3/common/icon/icon_close.png") center center no-repeat;
+        margin: 22px 24px 0 0;
+    }
+    figcaption {
+        font-weight: bold;
+        padding-top: 58px;
+        margin-bottom: 20px;
+    }
+    p {
+        margin-top: 12px;
+    }
+    span {
+        display: inline-block;
+        margin-top: 50px;
+        width: 80px;
+        height: 34px;
+        line-height: 34px;
+        background-color: #2899e6;
+        color: #fff;
+        font-size: 15px;
+        cursor: pointer;
+        border-radius: 3px;
+    }
+}
+
+//变更信息提示弹框：begin

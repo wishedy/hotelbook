@@ -1,0 +1,250 @@
+@charset "UTF-8";
+//微信二维码弹层组件
+//Created by qiangkailiang on 2016/11/23
+//公共方法模块调用
+@import "../modules/_common-modules";
+//公共变量引用
+@import "../variables/_variables";
+.none {
+  display:none;
+}
+
+.material{
+  .queMaterial {
+    height: 10rem;
+    padding: 1.25rem .9375rem 0;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    overflow-y: scroll;
+    background: #f4f7f6;
+    color: #555;
+    .queMaType {
+      height: 1.25rem;
+      margin-right: .3125rem;
+      width: 2.25rem;
+      color: #909090;
+      font-size: .8125rem;
+      text-align: center;
+      line-height: 1.25rem;
+      border-radius: .25rem;
+      float: left;
+      border: 1px solid #909090;
+    }
+  }
+  .singleSelect{
+    margin-top:rem(20px);
+  }
+  .checkbox{
+    margin-top:rem(20px);
+  }
+}
+
+
+/*启动页*/
+.queBeginContent{
+  /*background: #fbfbfb;*/
+  width: rem(750px);
+  margin: 0 auto;
+  .queReTiBg{
+    background: url("/image/exercises/practice_person_bg@2x.png") no-repeat;
+    width: rem(750px);
+    height: rem(540px);
+    background-size: cover;
+    position: relative;
+  }
+  .queBeginTitle{
+    width: rem(750px);
+    text-align: center;
+    font-size:rem(24px);
+    line-height:rem(24px);
+    color:#fff;
+    padding-top:rem(50px)
+  }
+  .queBeginInner {
+    color: #fff;
+    .queBeginImg {
+      position: relative;
+      display: block;
+      width: rem(110px);
+      height: rem(110px);
+      margin: rem(67px) auto rem(48px);
+      border: solid 5px #9facd6;
+      border-radius: 50%;
+    }
+    .queBeginAlert {
+      .queBeginName {
+        font-size: rem(22px);
+        color: #fff;
+        text-align: center;
+        margin-bottom: rem(14px);
+      }
+      .queBeginSign {
+        font-size: rem(20px);
+        color: #fff;
+        text-align: center;
+        margin-bottom: rem(112px);
+      }
+    }
+
+  }
+  .queBeginInfo{
+    position: absolute;
+    top: rem(500px);
+    left: 50%;
+    width: rem(650px);
+    margin-left: rem(-325px);
+    .queBeginInfoBg {
+      background: #fff;
+      width: rem(650px);
+      border-radius: rem(10px) rem(10px) 0 0;
+      padding:rem(50px) 0 rem(100px) 0;
+      p{
+        span{
+          display: inline-block;
+        }
+      }
+      .queSimuType {
+
+      }
+      .queSimuTime {
+      }
+      .queSimuStandard {
+      }
+      .queBeginInfoName {
+        color: #909090;
+        font-size: rem(15px);
+        line-height: rem(45px);
+        width: rem(200px);
+        text-align: right;
+      }
+      .queBeginInfoContent {
+        color: #555;
+        font-size: rem(16px);
+        line-height: rem(45px);
+      }
+    }
+    .bottomBg{
+      background:url(/image/exercises/practice_start_bg@2x.png) no-repeat;
+      background-size: cover;
+      width: rem(650px);
+      height: rem(13px);
+    }
+  }
+  .queBeginButton{
+    margin:rem(300px) auto 0;
+    .queBeginSign{
+      color:#909090;
+      font-size:rem(13px);
+      width:100%;
+      text-align: center;
+      margin-bottom:rem(20px);
+    }
+    .queBeginIte{
+      display: block;
+      height:rem(54px);
+      width:rem(450px);
+      margin:0 auto;
+      border-radius: rem(44px);
+      text-align: center;
+      line-height: rem(54px);
+      font-size: rem(16px);
+    }
+    .queBeginMor{
+      background: #546690;
+      color:#fff;
+    }
+  }
+
+}
+
+
+@include query() {
+  .queBeginContent {
+    width: 100%;
+    .queReTiBg {
+      width: rem(375px);
+      height: rem(270px);
+    }
+    .queBeginTitle {
+      height: rem(18px);
+      width: rem(375px);
+      font-size:rem(18px);
+      line-height:rem(18px);
+    }
+    .queBeginInner {
+      .queBeginImg {
+        width: rem(55px);
+        height: rem(55px);
+        margin: rem(33px) auto rem(24px);
+      }
+      .queBeginAlert{
+        .queBeginName{
+          font-size:rem(17px);
+          margin-bottom: rem(12px);
+          line-height: rem(17px);
+        }
+        .queBeginSign{
+          font-size:rem(15px);
+          line-height: rem(15px);
+        }
+      }
+
+    }
+    .queBeginInfo{
+      width: rem(325px);
+      margin-left: rem(-164px);
+      top: rem(250px);
+      .queBeginInfoBg {
+        width: rem(325px);
+        .queBeginInfoName {
+          width: rem(100px);
+        }
+      }
+      .bottomBg{
+        width: rem(325px);
+        height: rem(6px);
+      }
+    }
+    .queBeginButton{
+      .queBeginSign{
+        font-size:rem(13px);
+        margin-bottom:rem(20px);
+      }
+      .queBeginIte{
+        height:rem(54px);
+        width:92%;
+        border-radius: rem(44px);
+        line-height: rem(54px);
+        font-size: rem(16px);
+      }
+      .queBeginMor{
+        background: #546690;
+        color:#fff;
+      }
+    }
+  }
+}
+
+
+
+.hallTest_cont{
+  margin-top: rem(16px);
+  position: inherit;
+  padding: 20px 0;
+  /*border: solid 1px #e3e8ed;*/
+  background: none;
+}
+
+.hallTest_cont .singleSelect .hTestAnswer li .answerText {
+  width: 89%;
+  line-height: 1.5rem;
+}
+.quesContainer{
+
+  background: #fff;
+
+}
+.answerAnalysis {
+  border: solid 1px #e3e8ed;
+  border-top: none;
+}

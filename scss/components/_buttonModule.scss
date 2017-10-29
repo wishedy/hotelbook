@@ -1,0 +1,53 @@
+@charset "UTF-8";
+// 按钮库
+// Created by qiangkailiang on 2016/11/03
+// 功能库引入
+@import "../../modules/_common-modules";
+
+.btn-normal {
+    color: #555;
+    position: relative;
+    border-radius: rem(500px);
+    border: rem(1px) solid #dfdfdf;
+    padding: rem(5px) rem(10px);
+    font-size: rem(13px);
+}
+
+.btn-yellow {
+    background-color: #ffcb55;
+    color: #31394c;
+    font-size: rem(15px);
+    padding: rem(5px) rem(22px);
+    border-radius: rem(500px);
+    font-weight: bold;
+    position: relative;
+}
+
+.btn-primary {
+    border: rem(1px) solid #546690;
+    position: relative;
+    font-size: rem(16px);
+    color: #546690;
+    padding: rem(7.5px) rem(50px);
+    line-height: 1;
+    border-radius: rem(5000px);
+}
+
+.yd-addSave {
+    margin-top: rem(25px);
+    height: rem(44px);
+    width: rem(300px);
+    font-weight: bold;
+    font-size: rem(16px);
+    border-radius: rem(500px)
+}
+
+.yd-addSave.hasContent {
+    background-color: #546690;
+    color: #fff;
+}
+
+.yd-addSave.noContent {
+    background-color: #98a3bc;
+    color: #d5dae4;
+}
