@@ -17,7 +17,7 @@ var editObj = {
         editId:""
     },
     path:{
-        roomUrl:"//localhost/web-ssm/imageDisRest/showImage"
+        roomUrl:"//www.jikelearn.cn/web-ssm/imageDisRest/showImage"
     },
     el:{
         submit:$(".ev-submit"),
@@ -37,7 +37,7 @@ var editObj = {
         }
         if(leng>0) {
             $.ajax({
-                url: "//localhost/web-ssm/uploads",
+                url: "//www.jikelearn.cn/web-ssm/uploads",
                 type: 'post',
                 dataType: 'json',
                 timeout: 1000,

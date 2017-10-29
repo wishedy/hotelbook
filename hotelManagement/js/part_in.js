@@ -9,7 +9,7 @@ $(document).ready(function(){
             return t;
         },
         path:{
-          friend:"//localhost/web-ssm/franRest/fran"
+          friend:"//www.jikelearn.cn/web-ssm/franRest/fran"
         },
         data:{
             pageNum:1,

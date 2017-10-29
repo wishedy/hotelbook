@@ -8,14 +8,14 @@ $(document).ready(function(){
             var t = this;
             // t.templateService();
             $(".Gambier-scrollTop").scroll({
-                link: "http://localhost/pages/scene/cooperation/cooperation.html",
+                link: "http://www.jikelearn.cn/pages/scene/cooperation/cooperation.html",
                 text: "我要合作"
             });
             t.bannerList();
             return t;
         },
         path:{
-            roomUrl:"//localhost/web-ssm/imageDisRest/showImage"
+            roomUrl:"//www.jikelearn.cn/web-ssm/imageDisRest/showImage"
         },
         data:{
             editType:"4"

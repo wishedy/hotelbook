@@ -15,7 +15,7 @@ $(document).ready(function(){
             uploadImage:$(".ev-uploadImg")
         },
         path:{
-            roomUrl:"//localhost/web-ssm/hotelRest/submit",
+            roomUrl:"//www.jikelearn.cn/web-ssm/hotelRest/submit",
         },
         data: {
             tempData: {
@@ -87,7 +87,7 @@ $(document).ready(function(){
             }
             if(leng>0) {
                 $.ajax({
-                    url: "//localhost/web-ssm/uploads",
+                    url: "//www.jikelearn.cn/web-ssm/uploads",
                     type: 'post',
                     dataType: 'json',
                     timeout: 1000,
