@@ -349,8 +349,9 @@ $(document).ready(function(){
             $.ajax({
                 url: t.path.roomUrl,
                 type: 'post',
-                dataType: 'json',
+                dataType: 'jsonp',
                 timeout: 1000,
+
                 data:{paramJson: $.toJSON({pageNum:t.data.pageNum,pageSize:t.data.pageSize,RHtype:t.data.editType})},
                 success: function (data, status) {
                     t.roomList = data.responseData.result.list;
