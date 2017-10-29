@@ -3,7 +3,7 @@
  */
 $(document).ready(function(){
     $.ajax({
-        url: "//www.jikelearn.cn/web-ssm/getJson",
+        url: "//localhost:8081/web-ssm/getJson",
         type: 'post',
         dataType: 'json',
         timeout: 1000,

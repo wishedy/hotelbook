@@ -4,9 +4,9 @@
 $(document).ready(function(){
     var bookRoom = {
         path:{
-            submit:"//www.jikelearn.cn/web-ssm/orderRest/order",
-            roomUrl:"//www.jikelearn.cn/web-ssm/hotelRest/submit",
-            banner:"//www.jikelearn.cn/web-ssm/imageDisRest/showImage"
+            submit:"//localhost:8081/web-ssm/orderRest/order",
+            roomUrl:"//localhost:8081/web-ssm/hotelRest/submit",
+            banner:"//localhost:8081/web-ssm/imageDisRest/showImage"
         },
         data:{
             editType:"4",

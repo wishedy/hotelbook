@@ -4,7 +4,7 @@
 $(document).ready(function(){
     var editBanner = {
         path:{
-            bannerList:"//www.jikelearn.cn/web-ssm/imageDisRest/showImage"
+            bannerList:"//localhost:8081/web-ssm/imageDisRest/showImage"
         },
         el:{
           submit:$(".ev-submit"),
@@ -107,7 +107,7 @@ $(document).ready(function(){
             }
             if(leng>0) {
                 $.ajax({
-                    url: "//www.jikelearn.cn/web-ssm/uploads",
+                    url: "//localhost:8081/web-ssm/uploads",
                     type: 'post',
                     dataType: 'json',
                     timeout: 1000,

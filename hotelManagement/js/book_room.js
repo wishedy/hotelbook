@@ -9,7 +9,7 @@ $(document).ready(function(){
             t.registerFilter().showList().searchUser();
         },
         path:{
-          roomUrl:"//www.jikelearn.cn/web-ssm/orderRest/order"
+          roomUrl:"//localhost:8081/web-ssm/orderRest/order"
         },
         data: {
             pageNum: 1,
