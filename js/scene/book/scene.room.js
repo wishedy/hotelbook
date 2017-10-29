@@ -19,8 +19,8 @@ $(document).ready(function(){
             editType:"4"
         },
         path:{
-            roomUrl:"//localhost:8081/web-ssm/hotelRest/submit",
-            imgList: "//localhost:8081/web-ssm/imageDisRest/showImage"
+            roomUrl:"//47.94.225.154:8081/web-ssm/hotelRest/submit",
+            imgList: "//47.94.225.154:8081/web-ssm/imageDisRest/showImage"
         },
         queryName:function(name) {
             var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
@@ -176,7 +176,7 @@ $(document).ready(function(){
                         imgData.list.push(dataJson);
                     });
                     $(".Gambier-intro-content").html(data.responseData.result.list[0].description);
-                    $(".Gambier-scrollTop").scroll({link:"//localhost:8081/pages/scene/book/book_info.html?roomId="+t.queryName("roomId"),text:"现在预订"});
+                    $(".Gambier-scrollTop").scroll({link:"//47.94.225.154:8081/pages/scene/book/book_info.html?roomId="+t.queryName("roomId"),text:"现在预订"});
                     t.templateBanner(imgData);
                     t.templateService(data.responseData.result.list[0]);
 
@@ -225,7 +225,7 @@ $(document).ready(function(){
                 autoplay: 5000,//可选选项，自动滑动
                 pagination : '.Gambier-banner-pagination',
             });
-            $(".ev-book-now").attr({"href":"//localhost:8081/pages/scene/book/book_info.html?roomId="+t.queryName("roomId")});
+            $(".ev-book-now").attr({"href":"//47.94.225.154:8081/pages/scene/book/book_info.html?roomId="+t.queryName("roomId")});
             return t;
         }
     };

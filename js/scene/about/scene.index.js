@@ -3,7 +3,7 @@
  */
 $(document).ready(function(){
     $.ajax({
-        url: "//localhost:8081/web-ssm/getJson",
+        url: "//47.94.225.154:8081/web-ssm/getJson",
         type: 'post',
         dataType: 'json',
         timeout: 1000,

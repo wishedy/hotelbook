@@ -9,7 +9,7 @@ $(document).ready(function(){
             t.registerFilter().showList().searchUser();
         },
         path:{
-          roomUrl:"//localhost:8081/web-ssm/orderRest/order"
+          roomUrl:"//47.94.225.154:8081/web-ssm/orderRest/order"
         },
         data: {
             pageNum: 1,

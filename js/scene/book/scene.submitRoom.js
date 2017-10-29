@@ -4,9 +4,9 @@
 $(document).ready(function(){
     var bookRoom = {
         path:{
-            submit:"//localhost:8081/web-ssm/orderRest/order",
-            roomUrl:"//localhost:8081/web-ssm/hotelRest/submit",
-            banner:"//localhost:8081/web-ssm/imageDisRest/showImage"
+            submit:"//47.94.225.154:8081/web-ssm/orderRest/order",
+            roomUrl:"//47.94.225.154:8081/web-ssm/hotelRest/submit",
+            banner:"//47.94.225.154:8081/web-ssm/imageDisRest/showImage"
         },
         data:{
             editType:"4",

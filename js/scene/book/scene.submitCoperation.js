@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var part = {
         path:{
-          submit:"//localhost:8081/web-ssm/franRest/fran"
+          submit:"//47.94.225.154:8081/web-ssm/franRest/fran"
         },
         data:{
             editType:"4",

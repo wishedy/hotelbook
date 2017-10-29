@@ -7,7 +7,7 @@ $(document).ready(function () {
             console.log("首页");
             var t = this;
             $(".Gambier-scrollTop").scroll({
-                link: "http://localhost:8081/pages/scene/cooperation/cooperation.html",
+                link: "http://47.94.225.154:8081/pages/scene/cooperation/cooperation.html",
                 text: "我要合作"
             });
             t.register().bannerList().business().serviceList().siteList();
@@ -32,7 +32,7 @@ $(document).ready(function () {
             return t;
         },
         path: {
-            roomUrl: "//localhost:8081/web-ssm/imageDisRest/showImage"
+            roomUrl: "//47.94.225.154:8081/web-ssm/imageDisRest/showImage"
         },
         data: {
             editType: "4"

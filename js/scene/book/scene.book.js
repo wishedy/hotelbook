@@ -9,14 +9,14 @@ $(document).ready(function(){
             editType:"4"
         },
         path:{
-            roomUrl:"//localhost:8081/web-ssm/hotelRest/submit",
-            banner:"//localhost:8081/web-ssm/imageDisRest/showImage"
+            roomUrl:"//47.94.225.154:8081/web-ssm/hotelRest/submit",
+            banner:"//47.94.225.154:8081/web-ssm/imageDisRest/showImage"
         },
         init:function(){
             console.log("首页");
             var t = this;
             $(".Gambier-scrollTop").scroll({
-                link: "http://localhost:8081/pages/scene/cooperation/cooperation.html",
+                link: "http://47.94.225.154:8081/pages/scene/cooperation/cooperation.html",
                 text: "我要合作"
             });
             t.registerFilter().bannerList().showRoomList();
