@@ -9,14 +9,14 @@ $(document).ready(function(){
             editType:"4"
         },
         path:{
-            roomUrl:"//www.hotelbook.cn/web-ssm/hotelRest/submit",
-            banner:"//www.hotelbook.cn/web-ssm/imageDisRest/showImage"
+            roomUrl:"//localhost/web-ssm/hotelRest/submit",
+            banner:"//localhost/web-ssm/imageDisRest/showImage"
         },
         init:function(){
             console.log("首页");
             var t = this;
             $(".Gambier-scrollTop").scroll({
-                link: "http://www.hotelbook.cn/pages/scene/cooperation/cooperation.html",
+                link: "http://localhost/pages/scene/cooperation/cooperation.html",
                 text: "我要合作"
             });
             t.registerFilter().bannerList().showRoomList();

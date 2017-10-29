@@ -9,7 +9,7 @@ $(document).ready(function(){
             return t;
         },
         path:{
-          friend:"//www.hotelbook.cn/web-ssm/franRest/fran"
+          friend:"//localhost/web-ssm/franRest/fran"
         },
         data:{
             pageNum:1,

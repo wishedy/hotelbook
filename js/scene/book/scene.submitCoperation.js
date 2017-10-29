@@ -1,7 +1,7 @@
 $(document).ready(function(){
     var part = {
         path:{
-          submit:"//www.hotelbook.cn/web-ssm/franRest/fran"
+          submit:"//localhost/web-ssm/franRest/fran"
         },
         data:{
             editType:"4",

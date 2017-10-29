@@ -17,7 +17,7 @@ var editObj = {
         editId:""
     },
     path:{
-        roomUrl:"//www.hotelbook.cn/web-ssm/imageDisRest/showImage"
+        roomUrl:"//localhost/web-ssm/imageDisRest/showImage"
     },
     el:{
         submit:$(".ev-submit"),
@@ -37,7 +37,7 @@ var editObj = {
         }
         if(leng>0) {
             $.ajax({
-                url: "//www.hotelbook.cn/web-ssm/uploads",
+                url: "//localhost/web-ssm/uploads",
                 type: 'post',
                 dataType: 'json',
                 timeout: 1000,

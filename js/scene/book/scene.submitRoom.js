@@ -4,9 +4,9 @@
 $(document).ready(function(){
     var bookRoom = {
         path:{
-            submit:"//www.hotelbook.cn/web-ssm/orderRest/order",
-            roomUrl:"//www.hotelbook.cn/web-ssm/hotelRest/submit",
-            banner:"//www.hotelbook.cn/web-ssm/imageDisRest/showImage"
+            submit:"//localhost/web-ssm/orderRest/order",
+            roomUrl:"//localhost/web-ssm/hotelRest/submit",
+            banner:"//localhost/web-ssm/imageDisRest/showImage"
         },
         data:{
             editType:"4",

@@ -19,8 +19,8 @@ $(document).ready(function(){
             editType:"4"
         },
         path:{
-            roomUrl:"//www.hotelbook.cn/web-ssm/hotelRest/submit",
-            imgList: "//www.hotelbook.cn/web-ssm/imageDisRest/showImage"
+            roomUrl:"//localhost/web-ssm/hotelRest/submit",
+            imgList: "//localhost/web-ssm/imageDisRest/showImage"
         },
         queryName:function(name) {
             var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
@@ -176,7 +176,7 @@ $(document).ready(function(){
                         imgData.list.push(dataJson);
                     });
                     $(".Gambier-intro-content").html(data.responseData.result.list[0].description);
-                    $(".Gambier-scrollTop").scroll({link:"//www.hotelbook.cn/pages/scene/book/book_info.html?roomId="+t.queryName("roomId"),text:"现在预订"});
+                    $(".Gambier-scrollTop").scroll({link:"//localhost/pages/scene/book/book_info.html?roomId="+t.queryName("roomId"),text:"现在预订"});
                     t.templateBanner(imgData);
                     t.templateService(data.responseData.result.list[0]);
 
@@ -225,7 +225,7 @@ $(document).ready(function(){
                 autoplay: 5000,//可选选项，自动滑动
                 pagination : '.Gambier-banner-pagination',
             });
-            $(".ev-book-now").attr({"href":"//www.hotelbook.cn/pages/scene/book/book_info.html?roomId="+t.queryName("roomId")});
+            $(".ev-book-now").attr({"href":"//localhost/pages/scene/book/book_info.html?roomId="+t.queryName("roomId")});
             return t;
         }
     };

@@ -7,7 +7,7 @@ $(document).ready(function () {
             console.log("首页");
             var t = this;
             $(".Gambier-scrollTop").scroll({
-                link: "http://www.hotelbook.cn/pages/scene/cooperation/cooperation.html",
+                link: "http://localhost/pages/scene/cooperation/cooperation.html",
                 text: "我要合作"
             });
             t.register().bannerList().business().serviceList().siteList();
@@ -32,7 +32,7 @@ $(document).ready(function () {
             return t;
         },
         path: {
-            roomUrl: "//www.hotelbook.cn/web-ssm/imageDisRest/showImage"
+            roomUrl: "//localhost/web-ssm/imageDisRest/showImage"
         },
         data: {
             editType: "4"

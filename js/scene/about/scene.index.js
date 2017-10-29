@@ -3,7 +3,7 @@
  */
 $(document).ready(function(){
     $.ajax({
-        url: "//www.hotelbook.cn/web-ssm/getJson",
+        url: "//localhost/web-ssm/getJson",
         type: 'post',
         dataType: 'json',
         timeout: 1000,

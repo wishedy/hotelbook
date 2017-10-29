@@ -15,7 +15,7 @@ $(document).ready(function(){
             uploadImage:$(".ev-uploadImg")
         },
         path:{
-            roomUrl:"//www.hotelbook.cn/web-ssm/hotelRest/submit",
+            roomUrl:"//localhost/web-ssm/hotelRest/submit",
         },
         data: {
             tempData: {
@@ -87,7 +87,7 @@ $(document).ready(function(){
             }
             if(leng>0) {
                 $.ajax({
-                    url: "//www.hotelbook.cn/web-ssm/uploads",
+                    url: "//localhost/web-ssm/uploads",
                     type: 'post',
                     dataType: 'json',
                     timeout: 1000,
