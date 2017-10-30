@@ -32,7 +32,7 @@ $(document).ready(function () {
             return t;
         },
         path: {
-            roomUrl: "//47.94.225.154:8081/web-ssm/imageDisRest/showImage"
+            roomUrl: "/web-ssm/imageDisRest/showImage"
         },
         data: {
             editType: "4"
