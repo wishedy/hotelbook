@@ -9,7 +9,7 @@ $(document).ready(function(){
             return t;
         },
         path:{
-          friend:"//47.94.225.154:8081/web-ssm/franRest/fran"
+          friend:"/web-ssm/franRest/fran"
         },
         data:{
             pageNum:1,

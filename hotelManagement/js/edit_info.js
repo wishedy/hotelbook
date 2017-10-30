@@ -17,7 +17,7 @@ var editObj = {
         editId:""
     },
     path:{
-        roomUrl:"//47.94.225.154:8081/web-ssm/imageDisRest/showImage"
+        roomUrl:"/web-ssm/imageDisRest/showImage"
     },
     el:{
         submit:$(".ev-submit"),
@@ -37,7 +37,7 @@ var editObj = {
         }
         if(leng>0) {
             $.ajax({
-                url: "//47.94.225.154:8081/web-ssm/uploads",
+                url: "/web-ssm/uploads",
                 type: 'post',
                 dataType: 'json',
                 timeout: 1000,

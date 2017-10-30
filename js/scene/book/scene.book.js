@@ -9,8 +9,8 @@ $(document).ready(function(){
             editType:"4"
         },
         path:{
-            roomUrl:"//47.94.225.154:8081/web-ssm/hotelRest/submit",
-            banner:"//47.94.225.154:8081/web-ssm/imageDisRest/showImage"
+            roomUrl:"/web-ssm/hotelRest/submit",
+            banner:"/web-ssm/imageDisRest/showImage"
         },
         init:function(){
             console.log("首页");

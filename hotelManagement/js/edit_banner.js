@@ -4,7 +4,7 @@
 $(document).ready(function(){
     var editBanner = {
         path:{
-            bannerList:"//47.94.225.154:8081/web-ssm/imageDisRest/showImage"
+            bannerList:"/web-ssm/imageDisRest/showImage"
         },
         el:{
           submit:$(".ev-submit"),
@@ -107,7 +107,7 @@ $(document).ready(function(){
             }
             if(leng>0) {
                 $.ajax({
-                    url: "//47.94.225.154:8081/web-ssm/uploads",
+                    url: "/web-ssm/uploads",
                     type: 'post',
                     dataType: 'json',
                     timeout: 1000,

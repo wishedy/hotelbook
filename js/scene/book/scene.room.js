@@ -19,8 +19,8 @@ $(document).ready(function(){
             editType:"4"
         },
         path:{
-            roomUrl:"//47.94.225.154:8081/web-ssm/hotelRest/submit",
-            imgList: "//47.94.225.154:8081/web-ssm/imageDisRest/showImage"
+            roomUrl:"/web-ssm/hotelRest/submit",
+            imgList: "/web-ssm/imageDisRest/showImage"
         },
         queryName:function(name) {
             var reg = new RegExp('(^|&)' + name + '=([^&]*)(&|$)', 'i');
