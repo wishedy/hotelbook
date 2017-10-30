@@ -16,7 +16,7 @@ $(document).ready(function(){
             console.log("首页");
             var t = this;
             $(".Gambier-scrollTop").scroll({
-                link: "http://47.94.225.154:8081/pages/scene/cooperation/cooperation.html",
+                link: "http://47.94.225.154/pages/scene/cooperation/cooperation.html",
                 text: "我要合作"
             });
             t.registerFilter().bannerList().showRoomList();
