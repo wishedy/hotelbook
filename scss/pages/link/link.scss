@@ -5,18 +5,39 @@
   .Gambier-link-container{
     width: $width;
     margin: 0 auto;
-    height: 350px;
+    height: 588px;
     @include clearfix();
     .Gambier-link-left{
       float: left;
       width: 384px;
+      height: 588px;
       .Gambier-link-list{
+        height: 588px;
         margin-top: 20px;
         .Gambier-link-bar{
           padding-top: 20px;
           line-height: 18px;
           color: #333;
           font-size: 18px;
+          textarea,textarea:focus,input,input:focus{
+            width: 356px;
+            height: 40px;
+            color: #ccc;
+            border: 1px solid #ccc;
+            line-height: 40px;
+            font-size: 16px;
+            text-indent: 1em;
+            outline: none;
+          }
+          textarea,textarea:focus{
+            height: 116px;
+            resize: none;
+            outline: none;
+          }
+          button{
+            float: right;
+            margin-right: 14px;
+          }
           .link-icon{
             float: left;
             width: 20px;
@@ -45,9 +66,9 @@
       }
     }
     .Gambier-link-right{
-      float: right;
-      width: 854px;
-      height: 310px;
+      float: left;
+      width: 834px;
+      height: 548px;
       padding:20px;
       img{
         width: 100%;

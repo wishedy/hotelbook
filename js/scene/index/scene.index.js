@@ -95,12 +95,12 @@ $(document).ready(function () {
         templateService: function (data) {
             var t = this;
             var myTemplate = Handlebars.compile($("#service").html());
-            $('.Gambier-characteristic-wrap').html(myTemplate(data));
+            /*$('.Gambier-characteristic-wrap').html(myTemplate(data));
             var mySwiperSite = new Swiper('.Gambier-characteristic-swiper', {
                 pagination: '.Gambier-characteristic-pagination',
                 autoplay: 5000,//可选选项，自动滑动
 
-            });
+            });*/
 
             return t;
         },

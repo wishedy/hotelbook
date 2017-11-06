@@ -12,10 +12,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="renderer" content="webkit">
     <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/pages/book/book.css">
-    <link rel="stylesheet" href="/css/pages/link/link.css">
-    <link rel="stylesheet" href="/js/thirdParty/swiper/swiper.min.css">
-    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7YfHx050TLZmQpRSsn718ZEgzGUbAByc"></script>
+    <link rel="stylesheet" href="/css/pages/business/business.css">
     <!--[if lt IE 9]>
     <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
     <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -47,78 +44,60 @@
                 <li class="Gambier-nav-item"><a href="/">首页</a></li>
                 <li class="Gambier-nav-item"><a href="/pages/scene/book/book_room.html">酒店预订</a></li>
                 <li class="Gambier-nav-item"><a href="/pages/scene/service/service.html">服务设施</a></li>
-                <li class="Gambier-nav-item"><a href="/pages/scene/business/business.html">主营业务</a></li>
+                <li class="Gambier-nav-item active"><a href="/pages/scene/business/business.html">主营业务</a></li>
                 <li class="Gambier-nav-item"><a href="/pages/scene/about/about.html">关于我们</a></li>
-                <li class="Gambier-nav-item active"><a href="/pages/scene/link/link.html">联系我们</a></li>
+                <li class="Gambier-nav-item"><a href="/pages/scene/link/link.html">联系我们</a></li>
             </ul>
         </section>
     </nav>
-    <script type="text/x-handlebars-template" id="banner">
-        {{#each list}}
-        <div class="Gambier-banner-item swiper-slide" style="background:url('{{imgUrl}}') no-repeat 50% 50%;background-size:cover;">
-            <div class="Gambier-banner-content">
-                <div class="Gambier-banner-title">{{title}}</div>
-                <div class="Gambier-banner-subtitle">{{subtitle}}</div>
-                <button><a href="http://47.94.225.154/pages/scene/cooperation/cooperation.html">我要合作</a></button>
-            </div>
-        </div>
-        {{/each}}
-    </script>
-    <!--<section class="Gambier-banner swiper-container">
-        <section class="Gambier-banner-container swiper-wrapper">
-            <div class="Gambier-banner-item swiper-slide">
-                <div class="Gambier-banner-content">
-                    <div class="Gambier-banner-title">主标题</div>
-                    <div class="Gambier-banner-subtitle">乡村舒适的甘比尔山欢迎你</div>
-                    <button class="Gambier-banner-learnMore">了解更多</button>
-                </div>
-            </div>
-            <div class="Gambier-banner-item swiper-slide"></div>
-            <div class="Gambier-banner-item swiper-slide"></div>
-        </section>
-        <section class="swiper-pagination Gambier-banner-pagination"></section>
-    </section>-->
-    <section class="Gambier-link">
-        <section class="Gambier-link-container">
-
-            <section class="Gambier-link-right">
-                <img src="/img/pages/index/1509278304(1).jpg" alt="">
-            </section>
-            <section class="Gambier-link-left">
-                <div class="Gambier-link-list">
-                    <div class="Gambier-link-bar">
-                        <i class="link-icon icon-phone"></i>
-                        <span>电话:(08) 8725 4811</span>
+    <section class="Gambier-business">
+        <section class="Gambier-business-container">
+            <ul class="Gambier-business-list">
+                <li class="Gambier-business-item">
+                    <figure class="Gambier-business-img">
+                        <img src="/img/pages/index/banner.jpg" alt="">
+                    </figure>
+                    <div class="Gambier-business-des">
+                        <h1 class="Gambier-business-title">这是一个小小的标题</h1>
+                        <span class="Gambier-business-line"></span>
+                        <p class="Gambier-business-content">这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题</p>
+                        <input type="button" class="learn-more" value="我要合作">
                     </div>
-                    <div class="Gambier-link-bar">
-                        <i class="link-icon icon-fax"></i>
-                        <span>传真:(08) 8725 4811</span>
+                </li>
+                <li class="Gambier-business-item">
+                    <figure class="Gambier-business-img">
+                        <img src="/img/pages/index/banner.jpg" alt="">
+                    </figure>
+                    <div class="Gambier-business-des">
+                        <h1 class="Gambier-business-title">这是一个小小的标题</h1>
+                        <span class="Gambier-business-line"></span>
+                        <p class="Gambier-business-content">这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题</p>
+                        <input type="button" class="learn-more" value="我要合作">
                     </div>
-                    <div class="Gambier-link-bar">
-                        <i class="link-icon icon-email"></i>
-                        <span>E-mail:webheng@126.com</span>
+                </li>
+                <li class="Gambier-business-item">
+                    <figure class="Gambier-business-img">
+                        <img src="/img/pages/index/banner.jpg" alt="">
+                    </figure>
+                    <div class="Gambier-business-des">
+                        <h1 class="Gambier-business-title">这是一个小小的标题</h1>
+                        <span class="Gambier-business-line"></span>
+                        <p class="Gambier-business-content">这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题</p>
+                        <input type="button" class="learn-more" value="我要合作">
                     </div>
-                    <div class="Gambier-link-bar">
-                        <i class="link-icon icon-address"></i>
-                        <span>地址:甘比尔山乡村舒适国际酒店</span>
+                </li>
+                <li class="Gambier-business-item">
+                    <figure class="Gambier-business-img">
+                        <img src="/img/pages/index/banner.jpg" alt="">
+                    </figure>
+                    <div class="Gambier-business-des">
+                        <h1 class="Gambier-business-title">这是一个小小的标题</h1>
+                        <span class="Gambier-business-line"></span>
+                        <p class="Gambier-business-content">这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题这是一个小小的标题</p>
+                        <input type="button" class="learn-more" value="我要合作">
                     </div>
-                    <div class="Gambier-link-bar">
-                        <input type="text" placeholder="请输入您的名字">
-                    </div>
-                    <div class="Gambier-link-bar">
-                        <input type="text" placeholder="请输入您的电话">
-                    </div>
-                    <div class="Gambier-link-bar">
-                        <input type="text" placeholder="请输入您的Email">
-                    </div>
-                    <div class="Gambier-link-bar">
-                        <textarea name="" id="" cols="30" rows="10" placeholder="请输入您的留言..."></textarea>
-                    </div>
-                    <div class="Gambier-link-bar">
-                        <button>发送</button>
-                    </div>
-                </div>
-            </section>
+                </li>
+            </ul>
         </section>
     </section>
     <footer class="Gambier-footer">
@@ -164,9 +143,10 @@
 </section>
 <script src="/js/thirdParty/jquery/jquery-1.8.0.min.js"></script>
 <script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.js"></script>
+<script src="/js/common/common.js"></script>
 <script src="/js/common/jquery.scroll.js"></script>
 <script src="/js/thirdParty/jquery/jquery.json-2.4.js"></script>
 <script src="/js/thirdParty/swiper/swiper.min.js"></script>
-<script src="/js/scene/about/scene.link.js"></script>
+<script src="/js/scene/book/scene.book.js"></script>
 </body>
 </html>

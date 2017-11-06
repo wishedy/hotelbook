@@ -1,0 +1,60 @@
+@import "../../components/common/header";
+@import "../../variables/variables";
+.Gambier-business{
+  width: 100%;
+  .Gambier-business-container{
+    width: $width;
+    margin: 0 auto;
+    padding-bottom: 30px;
+    .Gambier-business-item{
+      @include clearfix();
+      margin-bottom: 22px;
+      .Gambier-business-img{
+        width: 500px;
+        height: 532px;
+        float: left;
+        margin-left: 20px;
+        img{
+          width: 100%;
+          height: 100%;
+
+        }
+      }
+      .Gambier-business-des{
+        float: left;
+        margin-left: 78px;
+        width: 544px;
+        .Gambier-business-title{
+          font-size: 24px;
+          color: #333;
+          line-height: 72px;
+          padding-top: 54px;
+        }
+        .Gambier-business-line{
+          display: inline-block;
+          width: 50px;
+          height: 2px;
+          background: #18a64e;
+        }
+        .Gambier-business-content{
+          font-size: 20px;
+          color: #999;
+          line-height: 48px;
+          padding: 30px 0;
+          height: 180px;
+        }
+        .learn-more{
+          font-size: 26px;
+          width: 188px;
+          height: 58px;
+          color: #18a64e;
+          border: 1px solid #18a64e;
+          border-radius: 10px;
+          background: none;
+          text-align: center;
+          line-height: 58px;
+        }
+      }
+    }
+  }
+}

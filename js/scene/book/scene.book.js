@@ -51,8 +51,8 @@ $(document).ready(function(){
         templateBanner:function(data){
           var t = this;
             var myTemplate = Handlebars.compile($("#banner").html());
-            $('.Gambier-banner-container').html(myTemplate(data));
-            t.swiperInit();
+            //$('.Gambier-banner-container').html(myTemplate(data));
+            //t.swiperInit();
             return t;
         },
         registerFilter:function(){

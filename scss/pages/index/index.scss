@@ -31,7 +31,9 @@
       .Gambier-business-list{
         width: 1058px;
        // min-width: 900px;
+        -moz-box-shadow:-8px 8px 14px #333333; -webkit-box-shadow:-8px 8px 14px #333333; box-shadow:-8px 8px 14px #333333;
         height: 320px;
+        background: none;
         @include clearfix();
         margin: 0 auto;
         .Gambier-business-item{
@@ -424,14 +426,19 @@
   }
   .Gambier-circum{
     width: 100%;
+
     @include clearfix();
     .Gambier-circum-container{
+
       width: 1000px;
+      height: auto;
+      @include clearfix();
       margin: 0 auto;
       .Gambier-circum-left{
         width: 520px;
         height: 480px;
         position: relative;
+        -moz-box-shadow:-6px 8px 15px #333333; -webkit-box-shadow:-6px 8px 15px #333333; box-shadow:-6px 8px 15px #333333;
         float: left;
         .Gambier-circum-view{
           width: 100%;
@@ -446,7 +453,7 @@
         }
         .Gambier-circum-des{
           width: 500px;
-          padding: 10px 30px;
+          padding: 10px 0 10px 20px;
           height: 70px;
           position: absolute;
           bottom:0;
@@ -465,6 +472,7 @@
         height: 480px;
         float: left;
         position: relative;
+        -moz-box-shadow:6px 8px 15px #333333; -webkit-box-shadow:6px 8px 15px #333333; box-shadow:6px 8px 15px #333333;
         .Gambier-circum-scenic{
           position: absolute;
           top: 0;
@@ -540,5 +548,51 @@
     text-align: center;
     color: $greenBack;
     font-weight: 500;
+  }
+  .Gambier-hot-service{
+    width: 100%;
+    .Gambier-hot-service-container{
+      width: $width;
+      min-height: 300px;
+      height: auto;
+      margin: 0 auto;
+      .Gambier-hot-service-item{
+        @include clearfix();
+        padding: 10px 0;
+        border-bottom: 1px dashed #333;
+        .Gambier-service-img{
+          width: 412px;
+          height: 232px;
+          border:2px solid #ccc;
+          float: left;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .Gambier-service-des{
+          margin-left: 30px;
+          float: left;
+          width: 738px;
+          .Gambier-service-title{
+            font-size: 24px;
+            line-height: 44px;
+            color: #333;
+          }
+          .Gambier-service-subTitle{
+            font-size: 22px;
+            font-weight: 500;
+            line-height: 44px;
+            color: #4b4b4b;
+          }
+          .Gambier-service-content{
+            font-size: 20px;
+            line-height: 34px;
+            color: #666;
+          }
+        }
+      }
+    }
+    padding-bottom: 30px;
   }
 }

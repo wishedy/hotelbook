@@ -11,10 +11,11 @@
       @include clearfix();
       .Gambier-characteristic-item{
         float: left;
-        width: 390px;
+        width: 386px;
         height: 320px;
         margin: 0 10px 20px 0;
         position: relative;
+        border:1px solid #a4a3a3;
         .Gambier-characteristic-background{
           position: absolute;
           top: 0;
@@ -86,9 +87,18 @@
         }
       }
       .Gambier-characteristic-item:hover{
+        transition: all .2s ease;
+        box-shadow: 7px 7px 4px #a4a3a3;
         .Gambier-characteristic-title{
           display: none;
 
+        }
+        .Gambier-characteristic-background{
+          overflow: hidden;
+          img{
+            transition: all .8s ease;
+            transform: scale(1.1);
+          }
         }
         .Gambier-characteristic-mask{
           display: block;
