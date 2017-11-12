@@ -10,40 +10,46 @@
       @include clearfix();
       width: $width*0.916;
       .Gambier-service-item{
-        width: 382px;
+        width: 100%;
         height: auto;
         float: left;
         min-height: 300px;
+        //cursor: pointer;
         .Gambier-service-inner{
-          width: 382px;
+          //width: 382px;
           .Gambier-service-inner-item{
             min-height: 200px;
             width: 382px;
             height: auto;
             margin-bottom: 20px;
+            margin-right: 10px;
+            float: left;
+            cursor: pointer;
             .Gambier-service-inner-img{
-              width: 382px;
+              width: 100%;
               height: 100%;
               position: relative;
               overflow: hidden;
               .Gambier-service-des{
                 position: absolute;
                 left: 100%;
-                width: 100%;
+                width: 96%;
                 height: 100%;
                 top:0;
+                padding-left: 4%;
                 background: rgba(11, 42, 31, 0.6);
                 .Gambier-service-title{
                   font-size: 22px;
                   color: #fff;
                   line-height: 48px;
                   padding-top: 83px;
-                  width: 308px;
+
+                  width: 100%;
                   margin: 0 auto;
 
                 }
                 .Gambier-service-line{
-                  width: 308px;
+                  width: 100%;
                   margin: 0 auto;
                   background:  #c7c7c6;
                   height: 2px;
@@ -51,7 +57,7 @@
                 ;
                 }
                 .Gambier-service-content{
-                  width: 308px;
+                  width: 100%;
                   margin: 0 auto;
                   min-height: 562px;
                   height: auto;
@@ -69,6 +75,7 @@
 
           }
           .Gambier-service-inner-item:hover{
+            cursor: pointer;
             .Gambier-service-inner-img{
               .Gambier-service-des{
                 left: 0;
@@ -88,17 +95,26 @@
 
           }
         }
+        .Gambier-service-thirdInner{
+          width: 570px;
+          @include clearfix();
+          float: left;
+          height: 788px;
+        }
       }
       .Gambier-service-item.first{
         .Gambier-service-inner{
           .Gambier-service-inner-first{
-              height: 592px;
+            width: 560px;
+            height: 384px;
           }
           .Gambier-service-inner-second{
-            height: 262px;
+            height: 384px;
+            width: 290px;
           }
           .Gambier-service-inner-third{
-            height: 592px;
+            height: 384px;
+            width: 290px;
           }
         }
 
@@ -107,13 +123,16 @@
           margin-left: 10px;
         .Gambier-service-inner{
           .Gambier-service-inner-first{
-            height: 263px;
+            height: 788px;
+            width: 580px;
           }
           .Gambier-service-inner-second{
-            height: 263px;
+            height: 390px;
+            width: 560px;
           }
-          .Gambier-service-inner-first{
-            height: 263px;
+          .Gambier-service-inner-third{
+            height: 378px;
+            width: 560px;
           }
           .Gambier-service-inner-fourth{
             height: 643px;
@@ -121,19 +140,64 @@
         }
       }
       .Gambier-service-item.third{
-        float: right;
         .Gambier-service-inner{
+          width: 100%;
           .Gambier-service-inner-first{
-            height: 592px;
+            width: 100%;
+            height: 394px;
           }
-          .Gambier-service-inner-second{
+          /*.Gambier-service-inner-second{
             height: 592px;
           }
           .Gambier-service-inner-third{
             height: 262px;
-          }
+          }*/
         }
 
+      }
+    }
+  }
+}
+.Gambier-detail{
+  width: 100%;
+  padding-bottom: 30px;
+  .Gambier-detail-container{
+    width: $width;
+    height: auto;
+    margin: 0 auto;
+    .Gambier-detail-title{
+      font-size: 26px;
+      text-shadow: 0 1px 0 #ffffff;
+      color: #777777;
+      width: 1140px;
+      margin: 0 auto;
+      line-height: 54px;
+      padding-bottom: 18px;
+    }
+    .Gambier-detail-img{
+      width: 1140px;
+      margin: 0 auto;
+      height: 454px;
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      padding-bottom: 20px;
+    }
+    .Gambier-detail-des{
+      font-size: 16px;
+      line-height: 32px;
+      color: #555555;
+      width: 1140px;
+      margin: 0 auto;
+      padding: 10px 0;
+    }
+    .Gambier-detail-partIn{
+      width: 1140px;
+      margin: 0 auto;
+      height: 60px;
+      button{
+        margin: 0 auto;
       }
     }
   }

@@ -46,7 +46,7 @@
           min-height: 180px;
           height: auto;
         }
-        .learn-more{
+        .learn-more,.learn-more:focus{
           font-size: 26px;
           width: 188px;
           height: 58px;
@@ -56,6 +56,8 @@
           background: none;
           text-align: center;
           line-height: 58px;
+          cursor: pointer;
+          outline: none;
         }
       }
     }
