@@ -9,6 +9,8 @@
     .Gambier-business-item{
       @include clearfix();
       margin-bottom: 22px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #dedede;
       .Gambier-business-img{
         width: 500px;
         height: 532px;
@@ -28,7 +30,7 @@
           font-size: 24px;
           color: #333;
           line-height: 72px;
-          padding-top: 54px;
+          padding-top: 34px;
         }
         .Gambier-business-line{
           display: inline-block;
@@ -56,6 +58,9 @@
           line-height: 58px;
         }
       }
+    }
+    .Gambier-business-item:hover{
+      background: #fbfbfb;
     }
   }
 }
