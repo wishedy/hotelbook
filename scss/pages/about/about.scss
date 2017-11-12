@@ -7,6 +7,8 @@
     min-height: 820px;
     height: auto;
     margin: 0 auto;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #cecece;
     .Gambier-characteristic{
       @include clearfix();
       .Gambier-characteristic-item{
@@ -119,5 +121,98 @@
         opacity: 1;
       }
     }
+  }
+}
+.Gambier-us{
+  width: 100%;
+  .Gambier-us-container{
+    width: $width;
+    height: auto;
+    padding-bottom: 70px;
+    margin: 0 auto;
+    .Gambier-us-list{
+      width: 100%;
+      .Gambier-us-item{
+        padding: 30px;
+        border-bottom: 1px solid #cecece;
+        .Gambier-us-img{
+          width: 1140px;
+          height: 388px;
+          margin: 0 auto;
+          img{
+            width: 100%;
+            height: 100%;
+
+          }
+        }
+        .Gambier-us-title{
+          font-size: 18px;
+          text-transform: capitalize;
+          color: #222;
+          margin: 0.8em 0;
+          font-weight: 600;
+          text-align: center;
+          font-family: 'OpenSans-Regular';
+        }
+        .Gambier-us-des{
+          font-size: 16px;
+          line-height: 32px;
+          color: #777;
+          text-align: center;
+          width: 1130px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}
+.Gambier-reason{
+  width: 100%;
+  background: #eee;
+  .Gambier-reason-container{
+    width: $width;
+    margin: 0 auto;
+    height: auto;
+    padding: 30px 70px;
+    @include clearfix();
+
+    .Gambier-reason-list{
+      width: $width;
+      font-size: 1.5em;
+      line-height: 1.1;
+      margin: 0 auto;
+      text-transform: capitalize;
+      text-align: center;
+      height: auto;
+      @include clearfix();
+      .Gambier-reason-item{
+        float: left;
+        width: 360px;
+        height: 416px;
+        color: #555;
+        margin: 10px 20px;
+        border: 1px solid rgb(206, 206, 206);
+        .Gambier-reason-img{
+          width: 100%;
+          height: 200px;
+          img{
+            width: 100%;
+            height: 100%;
+          }
+        }
+        .Gambier-reason-title{
+          font-size: 18px;
+          line-height: 32px;
+          margin-top: 15px;
+          padding: 0 15px;
+        }
+        .Gambier-reason-des{
+          font-size: 14px;
+          line-height: 26px;
+          padding:5px 15px;
+        }
+      }
+    }
+    margin-bottom: 30px;
   }
 }

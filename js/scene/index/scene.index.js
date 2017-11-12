@@ -171,8 +171,8 @@ $(document).ready(function () {
         },
         templateBusiness: function (data) {
             var t = this;
-            var myTemplate = Handlebars.compile($("#business").html());
-            $('.Gambier-business-list').html(myTemplate(data));
+            //var myTemplate = Handlebars.compile($("#business").html());
+            //$('.Gambier-business-list').html(myTemplate(data));
             $(".Gambier-business-item").off("mouseover").on("mouseover", function () {
                 $(this).addClass("active").siblings().removeClass("active");
             });
@@ -212,7 +212,12 @@ $(document).ready(function () {
 
 
             return t;
+        },
+        staticInit:function(){
+            var t = this;
+            t.swiperInit().templateBusiness().hoverSite();
         }
     };
-    roomDetail.init();
+    roomDetail.staticInit();
+    // roomDetail.init();
 });

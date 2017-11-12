@@ -41,7 +41,8 @@
           color: #999;
           line-height: 48px;
           padding: 30px 0;
-          height: 180px;
+          min-height: 180px;
+          height: auto;
         }
         .learn-more{
           font-size: 26px;
