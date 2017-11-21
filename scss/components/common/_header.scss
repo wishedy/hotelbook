@@ -80,7 +80,7 @@
 }
 .Gambier-nav{
   width: 100%;
-  background: #fff;
+  background: $greenBack;
   box-shadow: 0 4px 7px #aaa;
   margin-bottom: 20px;
   .Gambier-nav-container{
@@ -88,7 +88,8 @@
     height: 96px;
     margin: 0 auto;
     .Gambier-logo{
-      width: 200px;
+      width: 530px;
+      float: left;
       .Gambier-logoImg{
         width: 58px;
         height: 48px;
@@ -100,17 +101,19 @@
           }
       }
       .Gambier-logoTitle{
-        font-size: 18px;
+        font-size: 0;
+        width: 178px;
         font-weight: bold;
         float: left;
         line-height: 96px;
-        padding-left: 10px;
+        padding-left: 100px;
+        background: url("/img/1511067516_751210.png") no-repeat 0 50%;
       }
     }
     .Gambier-nav-list{
       float: right;
       .Gambier-nav-item{
-        color: #333;
+        color: #fff;
         cursor: pointer;
         padding: 0 18px;
         line-height: 96px;
@@ -118,7 +121,8 @@
         font-size: 16px;
         font-weight: 700;
         &.active{
-          color:#18a64e;
+          color:#fff;
+          background: rgba(255,255,255,.6);
         }
       }
     }

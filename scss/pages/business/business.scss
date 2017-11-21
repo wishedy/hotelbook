@@ -6,6 +6,21 @@
     width: $width;
     margin: 0 auto;
     padding-bottom: 30px;
+    .Gambier-business-headTitle{
+      font-size: 30px;
+      text-transform: capitalize;
+      color: #222;
+      //margin: 0.8em 0;
+      font-weight: 400;
+      //text-align: left;
+      font-family: 'OpenSans-Regular';
+      padding: 15px;
+      margin: 0 auto;
+      width: 260px;
+      text-align: center;
+      border-bottom: 2px solid #36ad5f;
+      margin-bottom: 30px;
+    }
     .Gambier-business-item{
       @include clearfix();
       margin-bottom: 22px;
