@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gambier Country Comfort International Hotel</title>
+    <link rel="shortcut icon" type="image/x-icon" href="idealogo.ico">
+    <meta name="keywords" content="Comfort Mt Gambier International（甘比尔山乡村舒适国际酒店）">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/book/book.css">
+    <link rel="stylesheet" href="/css/pages/link/link.css">
+    <link rel="stylesheet" href="/js/thirdParty/swiper/swiper.min.css">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=7YfHx050TLZmQpRSsn718ZEgzGUbAByc"></script>
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/js/common/rem.js"></script>
+</head>
+<body>
+<section class="Gambier-mainInner">
+    <header class="Gambier-header">
+        <section class="Gambier-header-container">
+            <ul class="Gambier-header-list">
+                <li class="Gambier-header-item"><span>Chinese</span> | <span>English</span></li>
+                <li class="Gambier-header-item">Login</li>
+                <li class="Gambier-header-item">Registered</li>
+            </ul>
+        </section>
+    </header>
+    <nav class="Gambier-nav">
+        <section class="Gambier-nav-container">
+            <div class="Gambier-logo">
+                <figure class="Gambier-logoImg">
+                    <img src="/img/pages/index/logo.png" alt="logo">
+                </figure>
+                <p class="Gambier-logoTitle">
+                    Gambier
+                </p>
+            </div>
+            <ul class="Gambier-nav-list">
+                <li class="Gambier-nav-item"><a href="/indexEn.html">Home</a></li>
+                <li class="Gambier-nav-item"><a href="/enPages/scene/book/book_room.html">Hotel</a></li>
+                <li class="Gambier-nav-item"><a href="/enPages/scene/service/service.html">Service facilities</a></li>
+                <li class="Gambier-nav-item"><a href="/enPages/scene/business/business.html">cooperation</a></li>
+                <li class="Gambier-nav-item"><a href="/enPages/scene/about/us.html">About Us</a></li>
+                <li class="Gambier-nav-item active"><a href="/enPages/scene/link/link.html">Contact Us</a></li>
+            </ul>
+        </section>
+    </nav>
+    <script type="text/x-handlebars-template" id="banner">
+        {{#each list}}
+        <div class="Gambier-banner-item swiper-slide" style="background:url('{{imgUrl}}') no-repeat 50% 50%;background-size:cover;">
+            <div class="Gambier-banner-content">
+                <div class="Gambier-banner-title">{{title}}</div>
+                <div class="Gambier-banner-subtitle">{{subtitle}}</div>
+                <button><a href="http://47.94.225.154/enPages/scene/cooperation/cooperation.html">I want to cooperate.</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <!--<section class="Gambier-banner swiper-container">
+        <section class="Gambier-banner-container swiper-wrapper">
+            <div class="Gambier-banner-item swiper-slide">
+                <div class="Gambier-banner-content">
+                    <div class="Gambier-banner-title">Main Title</div>
+                    <div class="Gambier-banner-subtitle">Welcome to the country's cozy Gambier.</div>
+                    <button class="Gambier-banner-learnMore">Learn More</button>
+                </div>
+            </div>
+            <div class="Gambier-banner-item swiper-slide"></div>
+            <div class="Gambier-banner-item swiper-slide"></div>
+        </section>
+        <section class="swiper-pagination Gambier-banner-pagination"></section>
+    -->
+    <section class="Gambier-link">
+        <section class="Gambier-link-container">
+
+            <section class="Gambier-link-right">
+                <img src="/img/pages/index/1509278304(1).jpg" alt="">
+            </section>
+            <section class="Gambier-link-left">
+                <div class="Gambier-link-list">
+                    <div class="Gambier-link-bar">
+                        <i class="link-icon icon-phone"></i>
+                        <span>Tel: (08) 8725 4811</span>
+                    </div>
+                    <div class="Gambier-link-bar">
+                        <i class="link-icon icon-fax"></i>
+                        <span>Fax: (08) 8725 4811</span>
+                    </div>
+                    <div class="Gambier-link-bar">
+                        <i class="link-icon icon-email"></i>
+                        <span>E-mail:webheng@126.com</span>
+                    </div>
+                    <div class="Gambier-link-bar">
+                        <i class="link-icon icon-address"></i>
+                        <span>Add: Gambier Country Comfort International Hotel</span>
+                    </div>
+                    <div class="Gambier-link-bar">
+                        <input type="text" placeholder="请输入您的名字" id="Gambier-name">
+                    </div>
+                    <div class="Gambier-link-bar">
+                        <input type="text" placeholder="请输入您的电话" id="Gambier-phone">
+                    </div>
+                    <div class="Gambier-link-bar">
+                        <input type="text" placeholder="请输入您的Email" id="Gambier-email">
+                    </div>
+                    <div class="Gambier-link-bar">
+                        <textarea name=""  id="Gambier-msg" cols="30" rows="10" placeholder="请输入您的留言..."></textarea>
+                    </div>
+                    <div class="Gambier-link-bar">
+                        <button class="Gambier-send-msg">Send</button>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </section>
+    <footer class="Gambier-footer">
+        <section class="Gambier-footer-container">
+            <p class="Gambier-footer-copyright">
+                <span class="Gambier-footer-des">Copyright ©1996–country Comfort MT Gambier International (Gansu hotels). All rights reserved</span>
+                <a class="Gambier-footer-about">About Us</a>
+                <span class="Gambier-footer-phone"><i></i>800-878-8874</span>
+            </p>
+            <div class="Gambier-footer-collaborate">
+                <ul>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png" title="Booking.com" alt="Booking.com" height="26" width="91">
+
+                    </li>
+                    <li>
+                        <img src="https://q.bstatic.com/static/img/tfl/group_logos/logo_priceline/f80e129541f2a952d470df2447373390f3dd4e44.png" title="Priceline" alt="Priceline" height="26" width="91">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_kayak/83ef7122074473a6566094e957ff834badb58ce6.png" title="Kayak" alt="Kayak" height="26" width="79">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_agoda/3d4f6ca8a45a376f2193f1e88d1ac8369f585e76.png" title="Agoda" alt="Agoda" height="26" width="70">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_rentalcars/6bc5ec89d870111592a378bbe7a2086f0b01abc4.png" title="Rentalcars" alt="Rentalcars" height="26" width="109">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_opentable/a4b50503eda6c15773d6e61c238230eb42fb050d.png" title="OpenTable" alt="OpenTable" height="26" width="95">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    <nav class="Gambier-scrollTop">
+        <div class="Gambier-detail-bar">
+            I want to cooperate.
+        </div>
+        <div class="Gambier-top">
+            Back to Top
+        </div>
+    </nav>
+</section>
+<script src="/js/thirdParty/jquery/jquery-1.8.0.min.js"></script>
+<script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.js"></script>
+<script src="/js/common/jquery.scroll.js"></script>
+<script src="/js/thirdParty/jquery/jquery.json-2.4.js"></script>
+<script src="/js/thirdParty/swiper/swiper.min.js"></script>
+<script src="/js/scene/about/scene.contact.js"></script>
+</body>
+</html>

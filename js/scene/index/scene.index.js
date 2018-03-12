@@ -21,7 +21,7 @@ $(document).ready(function () {
                 dataType: 'json',
                 timeout: 1000,
                 data: {paramJson: $.toJSON({type: '8', RHtype: t.data.editType})},
-                success: function (data, status) {
+                success: function (data, status) {//请求景点数据
                     console.log(data.responseData.result.list)
                     t.templateSite(t.filterSite(data.responseData.result.list));
                 },
@@ -170,9 +170,9 @@ $(document).ready(function () {
             return t;
         },
         templateBusiness: function (data) {
-            var t = this;
-            //var myTemplate = Handlebars.compile($("#business").html());
-            //$('.Gambier-business-list').html(myTemplate(data));
+            var t = this;//主营业务
+            var myTemplate = Handlebars.compile($("#business").html());
+            $('.Gambier-business-list').html(myTemplate(data));
             $(".Gambier-business-item").off("mouseover").on("mouseover", function () {
                 $(this).addClass("active").siblings().removeClass("active");
             });
@@ -219,5 +219,5 @@ $(document).ready(function () {
         }
     };
     roomDetail.staticInit();
-    // roomDetail.init();
+     roomDetail.init();
 });

@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Gambier Country Comfort International Hotel</title>
+    <link rel="shortcut icon" type="image/x-icon" href="idealogo.ico">
+    <meta name="keywords" content="Comfort Mt Gambier International（甘比尔山乡村舒适国际酒店）">
+    <meta name="viewport" content="width=750">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta content="telephone=no,email=no" name="format-detection">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="renderer" content="webkit">
+    <link rel="stylesheet" href="/css/base.css">
+    <link rel="stylesheet" href="/css/pages/index/index.css">
+    <link rel="stylesheet" href="/css/pages/about/about.css">
+    <link rel="stylesheet" href="/js/thirdParty/swiper/swiper.min.css">
+    <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="http://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="/js/common/rem.js"></script>
+</head>
+<body>
+<section class="Gambier-mainInner">
+    <header class="Gambier-header">
+        <section class="Gambier-header-container">
+            <ul class="Gambier-header-list">
+                <li class="Gambier-header-item"><span>Chinese</span> | <span>English</span></li>
+                <li class="Gambier-header-item">Login</li>
+                <li class="Gambier-header-item">Registered</li>
+            </ul>
+        </section>
+    </header>
+    <nav class="Gambier-nav">
+        <section class="Gambier-nav-container">
+            <div class="Gambier-logo">
+                <figure class="Gambier-logoImg">
+                    <img src="/img/pages/index/logo.png" alt="logo">
+                </figure>
+                <p class="Gambier-logoTitle">
+                    Gambier
+                </p>
+            </div>
+            <ul class="Gambier-nav-list">
+                <li class="Gambier-nav-item active"><a href="/indexEn.html">Home</a></li>
+                <li class="Gambier-nav-item"><a href="/enPages/scene/book/book_room.html">Hotel</a></li>
+                <li class="Gambier-nav-item"><a href="/enPages/scene/about/cooperation.html">cooperation</a></li>
+                <li class="Gambier-nav-item"><a href="/enPages/scene/about/us.html">About Us</a></li>
+                <li class="Gambier-nav-item"><a href="/enPages/scene/link/link.html">Contact Us</a></li>
+            </ul>
+        </section>
+    </nav>
+    <script type="text/x-handlebars-template" id="banner">
+        {{#each list}}
+        <div class="Gambier-banner-item swiper-slide" style="background:url('{{imgUrl}}') no-repeat 50% 50%;background-size:cover;">
+            <div class="Gambier-banner-content">
+                <div class="Gambier-banner-title">{{title}}</div>
+                <div class="Gambier-banner-subtitle">{{subtitle}}</div>
+                <button><a href="http://47.94.225.154:8081/enPages/scene/cooperation/cooperation.html">I want to cooperate.</a></button>
+            </div>
+        </div>
+        {{/each}}
+    </script>
+    <section class="Gambier-banner swiper-container">
+        <section class="Gambier-banner-container swiper-wrapper">
+            <div class="Gambier-banner-item swiper-slide" style="background: url('/img/pages/index/shutterstock_147980783-blue-lake-mount-gambier.jpg') no-repeat 50% 50%;background-size: cover">
+                <div class="Gambier-banner-content">
+                    <div class="Gambier-banner-title">Beautiful scenery</div>
+                    <div class="Gambier-banner-subtitle">Country Comfort Mount Gambier Hotel Welcome your arrival!</div>
+                    <!--<button><a href="http://47.94.225.154:8081/enPages/scene/cooperation/cooperation.html">我要合作</a></button>-->
+                </div>
+            </div>
+            <div class="Gambier-banner-item swiper-slide" style="background: url('/img/pages/index/ertyusdfghertydfg.jpg') no-repeat 50% 50%;background-size: cover">
+                <div class="Gambier-banner-content">
+                    <div class="Gambier-banner-title">Event planning, Meeting held</div>
+                    <div class="Gambier-banner-subtitle">Country Comfort Mount Gambier Hotel Welcome your arrival!</div>
+                    <!--<button><a href="http://47.94.225.154:8081/enPages/scene/cooperation/cooperation.html">我要合作</a></button>-->
+                </div>
+            </div>
+            <div class="Gambier-banner-item swiper-slide" style="background: url('/img/pages/index/16922640-3.jpg') no-repeat 50% 50%;background-size: cover">
+                <div class="Gambier-banner-content">
+                    <div class="Gambier-banner-title">Motel</div>
+                    <div class="Gambier-banner-subtitle">Country Comfort Mount Gambier Hotel Welcome your arrival!</div>
+                    <!--<button><a href="http://47.94.225.154:8081/enPages/scene/cooperation/cooperation.html">我要合作</a></button>-->
+                </div>
+            </div>
+        </section>
+        <section class="swiper-pagination Gambier-banner-pagination"></section>
+    </section>
+    <section class="Gambier-intro">
+        <section class="Gambier-intro-container">
+            <h1 class="Gambier-title">Hotel Introduction</h1>
+            <p class="Gambier-intro-content">Country Comfort Mount Gambier is situated within a 5-acre landscaped garden, just minutes away from the airport, CBD, shops and Blue Lake. If you go to Kangaroo Island, Grant or Ocean Road, we are the perfect stopover point. The wonderful views of Lan She and Gambier can make you quickly forget the hustle and bustle of Adelaide downtown. The Country Comfort Hostel, located in the second largest city of Nanao, is a relaxing weekend for you and your family and friends, and the ideal choice from the city's hustle and bustle of the countrysideInternational hotels inMay 27, 2013 began to accept reservations on the Booking.com hotel chain.<p>
+            <!--<button class="Gambier-intro-learnMore">我要预定</button>-->
+        </section>
+    </section>
+    <script type="text/x-handlebars-template" id="business">
+        {{#each list}}
+        <li class="Gambier-business-item {{activeClass @index}}" style="background:url('{{imgUrl}}') no-repeat 50% 50%;background-size: cover;">
+            <div class="Gambier-business-title">
+                <p>{{title}}</p>
+            </div>
+            <div class="Gambier-business-activeBar">
+                <h2 class="Gambier-business-activeTitle">{{title}}</h2>
+                <button class="Gambier-banner-learnMore"><a href="http://47.94.225.154:8081/enPages/scene/cooperation/cooperation.html">I want to cooperate.</a></button>
+            </div>
+            <p class="Gambier-business-des">
+                {{content}}
+            </p>
+        </li>
+        {{/each}}
+    </script>
+    <section class="Gambier-business">
+        <section class="Gambier-business-container">
+            <h1 class="Gambier-title">Business</h1>
+            <ul class="Gambier-business-list">
+                <li class="Gambier-business-item"  style="background: url('/img/pages/index/rtyuikofvgbhnm.jpg') no-repeat 50% 50%;background-size: cover">
+                    <div class="Gambier-business-title">
+                        <p>Immigration Services</p>
+                    </div>
+                    <div class="Gambier-business-activeBar">
+                        <h2 class="Gambier-business-activeTitle">Immigration Services</h2>
+                        <!--<button class="partIn">我要合作</button>-->
+                    </div>
+                    <p class="Gambier-business-des">
+                        Text description Text Description text Description text Description text Description text description text description
+                    </p>
+                </li>
+                <li class="Gambier-business-item active" style="background: url('/img/pages/index/u=2868172759,557100163&fm=27&gp=0.jpg') no-repeat 50% 50%;background-size: cover">
+                    <div class="Gambier-business-title">
+                        <p>Wedding Events</p>
+                    </div>
+                    <div class="Gambier-business-activeBar">
+                        <h2 class="Gambier-business-activeTitle">Wedding Events</h2>
+                        <!--<button class="partIn">我要合作</button>-->
+                    </div>
+                    <p class="Gambier-business-des">
+                        Text description Text Description text Description text Description text description text depictionDescription of text description
+                    </p>
+                </li>
+                <li class="Gambier-business-item" style="background: url('/img/pages/index/iuytfrdshgbvcx.jpg') no-repeat 50% 50%;background-size: cover">
+                    <div class="Gambier-business-title">
+                        <p>Trade Agency</p>
+                    </div>
+                    <div class="Gambier-business-activeBar">
+                        <h2 class="Gambier-business-activeTitle">Trade Agency</h2>
+                        <!--<button class="partIn">我要合作</button>-->
+                    </div>
+                    <p class="Gambier-business-des">
+                        Text description Text Description text Description text Description text Description text description text description
+                    </p>
+                </li>
+                <li class="Gambier-business-item" style="background: url('/img/pages/index/iugctdf.jpg') no-repeat 50% 50%;background-size: cover">
+                    <div class="Gambier-business-title">
+                        <p>Business activities</p>
+                    </div>
+                    <div class="Gambier-business-activeBar">
+                        <h2 class="Gambier-business-activeTitle">Business activities</h2>
+                        <!--<button class="partIn">我要合作</button>-->
+                    </div>
+                    <p class="Gambier-business-des">
+                        Text description Text Description text Description text Description text Description text description text description
+                    </p>
+                </li>
+                <li class="Gambier-business-item" style="background: url('/img/pages/index/poihguyftfdd.jpg') no-repeat 50% 50%;background-size: cover">
+                    <div class="Gambier-business-title">
+                        <p>Motel</p>
+                    </div>
+                    <div class="Gambier-business-activeBar">
+                        <h2 class="Gambier-business-activeTitle">Motel</h2>
+                        <!--<button class="partIn">我要合作</button>-->
+                    </div>
+                    <p class="Gambier-business-des">
+                        Text description Text Description text Description text Description text Description text description text description
+                    </p>
+                </li>
+            </ul>
+        </section>
+    </section>
+    <script type="text/x-handlebars-template" id="service">
+        {{#each list}}
+        <ul class="Gambier-characteristic swiper-slide">
+            {{#each this}}
+            <li class="Gambier-characteristic-item">
+                <figure class="Gambier-characteristic-background">
+                    <img src="{{imgUrl}}" alt="">
+                </figure>
+                <div class="Gambier-characteristic-title">
+                    <h1>{{title}}</h1>
+                </div>
+                <div class="Gambier-characteristic-mask">
+                    <div class="Gambier-characteristic-bar">
+                        <h1>{{title}}</h1>
+                        <button class="Gambier-banner-learnMore"><a href="http://47.94.225.154:8081/enPages/scene/cooperation/cooperation.html">I want to cooperate.</a></button>
+                    </div>
+                    <p class="Gambier-characteristic-des">{{content}}</p>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+        {{/each}}
+    </script>
+    <section class="Gambier-serviceList">
+        <section class="Gambier-serviceList-container">
+            <h1 class="Gambier-title">Hotel Facilities</h1>
+            <section class="Gambier-characteristic-swiper swiper-container">
+                <section class="Gambier-characteristic-wrap swiper-wrapper">
+                    <ul class="Gambier-characteristic swiper-slide">
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/TENNIS-COURT-2-2.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Tennis court</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Tennis court</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/INDOOR-SWIMMING-POOL.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Natatorium</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Natatorium</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/BAR-2-5.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Bar</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Bar</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/InRoomDining_FIDesktop.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Dining Room</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Dining Room</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/FUNCTION-ROOM-EMPTY-2.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Room</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Room</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/FUNCTION-ROOM-2.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Restaurant</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Restaurant</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="Gambier-characteristic swiper-slide">
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul class="Gambier-characteristic swiper-slide">
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <!--<button>我要合作</button>-->
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <button>I want to cooperate.</button>
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <button>I want to cooperate.</button>
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <button>I want to cooperate.</button>
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                        <li class="Gambier-characteristic-item">
+                            <figure class="Gambier-characteristic-background">
+                                <img src="/img/pages/index/banner.jpg" alt="">
+                            </figure>
+                            <div class="Gambier-characteristic-title">
+                                <h1>Guest Laundry</h1>
+                            </div>
+                            <div class="Gambier-characteristic-mask">
+                                <div class="Gambier-characteristic-bar">
+                                    <h1>Guest Laundry</h1>
+                                    <button>I want to cooperate.</button>
+                                </div>
+                                <p class="Gambier-characteristic-des">Business services are services that the hotel provides to satisfy the business needs of the guests.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+            </section>
+            <section class="Gambier-characteristic-pagination">
+
+            </section>
+        </section>
+    </section>
+    <section class="Gambier-circum">
+        <section class="Gambier-circum-container">
+            <h1 class="Gambier-title">Around the hotel</h1>
+            <div class="Gambier-circum-left">
+                <figure class="Gambier-circum-view">
+                    <img src="/img/pages/index/Nxs3mwqKSN3oWTRiyN122WDjo.jpg" alt="">
+                </figure>
+                <article class="Gambier-circum-des">
+                    <h1 class="Gambier-circum-siteTitle">Blue L.</h1>
+                    <h1 class="Gambier-circum-siteTitle Gambier-circum-siteDes">Blue Lake, situated in a beautiful volcanic landscape, is perched on the blue lake in Gambier, one of the extinct volcanic craters, 7KM</h1>
+                </article>
+            </div>
+            <script type="text/x-handlebars-template" id="site">
+                {{#each list}}
+                <ul class="Gambier-circum-list swiper-slide">
+                    {{#each this}}
+                    <li class="Gambier-circum-item">
+                        <figure><img src="{{imgUrl}}" alt="" data-text="{{title}}"  data-long="{{content}}"></figure>
+                        <div class="Gambier-circum-mask"></div>
+                    </li>
+                    {{/each}}
+                </ul>
+                {{/each}}
+            </script>
+            <div class="Gambier-circum-right ">
+                <div class="Gambier-circum-scenic swiper-container">
+                    <section class="swiper-wrapper">
+                        <ul class="Gambier-circum-list swiper-slide">
+                            <li class="Gambier-circum-item">
+                                <figure><img src="/img/pages/index/Nxs3mwqKSN3oWTRiyN122WDjo.jpg" alt="" data-text="蓝湖" data-long="蓝湖，坐落在一个美丽的火山景观，蓝湖栖息在甘比尔山已经绝迹的火山陨石坑之一,7KM"></figure>
+                                <div class="Gambier-circum-mask"></div>
+                            </li>
+                            <li class="Gambier-circum-item">
+                                <figure><img src="/img/pages/index/erfgbnwoksjnx.jpg" alt="" data-text="坦坦诺拉石窟" data-long="坦坦诺拉石窟（Tantanoola Caves）是甘比尔山附近唯一的轮椅访问洞穴。,7KM"></figure>
+                                <div class="Gambier-circum-mask"></div>
+                            </li>
+                            <li class="Gambier-circum-item">
+                                <figure><img src="/img/pages/index/377adab44aed2e731e5cc8868701a18b86d6fae7.jpg" alt="" data-text="堪培拉" data-long="堪培拉堪培拉是澳大利亚的首都，一个年轻的城市。市位于澳大利亚山脉区的开阔谷地上。7KM"></figure>
+                                <div class="Gambier-circum-mask"></div>
+                            </li>
+                            <li class="Gambier-circum-item">
+                                <figure><img src="/img/pages/index/NaracoorteCaves.jpg" alt="" data-text="Naracoorte洞穴" data-long="Naracoorte洞穴是甘比尔山地区最受欢迎的旅游景点之一。7KM"></figure>
+                                <div class="Gambier-circum-mask"></div>
+                            </li>
+                            <li class="Gambier-circum-item">
+                                <figure><img src="/img/pages/index/38dbb6fd5266d0163f8d09ea922bd40734fa355f.jpg" alt="" data-text="塔斯马尼亚薰衣草农场" data-long="塔斯马尼亚薰衣草农场在澳洲也能欣赏到美丽的薰衣草稻田。7KM"></figure>
+                                <div class="Gambier-circum-mask"></div>
+                            </li>
+                            <li class="Gambier-circum-item">
+                                <figure><img src="/img/pages/index/c995d143ad4bd113fa45e6d35aafa40f4afb0542.jpg" alt="" data-text="大堡礁" data-long="大堡礁日光浴、浮潜、半潜船、水肺潜水、直升机光，大堡礁提供全方位体验大海的方式，7KM"></figure>
+                                <div class="Gambier-circum-mask"></div>
+                            </li>
+                            <li class="Gambier-circum-item">
+                                <figure><img src="/img/pages/index/969cbf4492a440dbb3b7dc4e.jpg" alt="" data-text="布里斯班" data-long="布里斯班（Brisbane）是澳大利亚第三大城市1，全国最大海港，昆士兰州首府，主要工商业中心,7KM"></figure>
+                                <div class="Gambier-circum-mask"></div>
+                            </li>
+                            <li class="Gambier-circum-item">
+                                <figure><img src="/img/pages/index/6159252dd42a2834ce6f5be55ab5c9ea14cebf17.jpg" alt="" data-text="绿岛" data-long="绿岛隆起于大堡礁水域的绿岛位于凯恩斯东北方二七公里处，是一座面积不大的珊瑚礁岛屿。,7KM"></figure>
+                                <div class="Gambier-circum-mask"></div>
+                            </li>
+                            <li class="Gambier-circum-item">
+                                <figure><img src="/img/pages/index/ca1349540923dd54da99814cd209b3de9c82482f.jpg" alt="" data-text="龙柏考拉动物园" data-long="龙柏考拉保护区成立于1927年, 是澳洲第一个设立的考拉保护区。,7KM"></figure>
+                                <div class="Gambier-circum-mask"></div>
+                            </li>
+                        </ul>
+                    </section>
+                    <div class="swiper-pagination Gambier-circum-pagination"></div>
+                </div>
+
+            </div>
+            <!--<div class="Gambier-circum-bottom">
+                <button>I want to cooperate.</button>
+            -->
+        </section>
+    </section>
+    <section class="Gambier-hot-service">
+        <h1 class="Gambier-title">Hot Rooms</h1>
+        <ul class="Gambier-hot-service-container">
+            <li class="Gambier-hot-service-item">
+                <figure class="Gambier-service-img">
+                    <img src="/img/pages/index/Country_Comfort_MtGambier_Standard1_09.jpg" alt="">
+                </figure>
+                <div class="Gambier-service-des">
+                    <h1 class="Gambier-service-title">Standard Room</h1>
+                    <h3 class="Gambier-service-subTitle">AUD $125</h3>
+                    <p class="Gambier-service-content">Standard rooms with 1 double beds and 1 single beds for up to 2 adults.</p>
+                    <button>I want to book</button>
+                </div>
+            </li>
+            <li class="Gambier-hot-service-item">
+                <figure class="Gambier-service-img">
+                    <img src="/img/pages/index/16922640.jpg" alt="">
+                </figure>
+                <div class="Gambier-service-des">
+                    <h1 class="Gambier-service-title">Executive Spa Room</h1>
+                    <h3 class="Gambier-service-subTitle">AUD $165</h3>
+                    <p class="Gambier-service-content">2 adults, 1 children (UP), 1 double bed + 1 single Bed Executive spa room with spa tub and shower.</p>
+                    <button>I want to book</button>
+                </div>
+            </li>
+            <li class="Gambier-hot-service-item">
+                <figure class="Gambier-service-img">
+                    <img src="/img/pages/index/FAMILY-ROOM-HERO.jpg" alt="">
+                </figure>
+                <div class="Gambier-service-des">
+                    <h1 class="Gambier-service-title">Family room</h1>
+                    <h3 class="Gambier-service-subTitle">AUD $155</h3>
+                    <p class="Gambier-service-content">2 Adults, 2 children (max), 1 double bed + 2 single bed Our family rooms can accommodate up to 2 adults and 2 children with 1 double beds and 2 single beds.</p>
+                    <button>I want to book</button>
+                </div>
+            </li>
+        </ul>
+    </section>
+    <footer class="Gambier-footer">
+        <section class="Gambier-footer-container">
+            <p class="Gambier-footer-copyright">
+                <span class="Gambier-footer-des">Copyright ©1996–country Comfort MT Gambier International (Gansu hotels). All rights reserved</span>
+                <a class="Gambier-footer-about">About Us</a>
+                <span class="Gambier-footer-phone"><i></i>800-878-8874</span>
+            </p>
+            <div class="Gambier-footer-collaborate">
+                <ul>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_booking/27c8d1832de6a3123b6ee45b59ae2f81b0d9d0d0.png" title="Booking.com" alt="Booking.com" height="26" width="91">
+
+                    </li>
+                    <li>
+                        <img src="https://q.bstatic.com/static/img/tfl/group_logos/logo_priceline/f80e129541f2a952d470df2447373390f3dd4e44.png" title="Priceline" alt="Priceline" height="26" width="91">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_kayak/83ef7122074473a6566094e957ff834badb58ce6.png" title="Kayak" alt="Kayak" height="26" width="79">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_agoda/3d4f6ca8a45a376f2193f1e88d1ac8369f585e76.png" title="Agoda" alt="Agoda" height="26" width="70">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_rentalcars/6bc5ec89d870111592a378bbe7a2086f0b01abc4.png" title="Rentalcars" alt="Rentalcars" height="26" width="109">
+                    </li>
+                    <li>
+                        <img src="https://r.bstatic.com/static/img/tfl/group_logos/logo_opentable/a4b50503eda6c15773d6e61c238230eb42fb050d.png" title="OpenTable" alt="OpenTable" height="26" width="95">
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </footer>
+    <nav class="Gambier-scrollTop">
+        <div class="Gambier-detail-bar">
+            I want to cooperate.
+        </div>
+        <div class="Gambier-top">
+            Back to Top
+        </div>
+    </nav>
+</section>
+<!--<div class="Gambier-mask"></div>-->
+<script src="/js/thirdParty/jquery/jquery-1.8.0.min.js"></script>
+<script src="https://cdn.bootcss.com/handlebars.js/4.0.10/handlebars.js"></script>
+<script src="/js/thirdParty/jquery/jquery.json-2.4.js"></script>
+<script src="/js/common/jquery.scroll.js"></script>
+<script src="/js/thirdParty/swiper/swiper.min.js"></script>
+<script src="/js/scene/index/scene.index.js"></script>
+</body>
+</html>
